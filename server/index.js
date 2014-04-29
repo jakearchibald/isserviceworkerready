@@ -4,9 +4,16 @@ var swig = require('swig');
 var app = express();
 
 app.engine('html', swig.renderFile);
-app.use('/static', express.static(__dirname + '/../www/static'));
+app.set('view cache', false);
+swig.setDefaults({ cache: false });
 
-app.get('/', function(req, res) {
+app.use('/app-name/static', express.static(__dirname + '/../www/static'));
+
+app.get(RegExp('^/(app-name)?$'), function(req, res) {
+  res.redirect('/app-name/');
+});
+
+app.get('/app-name/', function(req, res) {
   res.render('../www/index.html');
 });
 
