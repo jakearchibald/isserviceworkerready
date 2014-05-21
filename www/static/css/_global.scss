@@ -5,21 +5,31 @@ html {
   min-height: 100%;
   background: #102a48;
   background: #102a48 radial-gradient(circle closest-corner at 50% 39px, #166ab9, #013668, #102a48) no-repeat;
+  
+  @media (min-width: 500px) {
+    font-size: 17px;
+  }
+  @media (min-width: 800px) {
+    background: #102a48 radial-gradient(circle closest-corner at 50% 89px, #166ab9, #013668, #102a48) no-repeat;
+  }
 }
 
 body {
   margin: 1rem;
+  @media (min-width: 500px) {
+    margin: 1.8rem;
+  }
 }
 
 a {
-  &:href,
+  &:link,
   &:visited {
-    color: blue;
+    color: #1F6DC2;
     text-decoration: none;
   }
   &:hover,
   &:active {
-    color: blue;
+    color: #007AFF;
     text-decoration: underline;
   }
 }

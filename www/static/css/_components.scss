@@ -5,19 +5,36 @@
 }
 
 .logo {
-  fill: #fff;
+  fill: #FFF;
   display: block;
-  margin: 0 0 1rem;
+  margin: 0 auto 1rem;
+  max-width: 660px;
+  
+  @media (min-width: 800px) {
+    margin-bottom: 2rem;
+  }
 }
 
 .feature {
   margin-bottom: 1rem;
   line-height: 1.2;
   
+  @media (min-width: 800px) {
+    @include display-flex;
+    @include flex-flow(wrap);
+    @include justify-content(flex-end);
+  }
+  
   & > header {
     background: #fff;
     overflow: hidden;
     padding: 0 1rem;
+    
+    @media (min-width: 800px) {
+      width: 35%;
+      box-sizing: border-box;
+    }
+
     & p {
       margin: 0.7rem 0;
     }
@@ -31,6 +48,8 @@
     font-size: 1rem;
     color: #fff;
     margin: 0 -1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
 }
@@ -38,6 +57,11 @@
 .results {
   @include display-flex;
   background: #fff;
+  min-width: 1px;
+  
+  @media (min-width: 800px) {
+    @include flex(1);
+  }
   
   & .result {
     @include flex(1);
@@ -49,7 +73,10 @@
   margin-left: 0;
   overflow: hidden;
   position: relative;
-  //border-bottom: solid 1rem #ccc;
+  
+  @media (min-width: 800px) {
+    margin-top: 0.4rem;
+  }
   
   &:first-child {
     margin-left: 0.4rem;
@@ -114,11 +141,10 @@
   background-size: 78%;
   background-repeat: no-repeat;
   background-position: center center;
-  -webkit-filter: drop-shadow(0 0 3px rgba(0,0,0,0.6));
   
-  @each $browser in chrome, opera, firefox, safari, ie, canary, firefox-nightly {
-    &.#{$browser} {
-      background-image: url(imgs/#{$browser}.png);
+  @each $icon in chrome, opera, firefox, safari, ie, canary, firefox-nightly {
+    &.#{$icon} {
+      background-image: url(imgs/#{$icon}.png);
     }
   }
 }
@@ -128,6 +154,11 @@
   padding: 0;
   border-top: solid 1px #CFCFCF;
   font-size: 0.9rem;
+  
+  @media (min-width: 800px) {
+    width: 65%;
+    box-sizing: border-box;
+  }
   
   & > li {
     display: block;
