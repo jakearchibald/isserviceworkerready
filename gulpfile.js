@@ -77,7 +77,7 @@ gulp.task('build', ['clean', 'sass-build', 'js-build'], function() {
 
   writeStream.on('end', server.close.bind(server));
 
-  return urlSrc('http://localhost:3000/app-name/', [
+  return urlSrc('http://localhost:3000/isserviceworkerready/', [
     '',
     'static/css/all.css',
     'static/js/all.js'
