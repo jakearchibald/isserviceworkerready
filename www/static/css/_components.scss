@@ -1,3 +1,99 @@
+.page-title {
+  position: absolute;
+  left: 0;
+  top: -5000px;
+}
+
 .logo {
   fill: #fff;
+  display: block;
+  margin: 0 0 1rem;
+}
+
+.feature {
+  margin-bottom: 1rem;
+  
+  & > header {
+    background: #fff;
+    overflow: hidden;
+    padding: 0 1rem;
+  }
+
+  & .feature-name {
+    font-weight: normal;
+    font-size: 1rem;
+  }
+}
+
+.results {
+  @include display-flex;
+  background: #fff;
+  
+  & .result {
+    @include flex(1);
+  }
+}
+
+.result {
+  margin: 0 0.4rem 0.4rem;
+  margin-left: 0;
+  overflow: hidden;
+  position: relative;
+  
+  &:first-child {
+    margin-left: 0.4rem;
+  }
+
+  &::after {
+    display: block;
+    content: '';
+    padding-top: 100%;
+  }
+  
+  &.yes {
+    background: #3DAA3D;
+  }
+
+  &.ish {
+    background: #D5BB00;
+  }
+
+  &.no {
+    background: #CCC;
+    & .icon {
+      opacity: 0.3;
+      -webkit-filter: grayscale(100%);
+    }
+  }
+  
+  & .details {
+    display: none;
+  }
+
+  & .support {
+    display: none;
+  }
+
+  & .icon {
+    text-indent: -5000px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.icon {
+  margin: 0;
+  background-size: 78%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-filter: drop-shadow(0 0 3px rgba(0,0,0,0.6));
+  
+  @each $browser in chrome, opera, firefox, safari, ie, canary, firefox-nightly {
+    &.#{$browser} {
+      background-image: url(imgs/#{$browser}.png);
+    }
+  }
 }
