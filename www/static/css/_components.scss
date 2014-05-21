@@ -12,17 +12,27 @@
 
 .feature {
   margin-bottom: 1rem;
+  line-height: 1.2;
   
   & > header {
     background: #fff;
     overflow: hidden;
     padding: 0 1rem;
+    & p {
+      margin: 0.7rem 0;
+    }
   }
 
   & .feature-name {
+    background: #2A609B;
+    line-height: 1;
+    padding: 0.4rem 1rem;
     font-weight: normal;
     font-size: 1rem;
+    color: #fff;
+    margin: 0 -1rem;
   }
+
 }
 
 .results {
@@ -39,6 +49,7 @@
   margin-left: 0;
   overflow: hidden;
   position: relative;
+  //border-bottom: solid 1rem #ccc;
   
   &:first-child {
     margin-left: 0.4rem;
@@ -51,7 +62,7 @@
   }
   
   &.yes {
-    background: #3DAA3D;
+    background: #376D37;
   }
 
   &.ish {
@@ -65,13 +76,27 @@
       -webkit-filter: grayscale(100%);
     }
   }
-  
-  & .details {
-    display: none;
-  }
 
   & .support {
-    display: none;
+    margin: 0;
+    text-indent: -5000px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  & .version {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.8);
+    line-height: 1;
+    color: #000;
+    text-indent: 0;
+    padding: 0.1rem 0.2rem;
+    font-size: 0.8rem;
   }
 
   & .icon {
@@ -94,6 +119,24 @@
   @each $browser in chrome, opera, firefox, safari, ie, canary, firefox-nightly {
     &.#{$browser} {
       background-image: url(imgs/#{$browser}.png);
+    }
+  }
+}
+
+.details {
+  margin: 0;
+  padding: 0;
+  border-top: solid 1px #CFCFCF;
+  font-size: 0.9rem;
+  
+  & > li {
+    display: block;
+    background: #E4E4E4;
+    margin: 0;
+    padding: 0.4rem 1rem;
+    
+    &:nth-child(even) {
+      background: #F1F1F1;
     }
   }
 }

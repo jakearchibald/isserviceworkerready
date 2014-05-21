@@ -1,6 +1,7 @@
 html {
   font-family: sans-serif;
   font-size: 15px;
+  line-height: 1.4;
   min-height: 100%;
   background: #102a48;
   background: #102a48 radial-gradient(circle closest-corner at 50% 39px, #166ab9, #013668, #102a48) no-repeat;
@@ -8,4 +9,17 @@ html {
 
 body {
   margin: 1rem;
+}
+
+a {
+  &:href,
+  &:visited {
+    color: blue;
+    text-decoration: none;
+  }
+  &:hover,
+  &:active {
+    color: blue;
+    text-decoration: underline;
+  }
 }
