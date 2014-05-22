@@ -99,8 +99,11 @@
   &.no {
     background: #CCC;
     & .icon {
-      opacity: 0.3;
-      -webkit-filter: grayscale(100%);
+      opacity: 0.2;
+      @supports (-webkit-filter: grayscale(100%)) {
+        opacity: 0.4;
+        -webkit-filter: grayscale(100%);
+      }
     }
   }
 
