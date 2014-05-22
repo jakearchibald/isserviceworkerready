@@ -1,7 +1,7 @@
 [
   {
     "name": "Promises",
-    "description": "Not ServiceWorker specific, but required by ServiceWorker",
+    "description": "Not ServiceWorker specific, but required by ServiceWorker. <a href=\"https://people.mozilla.org/~jorendorff/es6-draft.html#sec-promise-objects\">Spec</a>.",
     "chrome": {
       "supported": 0.5,
       "minVersion": 32,

@@ -7,18 +7,16 @@
 .logo {
   fill: #FFF;
   display: block;
-  margin: 0 auto 1rem;
+  margin: 0 auto 0;
   position: relative;
   padding-top: 18.98%;
   
   @media (min-width: 500px) {
     margin-top: 3rem;
-    margin-bottom: 3rem;
   }
   
   @media (min-width: 800px) {
     margin-top: 4.5rem;
-    margin-bottom: 4.9rem;
   }
 
   @media (min-width: 720px) {
@@ -33,6 +31,57 @@
     height: 100%;
     margin: 0 auto;
   }
+}
+
+.external-links {
+  font-family: "Press Start 2P";
+  margin: 0.8rem 0 1.1rem;
+  padding: 0;
+  text-align: center;
+  color: #fff;
+  
+  @media (min-width: 500px) {
+    margin: 0.8rem 0 3.2rem;
+  }
+
+  @media (min-width: 800px) {
+    margin: 0.8rem 0 4.4rem;
+  }
+  
+  & > li {
+    margin: 0;
+    display: inline-block;
+    @media (min-width: 400px) {
+      &::after {
+        content: ' * ';
+      }
+
+      &:last-child::after {
+        content: none;
+      }
+    }
+  }
+
+  & a:link,
+  & a:visited {
+    color: #71B5FF;
+  }
+  & a:hover,
+  & a:active {
+    text-decoration: underline;
+  }
+}
+
+%box-heading {
+  background: #2A609B;
+  line-height: 1;
+  padding: 0.4rem 1rem;
+  font-weight: normal;
+  font-size: 1rem;
+  color: #fff;
+  margin: 0 -1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .feature {
@@ -64,15 +113,7 @@
   }
 
   & .feature-name {
-    background: #2A609B;
-    line-height: 1;
-    padding: 0.4rem 1rem;
-    font-weight: normal;
-    font-size: 1rem;
-    color: #fff;
-    margin: 0 -1rem;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    @extend %box-heading;
   }
 
 }
