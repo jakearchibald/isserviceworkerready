@@ -24,6 +24,7 @@ To update data, edit `data.json`, which is in this format:
       // (optional) alternate icon, currently supports:
       // "canary"
       // "firefox-nightly"
+      // "webkit-nightly"
       "icon": "canary",
       // (optional) details, cavats, links to tickets, flags etc
       "details": [
