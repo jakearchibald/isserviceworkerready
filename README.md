@@ -1,9 +1,27 @@
 # Is ServiceWorker Ready Yet?
 
-Tracks the features of ServiceWorker supported in browsers.
+Tracks the features of ServiceWorker supported in browsers. [View the site](https://jakearchibald.github.io/isserviceworkerready/alpha.html).
 
-TODO: link to spec
-TODO: link to site
+## Run locally
+
+To install, run the following in the root of your cloned copy of the repo:
+
+```sh
+npm install -g gulp
+npm install
+```
+
+To serve the site on `localhost:3000`:
+
+```sh
+gulp
+```
+
+To build the site:
+
+```sh
+gulp build
+```
 
 ## Contribute
 
