@@ -26,7 +26,7 @@
                   Supported
                 {% endif %}
                 {% if feature[browser.id].minVersion %}
-                  since version <span class="version">37</span>
+                  since version <span class="version">{{ feature[browser.id].minVersion }}</span>
                 {% endif %}
               </p>
             {% else %}
