@@ -9,10 +9,12 @@ html {
   -webkit-text-size-adjust: 100%;
   
   @media (min-width: 500px) {
+    background: #102a48 radial-gradient(circle closest-corner at 50% 93px, #166ab9, #013668, #102a48) no-repeat;
     font-size: 17px;
   }
+
   @media (min-width: 800px) {
-    background: #102a48 radial-gradient(circle closest-corner at 50% 89px, #166ab9, #013668, #102a48) no-repeat;
+    background: #102a48 radial-gradient(circle closest-corner at 50% 122px, #166ab9, #013668, #102a48) no-repeat;
   }
 }
 
