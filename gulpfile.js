@@ -78,9 +78,16 @@ gulp.task('build', ['clean', 'sass-build', 'js-build'], function() {
   writeStream.on('end', server.close.bind(server));
 
   return urlSrc('http://localhost:3000/isserviceworkerready/', [
-    '',
+    'alpha.html',
     'static/css/all.css',
-    'static/js/all.js'
+    'static/css/imgs/canary.png',
+    'static/css/imgs/chrome.png',
+    'static/css/imgs/firefox-nightly.png',
+    'static/css/imgs/firefox.png',
+    'static/css/imgs/ie.png',
+    'static/css/imgs/opera.png',
+    'static/css/imgs/safari.png',
+    'static/css/imgs/webkit-nightly.png'
   ]).pipe(writeStream);
 });
 
