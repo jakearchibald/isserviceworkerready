@@ -51,7 +51,7 @@
   & > li {
     margin: 0;
     display: inline-block;
-    @media (min-width: 400px) {
+    @media (min-width: 360px) {
       &::after {
         content: ' * ';
       }
