@@ -1,0 +1,46 @@
+[
+  {
+    "name": "Promises",
+    "description": "Not ServiceWorker specific, but they're required",
+    "chrome": {
+      "supported": 1,
+      "minVersion": 35
+    },
+    "firefox": {
+      "supported": 1
+    },
+    "opera": {
+      "supported": 1
+    },
+    "safari": {
+      "supported": 0
+    },
+    "ie": {
+      "supported": 0
+    }
+  },
+  {
+    "name": "<code>navigator.serviceWorker</code>",
+    "description": "Basic entry point for serviceworker",
+    "chrome": {
+      "icon": "canary",
+      "supported": 0.5,
+      "minVersion": 37,
+      "details": [
+        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> &amp; some flags"
+      ]
+    },
+    "firefox": {
+      "supported": 0
+    },
+    "opera": {
+      "supported": 0
+    },
+    "safari": {
+      "supported": 0
+    },
+    "ie": {
+      "supported": 0
+    }
+  }
+]
