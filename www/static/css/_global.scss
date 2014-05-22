@@ -6,6 +6,8 @@ html {
   background: #102a48;
   background: #102a48 radial-gradient(circle closest-corner at 50% 39px, #166ab9, #013668, #102a48) no-repeat;
   
+  -webkit-text-size-adjust: 100%;
+  
   @media (min-width: 500px) {
     font-size: 17px;
   }
