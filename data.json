@@ -34,7 +34,7 @@
   },
   {
     "name": "<code>navigator.serviceWorker</code>",
-    "description": "Namespace for page-side ServiceWorker API",
+    "description": "Namespace for page-side ServiceWorker API. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#navigator-service-worker\">Spec</a>.",
     "chrome": {
       "supported": 0.5,
       "minVersion": 35,

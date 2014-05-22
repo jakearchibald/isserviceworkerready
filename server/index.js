@@ -18,10 +18,10 @@ swig.setDefaults({ cache: false });
 app.use('/isserviceworkerready/static', express.static(__dirname + '/../www/static'));
 
 app.get(RegExp('^/(isserviceworkerready)?$'), function(req, res) {
-  res.redirect('/isserviceworkerready/');
+  res.redirect('/isserviceworkerready/alpha.html');
 });
 
-app.get('/isserviceworkerready/', function(req, res) {
+app.get('/isserviceworkerready/alpha.html', function(req, res) {
   var features = JSON.parse(fs.readFileSync(__dirname + '/../data.json', 'utf8'));
 
   // add "hasDetails" to each feature
