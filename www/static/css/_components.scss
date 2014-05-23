@@ -121,10 +121,9 @@
 .results {
   @include display-flex;
   background: #fff;
-  min-width: 1px;
   
   @media (min-width: 800px) {
-    @include flex(1);
+    width: 65%;
   }
   
   & .result {
@@ -164,9 +163,10 @@
     background: #CCC;
     & .icon {
       opacity: 0.2;
+      -webkit-filter: grayscale(100%);
+        
       @supports (-webkit-filter: grayscale(100%)) {
         opacity: 0.4;
-        -webkit-filter: grayscale(100%);
       }
     }
   }
