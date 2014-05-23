@@ -62,5 +62,347 @@
     "ie": {
       "supported": 0
     }
+  },
+  {
+    "name": "Register / unregister",
+    "description": "Register for a SW and get an instance back, unregister undoes. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#navigator-service-worker-register\">Spec</a>.",
+    "chrome": {
+      "supported": 0
+    },
+    "firefox": {
+      "supported": 0
+    },
+    "opera": {
+      "supported": 0
+    },
+    "safari": {
+      "supported": 0
+    },
+    "ie": {
+      "supported": 0
+    }
+  },
+  {
+    "name": "<code>postMessage</code> to &amp; from worker",
+    "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#client\">Spec</a>.",
+    "chrome": {
+      "supported": 0
+    },
+    "firefox": {
+      "supported": 0
+    },
+    "opera": {
+      "supported": 0
+    },
+    "safari": {
+      "supported": 0
+    },
+    "ie": {
+      "supported": 0
+    }
+  },
+  {
+    "name": "Install event",
+    "description": "Install event fires in a newly discovered SW. Includes <code>InstallEvent.waitUntil()</code>. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#install-event\">Spec</a>.",
+    "chrome": {
+      "supported": 0
+    },
+    "firefox": {
+      "supported": 0
+    },
+    "opera": {
+      "supported": 0
+    },
+    "safari": {
+      "supported": 0
+    },
+    "ie": {
+      "supported": 0
+    }
+  },
+  {
+    "name": "<code>InstallEvent.replace()</code>",
+    "description": "Allow an installing worker to take over in-scope pages once installed. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#replace-method\">Spec</a>.",
+    "chrome": {
+      "supported": 0
+    },
+    "firefox": {
+      "supported": 0
+    },
+    "opera": {
+      "supported": 0
+    },
+    "safari": {
+      "supported": 0
+    },
+    "ie": {
+      "supported": 0
+    }
+  },
+  {
+    "name": "Activate event",
+    "description": "Activate event fires after others become redundant. Includes <code>InstallEvent.waitUntil()</code>. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#activate-event\">Spec</a>.",
+    "chrome": {
+      "supported": 0
+    },
+    "firefox": {
+      "supported": 0
+    },
+    "opera": {
+      "supported": 0
+    },
+    "safari": {
+      "supported": 0
+    },
+    "ie": {
+      "supported": 0
+    }
+  },
+  {
+    "name": "Update checks",
+    "description": "Browser checks for SW updates after navigation. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#update-algorithm\">Spec</a>.",
+    "chrome": {
+      "supported": 0
+    },
+    "firefox": {
+      "supported": 0
+    },
+    "opera": {
+      "supported": 0
+    },
+    "safari": {
+      "supported": 0
+    },
+    "ie": {
+      "supported": 0
+    }
+  },
+  {
+    "name": "ServiceWorker lifecycle",
+    "description": "Allow a next version to be in waiting &amp; take over when appropriate.",
+    "chrome": {
+      "supported": 0
+    },
+    "firefox": {
+      "supported": 0
+    },
+    "opera": {
+      "supported": 0
+    },
+    "safari": {
+      "supported": 0
+    },
+    "ie": {
+      "supported": 0
+    }
+  },
+  {
+    "name": "<code>Request</code>",
+    "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#request-objects\">Spec</a>.",
+    "chrome": {
+      "supported": 0
+    },
+    "firefox": {
+      "supported": 0
+    },
+    "opera": {
+      "supported": 0
+    },
+    "safari": {
+      "supported": 0
+    },
+    "ie": {
+      "supported": 0
+    }
+  },
+  {
+    "name": "<code>Response</code>",
+    "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#response-objects\">Spec</a>.",
+    "chrome": {
+      "supported": 0
+    },
+    "firefox": {
+      "supported": 0
+    },
+    "opera": {
+      "supported": 0
+    },
+    "safari": {
+      "supported": 0
+    },
+    "ie": {
+      "supported": 0
+    }
+  },
+  {
+    "name": "<code>fetch(request)</code>",
+    "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#service-worker-global-scope-fetch\">Spec</a>.",
+    "chrome": {
+      "supported": 0
+    },
+    "firefox": {
+      "supported": 0
+    },
+    "opera": {
+      "supported": 0
+    },
+    "safari": {
+      "supported": 0
+    },
+    "ie": {
+      "supported": 0
+    }
+  },
+  {
+    "name": "<code>Cache</code>",
+    "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#cache\">Spec</a>.",
+    "chrome": {
+      "supported": 0
+    },
+    "firefox": {
+      "supported": 0
+    },
+    "opera": {
+      "supported": 0
+    },
+    "safari": {
+      "supported": 0
+    },
+    "ie": {
+      "supported": 0
+    }
+  },
+  {
+    "name": "<code>caches</code>",
+    "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#service-worker-global-scope-caches\">Spec</a>.",
+    "chrome": {
+      "supported": 0
+    },
+    "firefox": {
+      "supported": 0
+    },
+    "opera": {
+      "supported": 0
+    },
+    "safari": {
+      "supported": 0
+    },
+    "ie": {
+      "supported": 0
+    }
+  },
+  {
+    "name": "<code>getAll()</code>",
+    "description": "Get all workers for an origin. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#navigator-service-worker-getAll\">Spec</a>.",
+    "chrome": {
+      "supported": 0
+    },
+    "firefox": {
+      "supported": 0
+    },
+    "opera": {
+      "supported": 0
+    },
+    "safari": {
+      "supported": 0
+    },
+    "ie": {
+      "supported": 0
+    }
+  },
+  {
+    "name": "<code>navigator.serviceWorker.whenReady()</code>",
+    "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#navigator-service-worker-when-ready\">Spec</a>.",
+    "chrome": {
+      "supported": 0
+    },
+    "firefox": {
+      "supported": 0
+    },
+    "opera": {
+      "supported": 0
+    },
+    "safari": {
+      "supported": 0
+    },
+    "ie": {
+      "supported": 0
+    }
+  },
+  {
+    "name": "Fetch event",
+    "description": "Fires for pages and all sub-resources. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#fetch-event\">Spec</a>.",
+    "chrome": {
+      "supported": 0
+    },
+    "firefox": {
+      "supported": 0
+    },
+    "opera": {
+      "supported": 0
+    },
+    "safari": {
+      "supported": 0
+    },
+    "ie": {
+      "supported": 0
+    }
+  },
+  {
+    "name": "<code>fetchEvent.request</code>",
+    "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#fetch-event-section\">Spec</a>.",
+    "chrome": {
+      "supported": 0
+    },
+    "firefox": {
+      "supported": 0
+    },
+    "opera": {
+      "supported": 0
+    },
+    "safari": {
+      "supported": 0
+    },
+    "ie": {
+      "supported": 0
+    }
+  },
+  {
+    "name": "<code>fetchEvent.context</code>",
+    "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#fetch-event-section\">Spec</a>.",
+    "chrome": {
+      "supported": 0
+    },
+    "firefox": {
+      "supported": 0
+    },
+    "opera": {
+      "supported": 0
+    },
+    "safari": {
+      "supported": 0
+    },
+    "ie": {
+      "supported": 0
+    }
+  },
+  {
+    "name": "<code>fetchEvent.respondWith()</code>",
+    "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#fetch-event-section\">Spec</a>.",
+    "chrome": {
+      "supported": 0
+    },
+    "firefox": {
+      "supported": 0
+    },
+    "opera": {
+      "supported": 0
+    },
+    "safari": {
+      "supported": 0
+    },
+    "ie": {
+      "supported": 0
+    }
   }
 ]
