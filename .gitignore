@@ -1,5 +1,6 @@
 node_modules
 www/static/js/all.js
+www/static/js/sw/all.js
 .sass-cache
 www/static/css/all.css
 www/static/css/all.css.map
