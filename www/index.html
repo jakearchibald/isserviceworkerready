@@ -18,10 +18,15 @@
   </ul>
 
   {% for feature in features %}
-    <article class="feature">
+    {% set featureId = feature.name|striptags|lower|replace("\s+", '-', 'g') %}
+    <article class="feature" id="{{ featureId }}">
       <header>
-        <h1 class="feature-name">{{feature.name|safe}}</h1>
-        <p>{{feature.description|safe}}</p>
+        <a href="#{{ featureId }}" class="perma">
+          <h1 class="feature-name">
+            {{ feature.name|safe }}
+          </h1>
+        </a>
+        <p>{{ feature.description|safe }}</p>
       </header>
       <div class="results">
         {% for browser in browsers %}

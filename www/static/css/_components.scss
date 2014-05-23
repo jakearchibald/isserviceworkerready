@@ -96,12 +96,16 @@
     @include justify-content(flex-end);
     max-width: 947px;
   }
+
+  &:target > header {
+    background: #FFECA9;
+  }
   
   & > header {
     background: #fff;
     overflow: hidden;
-    padding: 0 1rem;
-    
+    padding: 0 1rem;  
+
     @media (min-width: 800px) {
       width: 35%;
       box-sizing: border-box;
@@ -114,13 +118,37 @@
 
   & .feature-name {
     @extend %box-heading;
+    position: relative;
   }
+
+  & .perma {
+    &:link,
+    &:visited {
+      color: #fff;
+    }
+    &:hover,
+    &:active {
+      text-decoration: none;
+      & .feature-name::after {
+        content: '¶';
+        position: absolute;
+        top: 0.3rem;
+        right: 0.3rem;
+        color: rgba(255, 255, 255, 0.53);
+      }
+    }
+  }
+
 
 }
 
 .results {
   @include display-flex;
   background: #fff;
+  
+  :target & {
+    background: #FFECA9;
+  }
   
   @media (min-width: 800px) {
     width: 65%;
