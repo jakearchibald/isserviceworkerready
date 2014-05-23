@@ -56,6 +56,9 @@
               <li><strong>{{ browser.name }}:</strong> {{ detail|safe }}</li>
             {% endfor %}
           {% endfor %}
+          {% for detail in feature.details %}
+            <li>{{ detail|safe }}</li>
+          {% endfor %}
         </ul>
       {% endif %}
     </article>

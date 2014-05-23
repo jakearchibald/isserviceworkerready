@@ -52,7 +52,11 @@ To update data, edit `data.json`, which is in this format:
     "firefox": {},
     "opera": {},
     "safari": {},
-    "ie": {}
+    "ie": {},
+    // (optional) details that don't apply to a single browser
+    "details": [
+      "<strong>Chrome & Firefox</strong>: sitting in a tree K-I-S-S-I-N-G"
+    ]
   },
   // ...
 ]

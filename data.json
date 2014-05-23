@@ -1,5 +1,27 @@
 [
   {
+    "name": "ServiceWorker enthusiasm",
+    "description": "The first thing any implementation needs.",
+    "chrome": {
+      "supported": 1
+    },
+    "firefox": {
+      "supported": 1
+    },
+    "opera": {
+      "supported": 1
+    },
+    "safari": {
+      "supported": 0
+    },
+    "ie": {
+      "supported": 0
+    },
+    "details": [
+      "<strong>Safari &amp; IE</strong>: No public commitment."
+    ]
+  },
+  {
     "name": "Promises",
     "description": "Not ServiceWorker specific, but required by ServiceWorker. <a href=\"https://people.mozilla.org/~jorendorff/es6-draft.html#sec-promise-objects\">Spec</a>.",
     "chrome": {

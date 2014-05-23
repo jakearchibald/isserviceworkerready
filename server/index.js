@@ -29,6 +29,11 @@ app.get('/isserviceworkerready/alpha.html', function(req, res) {
     var browserSupport;
     feature.hasDetails = false;
 
+    if (feature.details && feature.details.length) {
+      feature.hasDetails = true;
+      return;
+    }
+
     for (var i = 0; i < browsers.length; i++) {
       browserSupport = feature[browsers[i].id];
 
