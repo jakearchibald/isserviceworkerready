@@ -8,6 +8,8 @@ this.onmessage = function(event) {
   else {
     console.log("No event.source");
   }
-
-  event.data.port.postMessage("Woop!");
+  
+  if (event.data.port) {
+    event.data.port.postMessage("Woop!");
+  }
 };
