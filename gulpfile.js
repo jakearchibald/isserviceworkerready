@@ -13,8 +13,6 @@ var path = require('path');
 var es = require('event-stream');
 
 var jsEntryPoints = [
-  './www/static/js/index.js',
-  './www/static/js/sw/index.js'
 ];
 
 function sassTask(dev) {
