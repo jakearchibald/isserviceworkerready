@@ -24,11 +24,13 @@
     }).then(function(sw) {
       log("Registered!", sw);
 
-      navigator.serviceWorker.unregister('./*').then(function() {
-        log("Unregistered");
-      }).catch(function(err) {
-        log("Unreg failed", err);
-      })
+      setTimeout(function() {
+        navigator.serviceWorker.unregister('./*').then(function() {
+          log("Unregistered");
+        }).catch(function(err) {
+          log("Unreg failed", err);
+        });
+      }, 3000);
     }).catch(function(err) {
       log("Reg failed", err);
     });
@@ -36,7 +38,7 @@
     log("whenReady", navigator.serviceWorker.whenReady);
 
     if (navigator.serviceWorker.whenReady) {
-      navigator.serviceWorker.whenReady.then(function() {
+      navigator.serviceWorker.whenReady().then(function() {
         log("whenReady resolved");
       });
     }
