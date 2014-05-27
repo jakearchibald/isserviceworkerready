@@ -43,6 +43,7 @@ To update data, edit `data.json`, which is in this format:
       // "canary"
       // "firefox-nightly"
       // "webkit-nightly"
+      // "opera-developer"
       "icon": "canary",
       // (optional) details, cavats, links to tickets, flags etc
       "details": [

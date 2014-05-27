@@ -96,6 +96,7 @@ gulp.task('build', ['clean', 'sass-build'], function() {
     'static/css/imgs/firefox.png',
     'static/css/imgs/ie.png',
     'static/css/imgs/opera.png',
+    'static/css/imgs/opera-developer.png',
     'static/css/imgs/safari.png',
     'static/css/imgs/webkit-nightly.png',
     'demos/fetchevent/',

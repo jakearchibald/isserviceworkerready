@@ -255,7 +255,7 @@
   background-repeat: no-repeat;
   background-position: center center;
   
-  @each $icon in chrome, opera, firefox, safari, ie, canary, firefox-nightly, webkit-nightly {
+  @each $icon in chrome, opera, firefox, safari, ie, canary, firefox-nightly, webkit-nightly, opera-developer {
     &.#{$icon} {
       background-image: url(imgs/#{$icon}.png);
     }

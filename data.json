@@ -12,14 +12,17 @@
       "supported": 1
     },
     "safari": {
-      "supported": 0
+      "supported": 0,
+      "details": [
+        "No public commitment."
+      ]
     },
     "ie": {
-      "supported": 0
-    },
-    "details": [
-      "<strong>Safari &amp; IE</strong>: No public commitment."
-    ]
+      "supported": 0,
+      "details": [
+        "<a href=\"http://status.modern.ie/serviceworker\">Under consideration</a>."
+      ]
+    }
   },
   {
     "name": "Promises",
@@ -87,23 +90,28 @@
     "description": "Register for a SW and get an instance back, unregister undoes. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#navigator-service-worker-register\">Spec</a>. <a href=\"/isserviceworkerready/demos/registerunregister/\">Test</a>.",
     "chrome": {
       "supported": 0.5,
-      "minVersion": 35,
-      "details": [
-        "Requires #enable-service-worker and #enable-experimental-web-platform-features in about:flags."
-      ]
+      "minVersion": 35
     },
     "firefox": {
-      "supported": 0
+      "icon": "firefox-nightly",
+      "supported": 0.5,
+      "details": [
+        "Requires a <a href=\"http://blog.nikhilism.com/2014/05/serviceworker-implementation-status-in-firefox.html\">special build</a> and dom.serviceWorkers.enabled in about:config."
+      ]
     },
     "opera": {
-      "supported": 0
+      "supported": 0.5,
+      "minVersion": 21
     },
     "safari": {
       "supported": 0
     },
     "ie": {
       "supported": 0
-    }
+    },
+    "details": [
+      "<strong>Chrome &amp; Opera</strong>: Requires #enable-service-worker and #enable-experimental-web-platform-features in about:flags."
+    ]
   },
   {
     "name": "<code>postMessage</code> to &amp; from worker",
@@ -112,22 +120,28 @@
       "icon": "canary",
       "supported": 0.5,
       "details": [
-        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> and #enable-service-worker and #enable-experimental-web-platform-features in about:flags.",
-        "<code>messageEvent.source</code> is null within the worker, but you can pass your own <code>MessageChannel</code> for 2-way communication."
+        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> and #enable-service-worker and #enable-experimental-web-platform-features in about:flags."
       ]
     },
     "firefox": {
       "supported": 0
     },
     "opera": {
-      "supported": 0
+      "icon": "opera-developer",
+      "supported": 0.5,
+      "details": [
+        "Requires <a href=\"http://www.opera.com/developer\">Opera Developer</a> and #enable-service-worker and #enable-experimental-web-platform-features in about:flags."
+      ]
     },
     "safari": {
       "supported": 0
     },
     "ie": {
       "supported": 0
-    }
+    },
+    "details": [
+      "<strong>Chrome & Opera</strong>: <code>messageEvent.source</code> is null within the worker, but you can pass your own <code>MessageChannel</code> for 2-way communication."
+    ]
   },
   {
     "name": "Fetch event",
@@ -136,7 +150,11 @@
       "supported": 0
     },
     "firefox": {
-      "supported": 0
+      "icon": "firefox-nightly",
+      "supported": 0.5,
+      "details": [
+        "Requires a <a href=\"http://blog.nikhilism.com/2014/05/serviceworker-implementation-status-in-firefox.html\">special build</a> and dom.serviceWorkers.enabled in about:config."
+      ]
     },
     "opera": {
       "supported": 0
@@ -155,7 +173,11 @@
       "supported": 0
     },
     "firefox": {
-      "supported": 0
+      "icon": "firefox-nightly",
+      "supported": 0.5,
+      "details": [
+        "Requires a <a href=\"http://blog.nikhilism.com/2014/05/serviceworker-implementation-status-in-firefox.html\">special build</a> and dom.serviceWorkers.enabled in about:config."
+      ]
     },
     "opera": {
       "supported": 0
@@ -174,7 +196,12 @@
       "supported": 0
     },
     "firefox": {
-      "supported": 0
+      "icon": "firefox-nightly",
+      "supported": 0.5,
+      "details": [
+        "Requires a <a href=\"http://blog.nikhilism.com/2014/05/serviceworker-implementation-status-in-firefox.html\">special build</a> and dom.serviceWorkers.enabled in about:config.",
+        "Can only respond with non-standard <code>SameOriginResponse</code> object"
+      ]
     },
     "opera": {
       "supported": 0
@@ -212,7 +239,11 @@
       "supported": 0
     },
     "firefox": {
-      "supported": 0
+      "icon": "firefox-nightly",
+      "supported": 0.5,
+      "details": [
+        "Requires a <a href=\"http://blog.nikhilism.com/2014/05/serviceworker-implementation-status-in-firefox.html\">special build</a> and dom.serviceWorkers.enabled in about:config."
+      ]
     },
     "opera": {
       "supported": 0
@@ -250,7 +281,11 @@
       "supported": 0
     },
     "firefox": {
-      "supported": 0
+      "icon": "firefox-nightly",
+      "supported": 0.5,
+      "details": [
+        "Requires a <a href=\"http://blog.nikhilism.com/2014/05/serviceworker-implementation-status-in-firefox.html\">special build</a> and dom.serviceWorkers.enabled in about:config."
+      ]
     },
     "opera": {
       "supported": 0
