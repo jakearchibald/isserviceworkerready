@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    html {
+      white-space: pre;
+      font-family: monospace;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    function log() {
+      document.body.appendChild(document.createTextNode(Array.prototype.join.call(arguments, ", ")));
+      console.log.apply(console, arguments);
+    }
+
+    window.onerror = function(err) {
+      log("Error", err);
+    };
+
+    log('navigator.serviceWorker', navigator.serviceWorker);
+  </script>
+</body>
+</html>

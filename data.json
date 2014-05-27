@@ -56,7 +56,7 @@
   },
   {
     "name": "<code>navigator.serviceWorker</code>",
-    "description": "Namespace for page-side ServiceWorker API. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#navigator-service-worker\">Spec</a>.",
+    "description": "Namespace for page-side ServiceWorker API. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#navigator-service-worker\">Spec</a>. <a href=\"/isserviceworkerready/demos/navigator.serviceWorker/\">Demo</a>.",
     "chrome": {
       "supported": 0.5,
       "minVersion": 35
@@ -65,7 +65,7 @@
       "icon": "firefox-nightly",
       "supported": 0.5,
       "details": [
-        "Requires a <a href=\"http://nightly.mozilla.org/\">nightly build</a> and dom.serviceWorkers.enabled in about:config"
+        "Requires a <a href=\"http://nightly.mozilla.org/\">nightly build</a> and dom.serviceWorkers.enabled in about:config."
       ]
     },
     "opera": {
@@ -79,17 +79,17 @@
       "supported": 0
     },
     "details": [
-      "<strong>Chrome &amp; Opera</strong>: Requires #enable-service-worker and #enable-experimental-web-platform-features in about:flags"
+      "<strong>Chrome &amp; Opera</strong>: Requires #enable-service-worker and #enable-experimental-web-platform-features in about:flags."
     ]
   },
   {
     "name": "Register / unregister",
-    "description": "Register for a SW and get an instance back, unregister undoes. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#navigator-service-worker-register\">Spec</a>.",
+    "description": "Register for a SW and get an instance back, unregister undoes. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#navigator-service-worker-register\">Spec</a>. <a href=\"/isserviceworkerready/demos/registerunregister/\">Demo</a>.",
     "chrome": {
       "supported": 0.5,
       "minVersion": 35,
       "details": [
-        "Requires #enable-service-worker and #enable-experimental-web-platform-features in about:flags"
+        "Requires #enable-service-worker and #enable-experimental-web-platform-features in about:flags."
       ]
     },
     "firefox": {
@@ -107,9 +107,14 @@
   },
   {
     "name": "<code>postMessage</code> to &amp; from worker",
-    "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#client\">Spec</a>.",
+    "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#client\">Spec</a>. <a href=\"/isserviceworkerready/demos/postMessage/\">Demo</a>.",
     "chrome": {
-      "supported": 0
+      "icon": "canary",
+      "supported": 0.5,
+      "details": [
+        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> and #enable-service-worker and #enable-experimental-web-platform-features in about:flags.",
+        "<code>messageEvent.source</code> is null within the worker, but you can pass your own <code>MessageChannel</code> for 2-way communication."
+      ]
     },
     "firefox": {
       "supported": 0

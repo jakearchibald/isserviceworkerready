@@ -81,7 +81,7 @@ gulp.task('clean', function() {
     .pipe(clean());
 });
 
-gulp.task('build', ['clean', 'sass-build', 'js-build'], function() {
+gulp.task('build', ['clean', 'sass-build'], function() {
   var server = app.listen(3000);
   var writeStream = gulp.dest('build/');
 
@@ -97,7 +97,12 @@ gulp.task('build', ['clean', 'sass-build', 'js-build'], function() {
     'static/css/imgs/ie.png',
     'static/css/imgs/opera.png',
     'static/css/imgs/safari.png',
-    'static/css/imgs/webkit-nightly.png'
+    'static/css/imgs/webkit-nightly.png',
+    'demos/navigator.serviceWorker/',
+    'demos/postMessage/',
+    'demos/postMessage/sw.js',
+    'demos/registerunregister/',
+    'demos/registerunregister/sw.js'
   ]).pipe(writeStream);
 });
 
