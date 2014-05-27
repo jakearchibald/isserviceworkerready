@@ -59,10 +59,7 @@
     "description": "Namespace for page-side ServiceWorker API. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#navigator-service-worker\">Spec</a>.",
     "chrome": {
       "supported": 0.5,
-      "minVersion": 35,
-      "details": [
-        "Requires #enable-service-worker and #enable-experimental-web-platform-features in about:flags"
-      ]
+      "minVersion": 35
     },
     "firefox": {
       "icon": "firefox-nightly",
@@ -73,23 +70,27 @@
     },
     "opera": {
       "supported": 0.5,
-      "minVersion": 21,
-      "details": [
-        "Requires #enable-service-worker and #enable-experimental-web-platform-features in about:flags"
-      ]
+      "minVersion": 21
     },
     "safari": {
       "supported": 0
     },
     "ie": {
       "supported": 0
-    }
+    },
+    "details": [
+      "<strong>Chrome &amp; Opera</strong>: Requires #enable-service-worker and #enable-experimental-web-platform-features in about:flags"
+    ]
   },
   {
     "name": "Register / unregister",
     "description": "Register for a SW and get an instance back, unregister undoes. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#navigator-service-worker-register\">Spec</a>.",
     "chrome": {
-      "supported": 0
+      "supported": 0.5,
+      "minVersion": 35,
+      "details": [
+        "Requires #enable-service-worker and #enable-experimental-web-platform-features in about:flags"
+      ]
     },
     "firefox": {
       "supported": 0
