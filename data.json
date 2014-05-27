@@ -18,7 +18,8 @@
       "supported": 0
     },
     "details": [
-      "<strong>Safari &amp; IE</strong>: No public commitment."
+      "<strong>Safari</strong>: No public commitment.",
+      "<strong>IE</strong>: <a href='http://status.modern.ie/serviceworker'>Under consideration</a>."
     ]
   },
   {
