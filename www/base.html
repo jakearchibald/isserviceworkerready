@@ -4,6 +4,10 @@
     <title>{% block title %}{% endblock %}</title>
     <meta name="viewport" content="width=device-width, minimum-scale=1.0">
     <script>
+      // force https
+      if ((!location.port || location.port == "80") && location.protocol != 'https:') {
+        location.protocol = 'https:';
+      }
       (function(i,r){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();
       })(window,'ga');
