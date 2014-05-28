@@ -402,7 +402,11 @@
     "name": "<code>Response</code>",
     "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#response-objects\">Spec</a>. <a href=\"/isserviceworkerready/demos/globalapis/\">Test</a>.",
     "chrome": {
-      "supported": 0
+      "icon": "canary",
+      "supported": 0.5,
+      "details": [
+        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> and #enable-service-worker and #enable-experimental-web-platform-features in about:flags."
+      ]
     },
     "firefox": {
       "supported": 0
@@ -440,7 +444,10 @@
     "name": "<code>Cache</code>",
     "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#cache\">Spec</a>. <a href=\"/isserviceworkerready/demos/globalapis/\">Test</a>.",
     "chrome": {
-      "supported": 0
+      "supported": 0,
+      "details": [
+        "Constructor is present, but doesn't appear to do anything useful yet, and is based on an older API"
+      ]
     },
     "firefox": {
       "supported": 0
