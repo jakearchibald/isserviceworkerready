@@ -114,6 +114,30 @@
     ]
   },
   {
+    "name": "Debugging",
+    "description": "State of debugging tools",
+    "chrome": {
+      "icon": "canary",
+      "supported": 0.5,
+      "details": [
+        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> and #enable-service-worker and #enable-experimental-web-platform-features in about:flags.",
+        "chrome://serviceworker-internals/ shows console logs, devtools, allows stop/start/unregister"
+      ]
+    },
+    "firefox": {
+      "supported": 0
+    },
+    "opera": {
+      "supported": 0
+    },
+    "safari": {
+      "supported": 0
+    },
+    "ie": {
+      "supported": 0
+    }
+  },
+  {
     "name": "<code>postMessage</code> to &amp; from worker",
     "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#client\">Spec</a>. <a href=\"/isserviceworkerready/demos/postMessage/\">Test</a>.",
     "chrome": {
