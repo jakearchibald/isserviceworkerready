@@ -171,7 +171,11 @@
     "name": "Fetch event",
     "description": "Fires for pages and all sub-resources. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#fetch-event\">Spec</a>. <a href=\"/isserviceworkerready/demos/fetchevent/\">Test</a>.",
     "chrome": {
-      "supported": 0
+      "icon": "canary",
+      "supported": 0.5,
+      "details": [
+        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> and #enable-service-worker and #enable-experimental-web-platform-features in about:flags."
+      ]
     },
     "firefox": {
       "icon": "firefox-nightly",
@@ -217,7 +221,12 @@
     "name": "<code>fetchEvent.respondWith()</code>",
     "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#respond-with-method\">Spec</a>. <a href=\"/isserviceworkerready/demos/fetchevent/\">Test</a>.",
     "chrome": {
-      "supported": 0
+      "icon": "canary",
+      "supported": 0.5,
+      "details": [
+        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> and #enable-service-worker and #enable-experimental-web-platform-features in about:flags.",
+        "<code>event.respondWith(new Response({body:'Hello!'}))</code> seems to produce empty responses"
+      ]
     },
     "firefox": {
       "icon": "firefox-nightly",
@@ -260,7 +269,11 @@
     "name": "Install event",
     "description": "Install event fires in a newly discovered SW. Includes <code>InstallEvent.waitUntil()</code>. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#install-event\">Spec</a>. <a href=\"/isserviceworkerready/demos/installactivate/\">Test</a>.",
     "chrome": {
-      "supported": 0
+      "icon": "canary",
+      "supported": 0.5,
+      "details": [
+        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> and #enable-service-worker and #enable-experimental-web-platform-features in about:flags."
+      ]
     },
     "firefox": {
       "icon": "firefox-nightly",
@@ -283,7 +296,10 @@
     "name": "<code>InstallEvent.replace()</code>",
     "description": "Allow an installing worker to take over in-scope pages once installed. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#replace-method\">Spec</a>. <a href=\"/isserviceworkerready/demos/installactivate/\">Test</a>.",
     "chrome": {
-      "supported": 0
+      "supported": 0,
+      "details": [
+        "Method is present, but can't really test until other lifecycle parts are implemented"
+      ]
     },
     "firefox": {
       "supported": 0
@@ -302,7 +318,11 @@
     "name": "Activate event",
     "description": "Activate event fires after others become redundant. Includes <code>InstallEvent.waitUntil()</code>. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#activate-event\">Spec</a>. <a href=\"/isserviceworkerready/demos/installactivate/\">Test</a>.",
     "chrome": {
-      "supported": 0
+      "icon": "canary",
+      "supported": 0.5,
+      "details": [
+        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> and #enable-service-worker and #enable-experimental-web-platform-features in about:flags."
+      ]
     },
     "firefox": {
       "icon": "firefox-nightly",
