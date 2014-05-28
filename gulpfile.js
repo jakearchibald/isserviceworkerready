@@ -88,7 +88,7 @@ gulp.task('build', ['clean', 'sass-build'], function() {
   writeStream.on('end', server.close.bind(server));
 
   return urlSrc('http://localhost:3000/isserviceworkerready/', [
-    'alpha.html',
+    '',
     'static/css/all.css',
     'static/css/imgs/canary.png',
     'static/css/imgs/chrome.png',

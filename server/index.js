@@ -26,10 +26,10 @@ app.use('/isserviceworkerready/static', express.static(__dirname + '/../www/stat
 app.use('/isserviceworkerready/demos', express.static(__dirname + '/../www/demos'));
 
 app.get(RegExp('^/(isserviceworkerready)?$'), function(req, res) {
-  res.redirect('/isserviceworkerready/alpha.html');
+  res.redirect('/isserviceworkerready/');
 });
 
-app.get('/isserviceworkerready/alpha.html', function(req, res) {
+app.get('/isserviceworkerready/', function(req, res) {
   var features = JSON.parse(fs.readFileSync(__dirname + '/../data.json', 'utf8'));
 
   // add "hasDetails" to each feature
