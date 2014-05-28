@@ -54,7 +54,10 @@
       ]
     },
     "ie": {
-      "supported": 0
+      "supported": 0,
+      "details": [
+        "<a href=\"http://status.modern.ie/promiseses6\">In development</a>"
+      ]
     }
   },
   {
