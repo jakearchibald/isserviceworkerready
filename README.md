@@ -1,6 +1,6 @@
 # Is ServiceWorker Ready Yet?
 
-Tracks the features of ServiceWorker supported in browsers. [View the site](https://jakearchibald.github.io/isserviceworkerready/alpha.html).
+Tracks the features of ServiceWorker supported in browsers. [View the site](https://jakearchibald.github.io/isserviceworkerready).
 
 ## Run locally
 
