@@ -192,6 +192,8 @@
     & .icon {
       opacity: 0.2;
       -webkit-filter: grayscale(100%);
+      // retinaifies filtered icons
+      -webkit-transform: translateZ(0);
         
       @supports (-webkit-filter: grayscale(100%)) {
         opacity: 0.4;
