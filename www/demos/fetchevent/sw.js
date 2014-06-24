@@ -7,6 +7,6 @@ this.onfetch = function(event) {
   console.log(".default", event.default);
 
   if (event.respondWith) {
-    event.respondWith(new Response({body: "This is from the SW!"}));
+    event.respondWith(new Response(new Blob(["Hello world"], {type : 'text/html'})));
   }
 };
