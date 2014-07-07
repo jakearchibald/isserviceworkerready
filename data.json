@@ -85,7 +85,7 @@
       "supported": 0
     },
     "details": [
-      "<strong>Chrome &amp; Opera</strong>: Requires #enable-service-worker and #enable-experimental-web-platform-features in about:flags."
+      "<strong>Chrome &amp; Opera</strong>: Requires #enable-experimental-web-platform-features in about:flags."
     ]
   },
   {
@@ -113,7 +113,7 @@
       "supported": 0
     },
     "details": [
-      "<strong>Chrome &amp; Opera</strong>: Requires #enable-service-worker and #enable-experimental-web-platform-features in about:flags."
+      "<strong>Chrome &amp; Opera</strong>: Requires #enable-experimental-web-platform-features in about:flags."
     ]
   },
   {
@@ -123,7 +123,7 @@
       "icon": "canary",
       "supported": 0.5,
       "details": [
-        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> and #enable-service-worker and #enable-experimental-web-platform-features in about:flags.",
+        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> and #enable-experimental-web-platform-features in about:flags.",
         "chrome://serviceworker-internals/ shows console logs, devtools, allows stop/start/unregister"
       ]
     },
@@ -147,7 +147,7 @@
       "icon": "canary",
       "supported": 0.5,
       "details": [
-        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> and #enable-service-worker and #enable-experimental-web-platform-features in about:flags."
+        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> and #enable-experimental-web-platform-features in about:flags."
       ]
     },
     "firefox": {
@@ -157,7 +157,7 @@
       "icon": "opera-developer",
       "supported": 0.5,
       "details": [
-        "Requires <a href=\"http://www.opera.com/developer\">Opera Developer</a> and #enable-service-worker and #enable-experimental-web-platform-features in about:flags."
+        "Requires <a href=\"http://www.opera.com/developer\">Opera Developer</a> and #enable-experimental-web-platform-features in about:flags."
       ]
     },
     "safari": {
@@ -177,7 +177,7 @@
       "icon": "canary",
       "supported": 0.5,
       "details": [
-        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> and #enable-service-worker and #enable-experimental-web-platform-features in about:flags."
+        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> and #enable-experimental-web-platform-features in about:flags."
       ]
     },
     "firefox": {
@@ -204,7 +204,7 @@
       "icon": "canary",
       "supported": 0.5,
       "details": [
-        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> and #enable-service-worker and #enable-experimental-web-platform-features in about:flags.",
+        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> and #enable-experimental-web-platform-features in about:flags.",
         "Partial implementation, covers url & some headers."
       ]
     },
@@ -233,7 +233,7 @@
       "icon": "canary",
       "supported": 0.5,
       "details": [
-        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> and #enable-service-worker and #enable-experimental-web-platform-features in about:flags."
+        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> and #enable-experimental-web-platform-features in about:flags."
       ]
     },
     "firefox": {
@@ -280,7 +280,7 @@
       "icon": "canary",
       "supported": 0.5,
       "details": [
-        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> and #enable-service-worker and #enable-experimental-web-platform-features in about:flags."
+        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> and #enable-experimental-web-platform-features in about:flags."
       ]
     },
     "firefox": {
@@ -329,7 +329,7 @@
       "icon": "canary",
       "supported": 0.5,
       "details": [
-        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> and #enable-service-worker and #enable-experimental-web-platform-features in about:flags."
+        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> and #enable-experimental-web-platform-features in about:flags."
       ]
     },
     "firefox": {
@@ -394,7 +394,7 @@
       "icon": "canary",
       "supported": 0.5,
       "details": [
-        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> and #enable-service-worker and #enable-experimental-web-platform-features in about:flags.",
+        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> and #enable-experimental-web-platform-features in about:flags.",
         "Following older spec where url is part of the option bag."
       ]
     },
@@ -418,7 +418,7 @@
       "icon": "canary",
       "supported": 0.5,
       "details": [
-        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> and #enable-service-worker and #enable-experimental-web-platform-features in about:flags.",
+        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> and #enable-experimental-web-platform-features in about:flags.",
         "Only supports blobs as the body so far."
       ]
     },
@@ -480,7 +480,7 @@
       "icon": "canary",
       "supported": 0.5,
       "details": [
-        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> and #enable-service-worker and #enable-experimental-web-platform-features in about:flags."
+        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> and #enable-experimental-web-platform-features in about:flags."
       ]
     },
     "firefox": {
