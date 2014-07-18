@@ -7,6 +7,8 @@ this.onfetch = function(event) {
   console.log(".default", event.default);
 
   if (event.respondWith) {
-    event.respondWith(new Response(new Blob(["Hello world"], {type : 'text/html'})));
+    event.respondWith(new Response(new Blob(["Hello <b>world</b>"], {type : 'text/html'}), {
+      headers: {"Content-Type": "text/html"}
+    }));
   }
 };
