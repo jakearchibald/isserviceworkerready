@@ -28,11 +28,8 @@
     "name": "Promises",
     "description": "Not ServiceWorker specific, but required by ServiceWorker. <a href=\"https://people.mozilla.org/~jorendorff/es6-draft.html#sec-promise-objects\">Spec</a>.",
     "chrome": {
-      "supported": 0.5,
-      "minVersion": 32,
-      "details": [
-        "<code>Promise.resolve(promise)</code> creates new promise instance. Fixed in <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a>."
-      ]
+      "supported": 1,
+      "minVersion": 36
     },
     "firefox": {
       "supported": 1,
