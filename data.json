@@ -139,7 +139,7 @@
   },
   {
     "name": "<code>postMessage</code> to &amp; from worker",
-    "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#client\">Spec</a>. <a href=\"/isserviceworkerready/demos/postMessage/\">Test</a>.",
+    "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#service-worker-client\">Spec</a>. <a href=\"/isserviceworkerready/demos/postMessage/\">Test</a>.",
     "chrome": {
       "icon": "canary",
       "supported": 0.5,
@@ -169,7 +169,7 @@
   },
   {
     "name": "Fetch event",
-    "description": "Fires for pages and all sub-resources. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#fetch-event\">Spec</a>. <a href=\"/isserviceworkerready/demos/fetchevent/\">Test</a>.",
+    "description": "Fires for pages and all sub-resources. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#fetch-event-section\">Spec</a>. <a href=\"/isserviceworkerready/demos/fetchevent/\">Test</a>.",
     "chrome": {
       "icon": "canary",
       "supported": 0.5,
@@ -272,7 +272,7 @@
   },
   {
     "name": "Install event",
-    "description": "Install event fires in a newly discovered SW. Includes <code>InstallEvent.waitUntil()</code>. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#install-event\">Spec</a>. <a href=\"/isserviceworkerready/demos/installactivate/\">Test</a>.",
+    "description": "Install event fires in a newly discovered SW. Includes <code>InstallEvent.waitUntil()</code>. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#install-event-section\">Spec</a>. <a href=\"/isserviceworkerready/demos/installactivate/\">Test</a>.",
     "chrome": {
       "icon": "canary",
       "supported": 0.5,
@@ -321,7 +321,7 @@
   },
   {
     "name": "Activate event",
-    "description": "Activate event fires after others become redundant. Includes <code>InstallEvent.waitUntil()</code>. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#activate-event\">Spec</a>. <a href=\"/isserviceworkerready/demos/installactivate/\">Test</a>.",
+    "description": "Activate event fires after others become redundant. Includes <code>InstallEvent.waitUntil()</code>. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#install-phase-event\">Spec</a>. <a href=\"/isserviceworkerready/demos/installactivate/\">Test</a>.",
     "chrome": {
       "icon": "canary",
       "supported": 0.5,
@@ -472,7 +472,7 @@
   },
   {
     "name": "<code>serviceWorker.ready</code>",
-    "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#navigator-service-worker-when-ready\">Spec</a>. <a href=\"/isserviceworkerready/demos/registerunregister/\">Test</a>.",
+    "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#navigator-service-worker-ready\">Spec</a>. <a href=\"/isserviceworkerready/demos/registerunregister/\">Test</a>.",
     "chrome": {
       "icon": "canary",
       "supported": 0.5,
