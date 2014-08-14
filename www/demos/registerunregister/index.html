@@ -25,7 +25,7 @@
       log("Registered!", sw);
 
       setTimeout(function() {
-        navigator.serviceWorker.unregister('./*').then(function() {
+        navigator.serviceWorker.unregister('./').then(function() {
           log("Unregistered");
         }).catch(function(err) {
           log("Unreg failed", err);
