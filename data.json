@@ -371,7 +371,10 @@
     "chrome": {
       "supported": 0.5,
       "icon": "canary",
-      "details": "A new version should take over an existing service worker script when it becomes stale. The 24 hours auto-update logic isn't done yet and replace() functionality is missing so avoid serving long-lived service worker scripts. Known issue: same-scope subsequent registrations with different script urls <a href=\"http://crbug.com/398355\">eagerly discard</a> the existing registration."
+      "details": [
+        "A new version should take over an existing service worker script when it becomes stale. The 24 hours auto-update logic isn't done yet and replace() functionality is missing so avoid serving long-lived service worker scripts.",
+        "Known issue: same-scope subsequent registrations with different script urls <a href=\"http://crbug.com/398355\">eagerly discard</a> the existing registration."
+      ]
     },
     "firefox": {
       "supported": 0
