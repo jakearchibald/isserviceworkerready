@@ -439,7 +439,10 @@
     "name": "<code>fetch(request)</code>",
     "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#service-worker-global-scope-fetch\">Spec</a>. <a href=\"/isserviceworkerready/demos/globalapis/\">Test</a>.",
     "chrome": {
-      "supported": 0
+      "supported": 0.5,
+      "icon": "canary",
+      "details": [
+        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a>"]
     },
     "firefox": {
       "supported": 0
