@@ -395,7 +395,7 @@
       "supported": 0.5,
       "details": [
         "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> and #enable-experimental-web-platform-features in about:flags.",
-        "Following older spec where url is part of the option bag."
+        "Caveats: only supports GET and HEAD methods; omit option for RequestCredentials is not supported; body is missing."
       ]
     },
     "firefox": {
@@ -419,7 +419,7 @@
       "supported": 0.5,
       "details": [
         "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> and #enable-experimental-web-platform-features in about:flags.",
-        "Only supports blobs as the body so far."
+        "Only supports blobs and strings as the body so far."
       ]
     },
     "firefox": {
