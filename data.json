@@ -164,7 +164,7 @@
       "supported": 0
     },
     "details": [
-      "<strong>Chrome & Opera</strong>: <code>messageEvent.source</code> is null within the worker, but you can pass your own <code>MessageChannel</code> for 2-way communication."
+      "<strong>Chrome & Opera</strong>: <code>messageEvent.source</code> is <a href=\"https://crbug.com/403693\">null within the worker</a>, but you can pass your own <code>MessageChannel</code> for 2-way communication."
     ]
   },
   {
