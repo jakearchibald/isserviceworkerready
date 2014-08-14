@@ -441,7 +441,8 @@
       "supported": 0.5,
       "icon": "canary",
       "details": [
-        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> and #enable-experimental-web-platform-features in about:flags."
+        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> and #enable-experimental-web-platform-features in about:flags.",
+        "Only available within ServiceWorkers"
       ]
     },
     "firefox": {
