@@ -442,7 +442,7 @@
       "icon": "canary",
       "details": [
         "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a>.",
-        "Caveats: only supports GET, HEAD (<a href=\"https://crbug.com/402387\">bug for POST support</a>). 30* redirects not supported yet. Promise <a href=\"https://crbug.com/402388\">resolved when the whole body is received</a> when it should resolve on the HTTP headers.",
+        "Caveats: only supports GET, HEAD (<a href=\"https://crbug.com/402387\">bug for POST support</a>). 30* redirects not supported yet. Promise <a href=\"https://crbug.com/402388\">resolved when the whole body is received</a> when it should resolve on the HTTP headers."
       ]
     },
     "firefox": {
