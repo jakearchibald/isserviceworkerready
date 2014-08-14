@@ -20,7 +20,7 @@ if (this.fetch) {
   }).catch(function(err) {
     console.error(err);
   }).then(function() {
-    console.log("Attempting redirected fetch");
+    console.log("Attempting fetch outside of scope");
     return fetch('/');
   }).then(function(res) {
     console.log("Response", res);
