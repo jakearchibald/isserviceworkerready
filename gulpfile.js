@@ -11,6 +11,7 @@ var app = require('./server');
 var urlSrc = require('./url-src');
 var path = require('path');
 var es = require('event-stream');
+var fs = require('fs');
 
 var jsEntryPoints = [
 ];
@@ -81,13 +82,28 @@ gulp.task('clean', function() {
     .pipe(clean());
 });
 
+function getDeepDirContentsSync(path) {
+  var paths = [];
+
+  fs.readdirSync(path).filter(function(name) {
+    return name.slice(0,1) != '.';
+  }).forEach(function(name) {
+    var newPath = path + '/' + name;
+    if (fs.statSync(newPath).isDirectory()) {
+      paths = paths.concat(getDeepDirContentsSync(newPath));
+    }
+    else {
+      paths.push(newPath);
+    }
+  });
+
+  return paths;
+}
+
 gulp.task('build', ['clean', 'sass-build'], function() {
   var server = app.listen(3000);
   var writeStream = gulp.dest('build/');
-
-  writeStream.on('end', server.close.bind(server));
-
-  return urlSrc('http://localhost:3000/isserviceworkerready/', [
+  var urls = [
     '',
     'static/css/all.css',
     'static/css/imgs/canary.png',
@@ -98,19 +114,18 @@ gulp.task('build', ['clean', 'sass-build'], function() {
     'static/css/imgs/opera.png',
     'static/css/imgs/opera-developer.png',
     'static/css/imgs/safari.png',
-    'static/css/imgs/webkit-nightly.png',
-    'demos/fetchevent/',
-    'demos/fetchevent/sw.js',
-    'demos/globalapis/',
-    'demos/globalapis/sw.js',
-    'demos/installactivate/',
-    'demos/installactivate/sw.js',
-    'demos/navigator.serviceWorker/',
-    'demos/postMessage/',
-    'demos/postMessage/sw.js',
-    'demos/registerunregister/',
-    'demos/registerunregister/sw.js'
-  ]).pipe(writeStream);
+    'static/css/imgs/webkit-nightly.png'
+  ];
+
+  urls = urls.concat(
+    getDeepDirContentsSync(__dirname + '/www/demos').map(function(path) {
+      return path.slice((__dirname + '/www/').length);
+    })
+  );
+
+  writeStream.on('end', server.close.bind(server));
+
+  return urlSrc('http://localhost:3000/isserviceworkerready/', urls).pipe(writeStream);
 });
 
 gulp.task('default', ['watch', 'server']);
