@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      white-space: pre;
+      font-family: monospace;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body><script>
+    function log() {
+      document.body.appendChild(document.createTextNode(Array.prototype.join.call(arguments, ", ") + '\n'));
+      console.log.apply(console, arguments);
+    }
+
+    window.onerror = function(err) {
+      log("Error", err);
+    };
+
+    log("fetch on window", window.fetch || false);
+
+    navigator.serviceWorker.register('sw.js', {
+      scope: './'
+    }).then(function(sw) {
+      log("Registered", sw);
+    }).catch(function(err) {
+      log("Error", err);
+    });
+  </script></body>
+</html>

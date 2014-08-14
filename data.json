@@ -436,12 +436,13 @@
   },
   {
     "name": "<code>fetch(request)</code>",
-    "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#service-worker-global-scope-fetch\">Spec</a>. <a href=\"/isserviceworkerready/demos/globalapis/\">Test</a>.",
+    "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#service-worker-global-scope-fetch\">Spec</a>. <a href=\"/isserviceworkerready/demos/fetch/\">Test</a>.",
     "chrome": {
       "supported": 0.5,
       "icon": "canary",
       "details": [
-        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a>"]
+        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> and #enable-experimental-web-platform-features in about:flags."
+      ]
     },
     "firefox": {
       "supported": 0
