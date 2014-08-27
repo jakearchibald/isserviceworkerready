@@ -23,9 +23,9 @@
       scope: './'
     }).then(function(sw) {
       log("Registered!", sw);
-
+      
       setTimeout(function() {
-        navigator.serviceWorker.unregister('./').then(function() {
+        sw.unregister().then(function() {
           log("Unregistered");
         }).catch(function(err) {
           log("Unreg failed", err);
@@ -35,11 +35,11 @@
       log("Reg failed", err);
     });
 
-    log("whenReady", navigator.serviceWorker.whenReady);
+    log("ready", navigator.serviceWorker.ready);
 
-    if (navigator.serviceWorker.whenReady) {
-      navigator.serviceWorker.whenReady().then(function() {
-        log("whenReady resolved");
+    if (navigator.serviceWorker.ready) {
+      navigator.serviceWorker.ready.then(function() {
+        log("ready resolved");
       });
     }
   </script></body>
