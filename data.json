@@ -58,6 +58,30 @@
     }
   },
   {
+    "name": "Debugging",
+    "description": "State of debugging tools",
+    "chrome": {
+      "icon": "canary",
+      "supported": 0.5,
+      "details": [
+        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> and #enable-experimental-web-platform-features in about:flags.",
+        "chrome://serviceworker-internals/ shows console logs, devtools, allows stop/start/unregister"
+      ]
+    },
+    "firefox": {
+      "supported": 0
+    },
+    "opera": {
+      "supported": 0
+    },
+    "safari": {
+      "supported": 0
+    },
+    "ie": {
+      "supported": 0
+    }
+  },
+  {
     "name": "<code>navigator.serviceWorker</code>",
     "description": "Namespace for page-side ServiceWorker API. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#navigator-service-worker\">Spec</a>. <a href=\"/isserviceworkerready/demos/navigator.serviceWorker/\">Test</a>.",
     "chrome": {
@@ -113,30 +137,6 @@
     },
     "details": [
     ]
-  },
-  {
-    "name": "Debugging",
-    "description": "State of debugging tools",
-    "chrome": {
-      "icon": "canary",
-      "supported": 0.5,
-      "details": [
-        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> and #enable-experimental-web-platform-features in about:flags.",
-        "chrome://serviceworker-internals/ shows console logs, devtools, allows stop/start/unregister"
-      ]
-    },
-    "firefox": {
-      "supported": 0
-    },
-    "opera": {
-      "supported": 0
-    },
-    "safari": {
-      "supported": 0
-    },
-    "ie": {
-      "supported": 0
-    }
   },
   {
     "name": "<code>postMessage</code> to &amp; from worker",
@@ -296,9 +296,10 @@
     "name": "<code>InstallEvent.replace()</code>",
     "description": "Allow an installing worker to take over in-scope pages once installed. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#replace-method\">Spec</a>. <a href=\"/isserviceworkerready/demos/installactivate/\">Test</a>.",
     "chrome": {
-      "supported": 0,
+      "icon": "canary",
+      "supported": 0.5,
       "details": [
-        "Method is present, but not relevant until other lifecycle parts are implemented"
+        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> and #enable-experimental-web-platform-features in about:flags."
       ]
     },
     "firefox": {
@@ -372,7 +373,6 @@
       "icon": "canary",
       "details": [
         "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> and #enable-experimental-web-platform-features in about:flags.",
-        "A new version should take over an existing service worker script when it becomes stale. The 24 hours auto-update logic isn't done yet and replace() functionality is missing so avoid serving long-lived service worker scripts.",
         "Known issue: same-scope subsequent registrations with different script urls <a href=\"http://crbug.com/398355\">eagerly discard</a> the existing registration."
       ]
     },
@@ -397,7 +397,8 @@
       "supported": 0.5,
       "details": [
         "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> and #enable-experimental-web-platform-features in about:flags.",
-        "Caveats: only supports GET and HEAD methods; omit option for RequestCredentials is not supported; body is missing."
+        "Caveats: only supports GET and HEAD methods; omit option for RequestCredentials is not supported; body is missing.",
+        "Based on an earlier version of the spec, so <code>request.body.asJSON</code> rather than <code>request.json</code>"
       ]
     },
     "firefox": {
@@ -421,7 +422,8 @@
       "supported": 0.5,
       "details": [
         "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> and #enable-experimental-web-platform-features in about:flags.",
-        "Only supports blobs and strings as the body so far."
+        "Only supports blobs and strings as the body so far.",
+        "Based on an earlier version of the spec, so <code>request.body.asJSON</code> rather than <code>request.json</code>"
       ]
     },
     "firefox": {
@@ -478,7 +480,10 @@
     },
     "ie": {
       "supported": 0
-    }
+    },
+    "details": [
+      "<a href=\"https://github.com/coonsta/cache-polyfill\">Polyfill available</a>"
+    ]
   },
   {
     "name": "<code>serviceWorker.ready</code>",
