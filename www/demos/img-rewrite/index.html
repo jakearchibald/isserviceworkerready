@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      white-space: pre-line;
+      font-family: monospace;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <img src="https://farm3.staticflickr.com/2916/14632988974_b3fe4012b8.jpg">
+  <script>
+    function log() {
+      document.body.appendChild(document.createTextNode(Array.prototype.join.call(arguments, ", ") + '\n'));
+      console.log.apply(console, arguments);
+    }
+
+    window.onerror = function(err) {
+      log("Error", err);
+    };
+
+    navigator.serviceWorker.register('sw.js', {
+      scope: './'
+    }).then(function(sw) {
+      log("Registered!", sw);
+      log("You should get a different response when you refresh");
+    }).catch(function(err) {
+      log("Error", err);
+    });
+  </script></body>
+</html>
