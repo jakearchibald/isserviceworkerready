@@ -43,10 +43,9 @@
       ]
     },
     "safari": {
-      "icon": "webkit-nightly",
+      "minVersion": 7.1,
       "supported": 0.5,
       "details": [
-        "Supported in <a href=\"http://nightly.webkit.org/\">nightlies</a> only",
         "<code>Promise.resolve(promise)</code> creates new promise instance. <a href=\"https://bugs.webkit.org/show_bug.cgi?id=128382\">Ticket</a>."
       ]
     },
