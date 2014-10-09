@@ -193,10 +193,11 @@
     "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#fetch-event-section\">Spec</a>. <a href=\"/isserviceworkerready/demos/fetchevent/\">Test</a>.",
     "chrome": {
       "icon": "canary",
-      "supported": 0.5,
+      "supported": 1,
       "details": [
         "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> and #enable-experimental-web-platform-features in about:flags.",
-        "Partial implementation, covers url & some headers."
+        "Caveat 1: mode is incorrectly set to 'no-cors' even if the request is 'CORS' (<a href=\"http://crbug.com/408507\">crbug/408507</a>)",
+        "Caveat 2: credentials mode is incorrectly set to 'omit' when it should be 'same-origin' or 'include' (<a href=\"http://crbug.com/418509\">crbug/418509</a>)"
       ]
     },
     "firefox": {
@@ -296,10 +297,7 @@
     "description": "Allow an installing worker to take over in-scope pages once installed. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#replace-method\">Spec</a>. <a href=\"/isserviceworkerready/demos/installactivate/\">Test</a>.",
     "chrome": {
       "icon": "canary",
-      "supported": 0.5,
-      "details": [
-        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> and #enable-experimental-web-platform-features in about:flags."
-      ]
+      "supported": 0
     },
     "firefox": {
       "supported": 0
@@ -371,8 +369,7 @@
       "supported": 0.5,
       "icon": "canary",
       "details": [
-        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> and #enable-experimental-web-platform-features in about:flags.",
-        "Known issue: same-scope subsequent registrations with different script urls <a href=\"http://crbug.com/398355\">eagerly discard</a> the existing registration."
+        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> and #enable-experimental-web-platform-features in about:flags."
       ]
     },
     "firefox": {
@@ -393,11 +390,10 @@
     "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#request-objects\">Spec</a>. <a href=\"/isserviceworkerready/demos/globalapis/\">Test</a>.",
     "chrome": {
       "icon": "canary",
-      "supported": 0.5,
+      "supported": 1,
       "details": [
         "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> and #enable-experimental-web-platform-features in about:flags.",
-        "Caveats: only supports GET and HEAD methods; omit option for RequestCredentials is not supported; body is missing.",
-        "Based on an earlier version of the spec, so <code>request.body.asJSON</code> rather than <code>request.json</code>"
+        "Caveats: omit option for RequestCredentials is not supported; formData and bodyUsed are not supported yet."
       ]
     },
     "firefox": {
@@ -418,11 +414,11 @@
     "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#response-objects\">Spec</a>. <a href=\"/isserviceworkerready/demos/globalapis/\">Test</a>.",
     "chrome": {
       "icon": "canary",
-      "supported": 0.5,
+      "supported": 1,
       "details": [
         "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> and #enable-experimental-web-platform-features in about:flags.",
-        "Only supports blobs and strings as the body so far.",
-        "Based on an earlier version of the spec, so <code>request.body.asJSON</code> rather than <code>request.json</code>"
+        "Caveats 1: no support yet for formData and URLSearchParams as the body.",
+        "Caveats 2: no support yet for error() and redirect(...)."
       ]
     },
     "firefox": {
@@ -446,7 +442,8 @@
       "icon": "canary",
       "details": [
         "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> and #enable-experimental-web-platform-features in about:flags.",
-        "Only available within ServiceWorkers"
+        "Only available within ServiceWorkers.",
+        "Caveat: no support for redirections yet (<a rhef=\"http://crbug.com/402389\">crbug/402389</a>), fetch promise resolves when the whole body is received instead of when HTTP headers are received (<a rhef=\"http://crbug.com/402388\">crbug/402388</a>)."
       ]
     },
     "firefox": {
@@ -488,9 +485,9 @@
     "name": "<code>serviceWorker.ready</code>",
     "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#navigator-service-worker-ready\">Spec</a>. <a href=\"/isserviceworkerready/demos/registerunregister/\">Test</a>.",
     "chrome": {
-      "supported": 0,
+      "supported": 1,
       "details": [
-        "API exists in Canary, but never resolves"
+        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> and #enable-experimental-web-platform-features in about:flags."
       ]
     },
     "firefox": {
