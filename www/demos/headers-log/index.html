@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      white-space: pre-line;
+      font-family: monospace;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <img src="https://trained-to-thrill-proxy.appspot.com/farm4.staticflickr.com/3843/14933673901_1e7a7ab1f2_b.jpg" crossorigin>
+  <script>
+    navigator.serviceWorker.register('sw.js', {
+      scope: './'
+    }).then(function(sw) {
+      console.log("Registered!", sw);
+    }).catch(function(err) {
+      console.log("Error", err);
+    });
+  </script>
+</body>
+</html>
