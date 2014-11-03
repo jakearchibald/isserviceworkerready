@@ -63,7 +63,7 @@
       "icon": "canary",
       "supported": 0.5,
       "details": [
-        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> and #enable-experimental-web-platform-features in about:flags.",
+        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a>",
         "chrome://inspect#service-worker lets you inspect and debug Service Workers.",
         "chrome://serviceworker-internals/ shows console logs, devtools, allows stop/start/unregister."
       ]
@@ -114,10 +114,7 @@
     "description": "Register for a SW and get a registration instance back, unregister undoes. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#navigator-service-worker-register\">Spec</a>. <a href=\"/isserviceworkerready/demos/registerunregister/\">Test</a>.",
     "chrome": {
       "icon": "canary",
-      "supported": 0.5,
-      "details": [
-        "Requires #enable-experimental-web-platform-features in about:flags."
-      ]
+      "supported": 0.5
     },
     "firefox": {
       "icon": "firefox-nightly",
@@ -145,7 +142,7 @@
       "icon": "canary",
       "supported": 0.5,
       "details": [
-        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> and #enable-experimental-web-platform-features in about:flags.",
+        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a>",
         "<code>messageEvent.source</code> is <a href=\"https://crbug.com/403693\">null within the worker</a>, but you can pass your own <code>MessageChannel</code> for 2-way communication."
       ]
     },
@@ -169,7 +166,7 @@
       "icon": "canary",
       "supported": 0.5,
       "details": [
-        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> and #enable-experimental-web-platform-features in about:flags."
+        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a>"
       ]
     },
     "firefox": {
@@ -196,7 +193,7 @@
       "icon": "canary",
       "supported": 0.5,
       "details": [
-        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> and #enable-experimental-web-platform-features in about:flags.",
+        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a>",
         "Partial implementation, covers method, url, referer and header. Note: credentials are not accurately initialized (<a href=\"http://crbug.com/418509\">crbug#418509</a>)."
       ]
     },
@@ -225,7 +222,7 @@
       "icon": "canary",
       "supported": 0.5,
       "details": [
-        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> and #enable-experimental-web-platform-features in about:flags."
+        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a>"
       ]
     },
     "firefox": {
@@ -272,7 +269,7 @@
       "icon": "canary",
       "supported": 0.5,
       "details": [
-        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> and #enable-experimental-web-platform-features in about:flags."
+        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a>"
       ]
     },
     "firefox": {
@@ -296,11 +293,7 @@
     "name": "<code>InstallEvent.replace()</code>",
     "description": "Allow an installing worker to take over in-scope pages once installed. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#replace-method\">Spec</a>. <a href=\"/isserviceworkerready/demos/installactivate/\">Test</a>.",
     "chrome": {
-      "icon": "canary",
-      "supported": 0.5,
-      "details": [
-        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> and #enable-experimental-web-platform-features in about:flags."
-      ]
+      "supported": 0
     },
     "firefox": {
       "supported": 0
@@ -322,7 +315,7 @@
       "icon": "canary",
       "supported": 0.5,
       "details": [
-        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> and #enable-experimental-web-platform-features in about:flags."
+        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a>"
       ]
     },
     "firefox": {
@@ -349,7 +342,7 @@
       "supported": 0.5,
       "icon": "canary",
       "details": [
-        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> and #enable-experimental-web-platform-features in about:flags."
+        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a>"
       ]
     },
     "firefox": {
@@ -372,7 +365,7 @@
       "supported": 0.5,
       "icon": "canary",
       "details": [
-        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> and #enable-experimental-web-platform-features in about:flags."
+        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a>"
       ]
     },
     "firefox": {
@@ -395,7 +388,7 @@
       "icon": "canary",
       "supported": 0.5,
       "details": [
-        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> and #enable-experimental-web-platform-features in about:flags."
+        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a>"
       ]
     },
     "firefox": {
@@ -418,8 +411,8 @@
       "icon": "canary",
       "supported": 0.5,
       "details": [
-        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> and #enable-experimental-web-platform-features in about:flags.",
-        "Caveat: URLSearchParams as well as creating a Response from FormData are not supported yet. (<a href=\"https://code.google.com/p/chromium/issues/detail?id=412027#c5\">crbug#412027</a>)."
+        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a>",
+        "URLSearchParams as well as creating a Response from FormData are not supported yet. (<a href=\"https://code.google.com/p/chromium/issues/detail?id=412027#c5\">crbug#412027</a>)."
       ]
     },
     "firefox": {
@@ -442,7 +435,7 @@
       "supported": 0.5,
       "icon": "canary",
       "details": [
-        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a> and #enable-experimental-web-platform-features in about:flags.",
+        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a>",
         "Only available within ServiceWorkers"
       ]
     },
@@ -463,7 +456,13 @@
     "name": "<code>caches</code>",
     "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#service-worker-global-scope-caches\">Spec</a>. <a href=\"/isserviceworkerready/demos/globalapis/\">Test</a>.",
     "chrome": {
-      "supported": 0
+      "supported": 0.5,
+      "icon": "canary",
+      "details": [
+        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a>",
+        "Only available within ServiceWorkers",
+        "Some higher-level methods absent such as <code>caches.match</code>, <code>cache.add</code>, <code>cache.addAll</code>"
+      ]
     },
     "firefox": {
       "supported": 0
