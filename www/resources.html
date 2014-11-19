@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+{% block title %}Service Worker Resources{% endblock %}
+
+{% block body %}
+  {% include 'masthead.html' %}
+
+  <article class="feature" id="articles">
+    <header class="no-background">
+      <a href="#articles" class="perma">
+        <h1 class="feature-name">Articles</h1>
+      </a>
+    </header>
+    <ul class="details">
+      <li><a href="http://jakearchibald.com/2014/using-serviceworker-today/">Using Service Workers Today</a></li>
+      <li><a href="http://www.html5rocks.com/en/tutorials/es6/promises/">JavaScript Promises</a></li>
+    </ul>
+  </article>
+
+  <article class="feature" id="recipes">
+    <header class="no-background">
+      <a href="#recipes" class="perma">
+        <h1 class="feature-name">Sample Code & Recipes</h1>
+      </a>
+    </header>
+    <ul class="details">
+      <li><a href="https://github.com/GoogleChrome/samples/tree/gh-pages/service-worker/prefetch">Prefetching Resources During Registration</a></li>
+      <li><a href="https://github.com/GoogleChrome/samples/tree/gh-pages/service-worker/selective-caching">Selective Read-through Caching</a></li>
+      <li><a href="https://github.com/GoogleChrome/samples/tree/gh-pages/service-worker/mock-responses">Returning Mock Responses</a></li>
+      <li><a href="https://github.com/GoogleChrome/samples/tree/gh-pages/service-worker/fallback-response">Returning Fallback Responses</a></li>
+      <li><a href="https://github.com/GoogleChrome/samples/tree/gh-pages/service-worker">...and more!</a></li>
+    </ul>
+  </article>
+
+  <article class="feature" id="reference-apps">
+    <header class="no-background">
+      <a href="#reference-apps" class="perma">
+        <h1 class="feature-name">Reference Apps</h1>
+      </a>
+    </header>
+    <ul class="details">
+      <li><a href="https://github.com/jakearchibald/trained-to-thrill">Trained to Thrill</a></li>
+      <li><a href="https://github.com/GoogleChrome/devsummit">Chrome Dev Summit</a></li>
+    </ul>
+  </article>
+
+  <article class="feature" id="documentation">
+    <header class="no-background">
+      <a href="#documentation" class="perma">
+        <h1 class="feature-name">Documentation</h1>
+      </a>
+    </header>
+    <ul class="details">
+      <li><a href="https://slightlyoff.github.io/ServiceWorker/spec/service_worker/index.html">Service Worker Specification (draft)</a></li>
+      <li><a href="https://fetch.spec.whatwg.org/">Fetch API Specification (living standard)</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promises</a></li>
+    </ul>
+  </article>
+
+<article class="feature" id="libraries">
+  <header class="no-background">
+    <a href="#libraries" class="perma">
+      <h1 class="feature-name">Libraries</h1>
+    </a>
+  </header>
+  <ul class="details">
+    <li><a href="https://github.com/jeffposnick/service-worker-cache">&lt;service-worker-cache&gt; Polymer Element</a></li>
+    <li><a href="https://github.com/dmurph/sw-status">&lt;sw-status&gt; Polymer Element</a></li>
+  </ul>
+</article>
+
+  <p class="outro">ServiceWorker is coming. Look busy.</p>
+{% endblock %}
