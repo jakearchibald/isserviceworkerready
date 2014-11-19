@@ -25,6 +25,10 @@ app.use(function(req, res, next){
 app.use('/isserviceworkerready/static', express.static(__dirname + '/../www/static'));
 app.use('/isserviceworkerready/demos', express.static(__dirname + '/../www/demos'));
 
+app.get('/isserviceworkerready/resources.html', function(req, res) {
+  res.render('resources.html');
+});
+
 app.get(RegExp('^/(isserviceworkerready)?$'), function(req, res) {
   res.redirect('/isserviceworkerready/');
 });

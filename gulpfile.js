@@ -105,6 +105,7 @@ gulp.task('build', ['clean', 'sass-build'], function() {
   var writeStream = gulp.dest('build/');
   var urls = [
     '',
+    'resources.html',
     'static/css/all.css',
     'static/css/imgs/canary.png',
     'static/css/imgs/chrome.png',
