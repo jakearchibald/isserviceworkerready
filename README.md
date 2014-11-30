@@ -7,20 +7,19 @@ Tracks the features of ServiceWorker supported in browsers. [View the site](http
 To install, run the following in the root of your cloned copy of the repo:
 
 ```sh
-npm install -g gulp
 npm install
 ```
 
 To serve the site on `localhost:3000`:
 
 ```sh
-gulp
+npm run serve
 ```
 
 To build the site:
 
 ```sh
-gulp build
+npm run build
 ```
 
 ## Contribute
