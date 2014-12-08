@@ -1,4 +1,0 @@
-[submodule "build"]
-	path = build
-	url = git@github.com:jakearchibald/isserviceworkerready.git
-	branch = gh-pages
