@@ -1,14 +1,4 @@
 {
-  "name": "isserviceworkerready",
-  "version": "0.0.0",
-  "description": "ServiceWorker status",
-  "main": "index.js",
-  "scripts": {
-    "build": "gulp build",
-    "serve": "gulp"
-  },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "browserify": "^6.3.3",
     "event-stream": "^3.1.5",
@@ -25,5 +15,10 @@
     "vinyl": "^0.4.6",
     "vinyl-source-stream": "^1.0.0",
     "watchify": "^2.1.1"
+  },
+  "private": true,
+  "scripts": {
+    "build": "gulp build",
+    "serve": "gulp"
   }
 }
