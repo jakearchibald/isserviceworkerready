@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block title %}Is ServiceWorker ready?{% endblock %}
+
+{% block body %}
+  {% include 'masthead.html' %}
+  {% for feature in features %}
+    {% set featureId = feature.name|striptags|lower|replace("\s+", '-', 'g') %}
+    <article class="feature" id="{{ featureId }}">
+      <header>
+        <a href="#{{ featureId }}" class="perma">
+          <h1 class="feature-name">
+            {{ feature.name|safe }}
+          </h1>
+        </a>
+        <p>{{ feature.description|safe }}</p>
+      </header>
+      <div class="results">
+        {% for browser in browsers %}
+          <section class="result {% if feature[browser.id].supported == 0.5 %}ish{% elif feature[browser.id].supported %}yes{% else %}no{% endif %}">
+            <h1 class="icon {{ feature[browser.id].icon|default(browser.id) }}">{{browser.name}}</h1>
+            {% if feature[browser.id].supported %}
+              <p class="support">
+                {% if feature[browser.id].supported == 0.5 %}
+                  Somewhat supported
+                {% else %}
+                  Supported
+                {% endif %}
+                {% if feature[browser.id].minVersion %}
+                  since version <span class="version">{{ feature[browser.id].minVersion }}</span>
+                {% endif %}
+              </p>
+            {% else %}
+              <p class="support">No support</p>
+            {% endif %}
+          </section>
+        {% endfor %}
+    </div>
+        <ul class="details">
+          {% for browser in browsers %}
+            {% for detail in feature[browser.id].details %}
+              <li><strong>{{ browser.name }}:</strong> {{ detail|safe }}</li>
+            {% endfor %}
+          {% endfor %}
+          {% for detail in feature.details %}
+            <li>{{ detail|safe }}</li>
+          {% endfor %}
+        </ul>
+    </article>
+  {% endfor %}
+
+  <p class="outro">ServiceWorker is coming. Look busy.</p>
+{% endblock %}
