@@ -64,7 +64,7 @@
       "supported": 0.5,
       "details": [
         "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a>",
-        "chrome://inspect#service-worker lets you inspect and debug Service Workers.",
+        "chrome://inspect/#service-workers lets you inspect and debug Service Workers.",
         "chrome://serviceworker-internals/ shows console logs, devtools, allows stop/start/unregister."
       ]
     },
