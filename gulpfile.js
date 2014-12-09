@@ -1,5 +1,5 @@
 var gulp = require('gulp');
-var sass = require('gulp-ruby-sass');
+var sass = require('gulp-sass');
 var uglify = require('gulp-uglify');
 var clean = require('gulp-clean');
 var buffer = require('gulp-buffer');

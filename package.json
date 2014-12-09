@@ -12,7 +12,7 @@
     "browserify": "~3.31.2",
     "rsvp": "~3.0.6",
     "gulp": "~3.8.8",
-    "gulp-ruby-sass": "~0.4.3",
+    "gulp-sass": "~1.2.4",
     "watchify": "~0.6.4",
     "vinyl-source-stream": "~0.1.1",
     "express": "~3.4.8",
