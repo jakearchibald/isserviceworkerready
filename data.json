@@ -60,11 +60,11 @@
     "name": "Debugging",
     "description": "State of debugging tools",
     "chrome": {
-      "icon": "canary",
       "supported": 0.5,
+      "minVersion": 40,
       "details": [
-        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a>",
-        "chrome://inspect#service-worker lets you inspect and debug Service Workers.",
+        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/beta.html\">Chrome Beta</a>",
+        "chrome://inspect/#service-workers lets you inspect and debug Service Workers.",
         "chrome://serviceworker-internals/ shows console logs, devtools, allows stop/start/unregister."
       ]
     },
@@ -86,7 +86,10 @@
     "description": "Namespace for page-side ServiceWorker API. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#navigator-service-worker\">Spec</a>. <a href=\"/isserviceworkerready/demos/navigator.serviceWorker/\">Test</a>.",
     "chrome": {
       "supported": 0.5,
-      "minVersion": 35
+      "minVersion": 40,
+      "details": [
+        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/beta.html\">Chrome Beta</a>"
+      ]
     },
     "firefox": {
       "icon": "firefox-nightly",
@@ -106,15 +109,18 @@
       "supported": 0
     },
     "details": [
-      "<strong>Chrome &amp; Opera</strong>: Requires #enable-experimental-web-platform-features in about:flags."
+      "<strong>Opera</strong>: Requires #enable-experimental-web-platform-features in about:flags."
     ]
   },
   {
     "name": "Register / unregister",
     "description": "Register for a SW and get a registration instance back, unregister undoes. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#navigator-service-worker-register\">Spec</a>. <a href=\"/isserviceworkerready/demos/registerunregister/\">Test</a>.",
     "chrome": {
-      "icon": "canary",
-      "supported": 0.5
+      "supported": 0.5,
+      "minVersion": 40,
+      "details": [
+        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/beta.html\">Chrome Beta</a>"
+      ]
     },
     "firefox": {
       "icon": "firefox-nightly",
@@ -139,10 +145,10 @@
     "name": "<code>postMessage</code> to &amp; from worker",
     "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#service-worker-client\">Spec</a>. <a href=\"/isserviceworkerready/demos/postMessage/\">Test</a>.",
     "chrome": {
-      "icon": "canary",
       "supported": 0.5,
+      "minVersion": 40,
       "details": [
-        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a>",
+        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/beta.html\">Chrome Beta</a>",
         "<code>messageEvent.source</code> is <a href=\"https://crbug.com/403693\">null within the worker</a>, but you can pass your own <code>MessageChannel</code> for 2-way communication."
       ]
     },
@@ -163,10 +169,10 @@
     "name": "Fetch event",
     "description": "Fires for pages and all sub-resources. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#fetch-event-section\">Spec</a>. <a href=\"/isserviceworkerready/demos/fetchevent/\">Test</a>.",
     "chrome": {
-      "icon": "canary",
       "supported": 0.5,
+      "minVersion": 40,
       "details": [
-        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a>"
+        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/beta.html\">Chrome Beta</a>"
       ]
     },
     "firefox": {
@@ -190,11 +196,11 @@
     "name": "<code>fetchEvent.request</code>",
     "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#fetch-event-section\">Spec</a>. <a href=\"/isserviceworkerready/demos/fetchevent/\">Test</a>.",
     "chrome": {
-      "icon": "canary",
       "supported": 0.5,
+      "minVersion": 40,
       "details": [
-        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a>",
-        "Partial implementation, covers method, url, referer and header. Note: credentials are not accurately initialized (<a href=\"http://crbug.com/418509\">crbug#418509</a>)."
+        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/beta.html\">Chrome Beta</a>",
+        "Partial implementation, covers method, url, referer, header, mode and credentials."
       ]
     },
     "firefox": {
@@ -219,10 +225,10 @@
     "name": "<code>fetchEvent.respondWith()</code>",
     "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#respond-with-method\">Spec</a>. <a href=\"/isserviceworkerready/demos/fetchevent/\">Test</a>.",
     "chrome": {
-      "icon": "canary",
       "supported": 0.5,
+      "minVersion": 40,
       "details": [
-        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a>"
+        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/beta.html\">Chrome Beta</a>"
       ]
     },
     "firefox": {
@@ -266,10 +272,10 @@
     "name": "Install event",
     "description": "Install event fires in a newly discovered SW. Includes <code>InstallEvent.waitUntil()</code>. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#install-event-section\">Spec</a>. <a href=\"/isserviceworkerready/demos/installactivate/\">Test</a>.",
     "chrome": {
-      "icon": "canary",
       "supported": 0.5,
+      "minVersion": 40,
       "details": [
-        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a>"
+        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/beta.html\">Chrome Beta</a>"
       ]
     },
     "firefox": {
@@ -312,10 +318,10 @@
     "name": "Activate event",
     "description": "Activate event fires after others become redundant. Includes <code>InstallEvent.waitUntil()</code>. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#install-phase-event\">Spec</a>. <a href=\"/isserviceworkerready/demos/installactivate/\">Test</a>.",
     "chrome": {
-      "icon": "canary",
       "supported": 0.5,
+      "minVersion": 40,
       "details": [
-        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a>"
+        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/beta.html\">Chrome Beta</a>"
       ]
     },
     "firefox": {
@@ -340,9 +346,9 @@
     "description": "Browser checks for SW updates after navigation. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#update-algorithm\">Spec</a>.",
     "chrome": {
       "supported": 0.5,
-      "icon": "canary",
+      "minVersion": 40,
       "details": [
-        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a>"
+        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/beta.html\">Chrome Beta</a>"
       ]
     },
     "firefox": {
@@ -363,9 +369,9 @@
     "description": "Allow a next version to be in waiting &amp; take over when appropriate.",
     "chrome": {
       "supported": 0.5,
-      "icon": "canary",
+      "minVersion": 40,
       "details": [
-        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a>"
+        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/beta.html\">Chrome Beta</a>"
       ]
     },
     "firefox": {
@@ -385,10 +391,10 @@
     "name": "<code>Request</code>",
     "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#request-objects\">Spec</a>. <a href=\"/isserviceworkerready/demos/globalapis/\">Test</a>.",
     "chrome": {
-      "icon": "canary",
       "supported": 0.5,
+      "minVersion": 40,
       "details": [
-        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a>"
+        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/beta.html\">Chrome Beta</a>"
       ]
     },
     "firefox": {
@@ -408,10 +414,10 @@
     "name": "<code>Response</code>",
     "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#response-objects\">Spec</a>. <a href=\"/isserviceworkerready/demos/globalapis/\">Test</a>.",
     "chrome": {
-      "icon": "canary",
       "supported": 0.5,
+      "minVersion": 40,
       "details": [
-        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a>",
+        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/beta.html\">Chrome Beta</a>",
         "URLSearchParams as well as creating a Response from FormData are not supported yet. (<a href=\"https://code.google.com/p/chromium/issues/detail?id=412027#c5\">crbug#412027</a>)."
       ]
     },
@@ -433,9 +439,9 @@
     "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#service-worker-global-scope-fetch\">Spec</a>. <a href=\"/isserviceworkerready/demos/fetch/\">Test</a>.",
     "chrome": {
       "supported": 0.5,
-      "icon": "canary",
+      "minVersion": 40,
       "details": [
-        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a>",
+        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/beta.html\">Chrome Beta</a>",
         "Only available within ServiceWorkers"
       ]
     },
@@ -450,16 +456,19 @@
     },
     "ie": {
       "supported": 0
-    }
+    },
+    "details": [
+      "<a href=\"https://github.com/github/fetch\">Polyfill available</a>"
+    ]
   },
   {
     "name": "<code>caches</code>",
     "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#service-worker-global-scope-caches\">Spec</a>. <a href=\"/isserviceworkerready/demos/globalapis/\">Test</a>.",
     "chrome": {
       "supported": 0.5,
-      "icon": "canary",
+      "minVersion": 40,
       "details": [
-        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/canary.html\">Chrome Canary</a>",
+        "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/beta.html\">Chrome Beta</a>",
         "Only available within ServiceWorkers",
         "Some higher-level methods absent such as <code>caches.match</code>, <code>cache.add</code>, <code>cache.addAll</code>"
       ]
@@ -486,7 +495,7 @@
     "chrome": {
       "supported": 0,
       "details": [
-        "API exists in Canary, but never resolves"
+        "API exists in Beta, but never resolves"
       ]
     },
     "firefox": {
