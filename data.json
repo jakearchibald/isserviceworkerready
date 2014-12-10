@@ -93,7 +93,7 @@
       "icon": "firefox-nightly",
       "supported": 0.5,
       "details": [
-        "Requires a <a href=\"http://nightly.mozilla.org/\">nightly build</a> and dom.serviceWorkers.enabled in about:config."
+        "Requires a <a href=\"http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-maple/\">maple build</a> and dom.serviceWorkers.enabled in about:config."
       ]
     },
     "opera": {
@@ -124,7 +124,7 @@
       "icon": "firefox-nightly",
       "supported": 0.5,
       "details": [
-        "Requires a <a href=\"http://nightly.mozilla.org/\">nightly build</a> and dom.serviceWorkers.enabled in about:config."
+        "Requires a <a href=\"http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-maple/\">maple build</a> and dom.serviceWorkers.enabled in about:config."
       ]
     },
     "opera": {
@@ -177,7 +177,7 @@
       "icon": "firefox-nightly",
       "supported": 0.5,
       "details": [
-        "Requires a <a href=\"http://nightly.mozilla.org/\">nightly build</a> and dom.serviceWorkers.enabled in about:config."
+        "Requires a <a href=\"http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-maple/\">maple build</a> and dom.serviceWorkers.enabled in about:config."
       ]
     },
     "opera": {
@@ -205,7 +205,7 @@
       "icon": "firefox-nightly",
       "supported": 0.5,
       "details": [
-        "Requires a <a href=\"http://nightly.mozilla.org/\">nightly build</a> and dom.serviceWorkers.enabled in about:config.",
+        "Requires a <a href=\"http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-maple/\">maple build</a> and dom.serviceWorkers.enabled in about:config.",
         "Partial implementation."
       ]
     },
@@ -233,7 +233,7 @@
       "icon": "firefox-nightly",
       "supported": 0.5,
       "details": [
-        "Requires a <a href=\"http://nightly.mozilla.org/\">nightly build</a> and dom.serviceWorkers.enabled in about:config.",
+        "Requires a <a href=\"http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-maple/\">maple build</a> and dom.serviceWorkers.enabled in about:config.",
         "Can only respond with non-standard <code>SameOriginResponse</code> object"
       ]
     },
@@ -280,7 +280,7 @@
       "icon": "firefox-nightly",
       "supported": 0.5,
       "details": [
-        "Requires a <a href=\"http://nightly.mozilla.org/\">nightly build</a> and dom.serviceWorkers.enabled in about:config."
+        "Requires a <a href=\"http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-maple/\">maple build</a> and dom.serviceWorkers.enabled in about:config."
       ]
     },
     "opera": {
@@ -326,7 +326,7 @@
       "icon": "firefox-nightly",
       "supported": 0.5,
       "details": [
-        "Requires a <a href=\"http://nightly.mozilla.org/\">nightly build</a> and dom.serviceWorkers.enabled in about:config."
+        "Requires a <a href=\"http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-maple/\">maple build</a> and dom.serviceWorkers.enabled in about:config."
       ]
     },
     "opera": {
