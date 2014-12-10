@@ -1,132 +1,121 @@
-var gulp = require('gulp');
-var sass = require('gulp-ruby-sass');
-var uglify = require('gulp-uglify');
-var clean = require('gulp-clean');
-var buffer = require('gulp-buffer');
-var source = require('vinyl-source-stream');
-var watchify = require('watchify');
-var hbsfy = require('hbsfy');
-var browserify = require('browserify');
-var app = require('./server');
-var urlSrc = require('./url-src');
-var path = require('path');
-var es = require('event-stream');
 var fs = require('fs');
 
-var jsEntryPoints = [
-];
+var browserSync = require('browser-sync');
+var gulp = require('gulp');
+var plugins = require('gulp-load-plugins')();
+var runSequence = require('run-sequence');  // Temporary solution until Gulp 4
+                                            // https://github.com/gulpjs/gulp/issues/355
 
-function sassTask(dev) {
-  return gulp.src('www/static/css/*.scss')
-    .pipe(sass({
-      sourcemap: dev,
-      style: 'compressed'
-    }))
-    .pipe(gulp.dest('www/static/css/'));
-}
+var reload = browserSync.reload;
 
-gulp.task('sass', function() {
-  return sassTask(true);
+// ---------------------------------------------------------------------
+// | Helper tasks                                                      |
+// ---------------------------------------------------------------------
+
+gulp.task('clean', function (done) {
+    require('del')(['build'], done);
 });
 
-gulp.task('sass-build', function() {
-  return sassTask(false);
+gulp.task('copy', [
+    'copy:css',
+    'copy:html',
+    'copy:misc'
+]);
+
+gulp.task('copy:css', function () {
+    return gulp.src('src/css/all.scss')
+               .pipe(plugins.rubySass())
+               .pipe(gulp.dest('build/css'))
+               .pipe(plugins.filter('**/*.css'))
+               .pipe(reload({stream: true}));
 });
 
-function jsTask(bundler, dest, dev) {
-  var stream = bundler.bundle({
-    debug: dev
-  }).pipe(source('all.js'));
+gulp.task('copy:html', function () {
+    return gulp.src([
 
-  if (!dev) {
-    stream = stream.pipe(buffer()).pipe(uglify());
-  }
-  return stream.pipe(gulp.dest(dest));
-}
+        // Copy all `.html` files
+        'src/*.html',
 
-function makeBundler(func, path) {
-  return func(path).transform(hbsfy);
-}
+        // Exclude the following files since they
+        // are only used to build the other files
+        '!src/masthead.html',
+        '!src/base.html'
 
-gulp.task('js-build', function() {
-  var streams = jsEntryPoints.map(function(jsPath) {
-    return jsTask(makeBundler(browserify, jsPath), path.dirname(jsPath), false);
-  });
+    ]).pipe(plugins.swig({
+            defaults: { cache: false },
+            data: JSON.parse(fs.readFileSync("./src/data.json"))
+       }))
+      .pipe(plugins.htmlmin({
 
-  return es.merge.apply(es, streams);
+            // In-depth information about the options:
+            // https://github.com/kangax/html-minifier#options-quick-reference
+
+            collapseBooleanAttributes: true,
+            collapseWhitespace: true,
+            minifyJS: true,
+            removeAttributeQuotes: true,
+            removeComments: true,
+            removeEmptyAttributes: true,
+            removeOptionalTags: true,
+            removeRedundantAttributes: true,
+
+            // Prevent html-minifier from breaking the SVGs
+            // https://github.com/kangax/html-minifier/issues/285
+            keepClosingSlash: true,
+            caseSensitive: true
+
+      })).pipe(gulp.dest('build'))
+         .pipe(reload({stream: true}));
 });
 
-gulp.task('watch', ['sass'], function() {
-  // sass
-  gulp.watch('www/static/css/**/*.scss', ['sass']);
+gulp.task('copy:misc', function () {
+    return gulp.src([
 
-  // js
-  var streams = jsEntryPoints.map(function(jsPath) {
-    var bundler = makeBundler(watchify, jsPath);
-    bundler.on('update', rebundle);
-    function rebundle() {
-      return jsTask(bundler, path.dirname(jsPath), true);
-    }
-    return rebundle();
-  });
+        // Copy all files
+        'src/**',
 
-  return es.merge.apply(es, streams);
+        // Exclude the following files
+        // (other tasks will handle the copying of these files)
+        '!src/*.html',
+        '!src/{css,css/**}',
+        '!src/data.json'
+
+    ], {
+        // Include hidden files by default
+        dot: true
+    }).pipe(gulp.dest('build'));
+
 });
 
-gulp.task('server', function() {
-  app.listen(3000);
+gulp.task('browser-sync', function() {
+     browserSync({
+
+        // In-depth information about the options:
+        // http://www.browsersync.io/docs/options/
+
+        notify: false,
+        port: 8000,
+        server: "build"
+
+    });
 });
 
-gulp.task('clean', function() {
-  gulp.src('build/*', {read: false})
-    .pipe(clean());
+gulp.task('watch', function () {
+    gulp.watch(['src/**/*.scss'], ['copy:css']);
+    gulp.watch(['src/*.html', 'src/data.json'], ['copy:html', reload]);
+    gulp.watch(['src/img/**', 'src/demos/**'], ['copy:misc', reload]);
 });
 
-function getDeepDirContentsSync(path) {
-  var paths = [];
+// ---------------------------------------------------------------------
+// | Main tasks                                                        |
+// ---------------------------------------------------------------------
 
-  fs.readdirSync(path).filter(function(name) {
-    return name.slice(0,1) != '.';
-  }).forEach(function(name) {
-    var newPath = path + '/' + name;
-    if (fs.statSync(newPath).isDirectory()) {
-      paths = paths.concat(getDeepDirContentsSync(newPath));
-    }
-    else {
-      paths.push(newPath);
-    }
-  });
-
-  return paths;
-}
-
-gulp.task('build', ['clean', 'sass-build'], function() {
-  var server = app.listen(3000);
-  var writeStream = gulp.dest('build/');
-  var urls = [
-    '',
-    'resources.html',
-    'static/css/all.css',
-    'static/css/imgs/canary.png',
-    'static/css/imgs/chrome.png',
-    'static/css/imgs/firefox-nightly.png',
-    'static/css/imgs/firefox.png',
-    'static/css/imgs/ie.png',
-    'static/css/imgs/opera.png',
-    'static/css/imgs/opera-developer.png',
-    'static/css/imgs/safari.png',
-    'static/css/imgs/webkit-nightly.png'
-  ];
-
-  urls = urls.concat(
-    getDeepDirContentsSync(__dirname + '/www/demos').map(function(path) {
-      return path.slice((__dirname + '/www/').length);
-    })
-  );
-
-  writeStream.on('end', server.close.bind(server));
-
-  return urlSrc('http://localhost:3000/isserviceworkerready/', urls).pipe(writeStream);
+gulp.task('build', function (done) {
+    runSequence('clean', 'copy', done);
 });
 
-gulp.task('default', ['watch', 'server']);
+gulp.task('default', ['build']);
+
+gulp.task('serve', function (done) {
+    runSequence( 'build', ['browser-sync', 'watch'], done);
+});

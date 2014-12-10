@@ -1,0 +1,536 @@
+{
+  "browsers": [
+    {
+      "id": "chrome",
+      "name": "Chrome"
+    },
+    {
+      "id": "firefox",
+      "name": "Firefox"
+    },
+    {
+      "id": "opera",
+      "name": "Opera"
+    },
+    {
+      "id": "safari",
+      "name": "Safari"
+    },
+    {
+      "id": "internet-explorer",
+      "name": "Internet Explorer"
+    }
+  ],
+  "features": [
+    {
+      "name": "ServiceWorker enthusiasm",
+      "description": "The first thing any implementation needs.",
+      "chrome": {
+        "supported": 1
+      },
+      "firefox": {
+        "supported": 1
+      },
+      "opera": {
+        "supported": 1
+      },
+      "safari": {
+        "supported": 0,
+        "details": [
+          "No public commitment."
+        ]
+      },
+      "internet-explorer": {
+        "supported": 0,
+        "details": [
+          "<a href=\"http://status.modern.ie/serviceworker\">Under consideration</a>."
+        ]
+      }
+    },
+    {
+      "name": "Promises",
+      "description": "Not ServiceWorker specific, but required by ServiceWorker. <a href=\"https://people.mozilla.org/~jorendorff/es6-draft.html#sec-promise-objects\">Spec</a>.",
+      "chrome": {
+        "supported": 1,
+        "minVersion": 36
+      },
+      "firefox": {
+        "supported": 1,
+        "minVersion": "29"
+      },
+      "opera": {
+        "supported": 1,
+        "minVersion": 23
+      },
+      "safari": {
+        "minVersion": 7.1,
+        "supported": 0.5,
+        "details": [
+          "<code>Promise.resolve(promise)</code> creates new promise instance. (fixed in the nightlies)"
+        ]
+      },
+      "internet-explorer": {
+        "icon": "internet-explorer-dev",
+        "supported": 0.5,
+        "details": [
+          "Implemented in IE's <a href=\"http://devchannel.modern.ie/\">preview release</a>"
+        ]
+      }
+    },
+    {
+      "name": "Debugging",
+      "description": "State of debugging tools",
+      "chrome": {
+        "supported": 0.5,
+        "minVersion": 40,
+        "details": [
+          "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/beta.html\">Chrome Beta</a>",
+          "chrome://inspect/#service-workers lets you inspect and debug Service Workers.",
+          "chrome://serviceworker-internals/ shows console logs, devtools, allows stop/start/unregister."
+        ]
+      },
+      "firefox": {
+        "supported": 0
+      },
+      "opera": {
+        "supported": 0
+      },
+      "safari": {
+        "supported": 0
+      },
+      "internet-explorer": {
+        "supported": 0
+      }
+    },
+    {
+      "name": "<code>navigator.serviceWorker</code>",
+      "description": "Namespace for page-side ServiceWorker API. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#navigator-service-worker\">Spec</a>. <a href=\"/isserviceworkerready/demos/navigator.serviceWorker/\">Test</a>.",
+      "chrome": {
+        "supported": 0.5,
+        "minVersion": 40,
+        "details": [
+          "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/beta.html\">Chrome Beta</a>"
+        ]
+      },
+      "firefox": {
+        "icon": "firefox-nightly",
+        "supported": 0.5,
+        "details": [
+          "Requires a <a href=\"http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-maple/\">maple build</a> and dom.serviceWorkers.enabled in about:config."
+        ]
+      },
+      "opera": {
+        "supported": 0.5,
+        "minVersion": 21
+      },
+      "safari": {
+        "supported": 0
+      },
+      "internet-explorer": {
+        "supported": 0
+      },
+      "details": [
+        "<strong>Opera</strong>: Requires #enable-experimental-web-platform-features in about:flags."
+      ]
+    },
+    {
+      "name": "Register / unregister",
+      "description": "Register for a SW and get a registration instance back, unregister undoes. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#navigator-service-worker-register\">Spec</a>. <a href=\"/isserviceworkerready/demos/registerunregister/\">Test</a>.",
+      "chrome": {
+        "supported": 0.5,
+        "minVersion": 40,
+        "details": [
+          "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/beta.html\">Chrome Beta</a>"
+        ]
+      },
+      "firefox": {
+        "icon": "firefox-nightly",
+        "supported": 0.5,
+        "details": [
+          "Requires a <a href=\"http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-maple/\">maple build</a> and dom.serviceWorkers.enabled in about:config."
+        ]
+      },
+      "opera": {
+        "supported": 0
+      },
+      "safari": {
+        "supported": 0
+      },
+      "internet-explorer": {
+        "supported": 0
+      },
+      "details": [
+      ]
+    },
+    {
+      "name": "<code>postMessage</code> to &amp; from worker",
+      "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#service-worker-client\">Spec</a>. <a href=\"/isserviceworkerready/demos/postMessage/\">Test</a>.",
+      "chrome": {
+        "supported": 0.5,
+        "minVersion": 40,
+        "details": [
+          "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/beta.html\">Chrome Beta</a>",
+          "<code>messageEvent.source</code> is <a href=\"https://crbug.com/403693\">null within the worker</a>, but you can pass your own <code>MessageChannel</code> for 2-way communication."
+        ]
+      },
+      "firefox": {
+        "supported": 0
+      },
+      "opera": {
+        "supported": 0
+      },
+      "safari": {
+        "supported": 0
+      },
+      "internet-explorer": {
+        "supported": 0
+      }
+    },
+    {
+      "name": "Fetch event",
+      "description": "Fires for pages and all sub-resources. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#fetch-event-section\">Spec</a>. <a href=\"/isserviceworkerready/demos/fetchevent/\">Test</a>.",
+      "chrome": {
+        "supported": 0.5,
+        "minVersion": 40,
+        "details": [
+          "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/beta.html\">Chrome Beta</a>"
+        ]
+      },
+      "firefox": {
+        "icon": "firefox-nightly",
+        "supported": 0.5,
+        "details": [
+          "Requires a <a href=\"http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-maple/\">maple build</a> and dom.serviceWorkers.enabled in about:config."
+        ]
+      },
+      "opera": {
+        "supported": 0
+      },
+      "safari": {
+        "supported": 0
+      },
+      "internet-explorer": {
+        "supported": 0
+      }
+    },
+    {
+      "name": "<code>fetchEvent.request</code>",
+      "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#fetch-event-section\">Spec</a>. <a href=\"/isserviceworkerready/demos/fetchevent/\">Test</a>.",
+      "chrome": {
+        "supported": 0.5,
+        "minVersion": 40,
+        "details": [
+          "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/beta.html\">Chrome Beta</a>",
+          "Partial implementation, covers method, url, referer, header, mode and credentials."
+        ]
+      },
+      "firefox": {
+        "icon": "firefox-nightly",
+        "supported": 0.5,
+        "details": [
+          "Requires a <a href=\"http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-maple/\">maple build</a> and dom.serviceWorkers.enabled in about:config.",
+          "Partial implementation."
+        ]
+      },
+      "opera": {
+        "supported": 0
+      },
+      "safari": {
+        "supported": 0
+      },
+      "internet-explorer": {
+        "supported": 0
+      }
+    },
+    {
+      "name": "<code>fetchEvent.respondWith()</code>",
+      "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#respond-with-method\">Spec</a>. <a href=\"/isserviceworkerready/demos/fetchevent/\">Test</a>.",
+      "chrome": {
+        "supported": 0.5,
+        "minVersion": 40,
+        "details": [
+          "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/beta.html\">Chrome Beta</a>"
+        ]
+      },
+      "firefox": {
+        "icon": "firefox-nightly",
+        "supported": 0.5,
+        "details": [
+          "Requires a <a href=\"http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-maple/\">maple build</a> and dom.serviceWorkers.enabled in about:config.",
+          "Can only respond with non-standard <code>SameOriginResponse</code> object"
+        ]
+      },
+      "opera": {
+        "supported": 0
+      },
+      "safari": {
+        "supported": 0
+      },
+      "internet-explorer": {
+        "supported": 0
+      }
+    },
+    {
+      "name": "<code>fetchEvent.default()</code>",
+      "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#default-method\">Spec</a>. <a href=\"/isserviceworkerready/demos/fetchevent/\">Test</a>.",
+      "chrome": {
+        "supported": 0
+      },
+      "firefox": {
+        "supported": 0
+      },
+      "opera": {
+        "supported": 0
+      },
+      "safari": {
+        "supported": 0
+      },
+      "internet-explorer": {
+        "supported": 0
+      }
+    },
+    {
+      "name": "Install event",
+      "description": "Install event fires in a newly discovered SW. Includes <code>InstallEvent.waitUntil()</code>. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#install-event-section\">Spec</a>. <a href=\"/isserviceworkerready/demos/installactivate/\">Test</a>.",
+      "chrome": {
+        "supported": 0.5,
+        "minVersion": 40,
+        "details": [
+          "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/beta.html\">Chrome Beta</a>"
+        ]
+      },
+      "firefox": {
+        "icon": "firefox-nightly",
+        "supported": 0.5,
+        "details": [
+          "Requires a <a href=\"http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-maple/\">maple build</a> and dom.serviceWorkers.enabled in about:config."
+        ]
+      },
+      "opera": {
+        "supported": 0
+      },
+      "safari": {
+        "supported": 0
+      },
+      "internet-explorer": {
+        "supported": 0
+      }
+    },
+    {
+      "name": "<code>self.skipWaiting()</code>",
+      "description": "Allow an installing worker to take over from the current active worker once installed. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#service-worker-global-scope-skipwaiting\">Spec</a>. <a href=\"/isserviceworkerready/demos/installactivate/\">Test</a>.",
+      "chrome": {
+        "supported": 0
+      },
+      "firefox": {
+        "supported": 0
+      },
+      "opera": {
+        "supported": 0
+      },
+      "safari": {
+        "supported": 0
+      },
+      "internet-explorer": {
+        "supported": 0
+      }
+    },
+    {
+      "name": "Activate event",
+      "description": "Activate event fires after others become redundant. Includes <code>InstallEvent.waitUntil()</code>. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#install-phase-event\">Spec</a>. <a href=\"/isserviceworkerready/demos/installactivate/\">Test</a>.",
+      "chrome": {
+        "supported": 0.5,
+        "minVersion": 40,
+        "details": [
+          "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/beta.html\">Chrome Beta</a>"
+        ]
+      },
+      "firefox": {
+        "icon": "firefox-nightly",
+        "supported": 0.5,
+        "details": [
+          "Requires a <a href=\"http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-maple/\">maple build</a> and dom.serviceWorkers.enabled in about:config."
+        ]
+      },
+      "opera": {
+        "supported": 0
+      },
+      "safari": {
+        "supported": 0
+      },
+      "internet-explorer": {
+        "supported": 0
+      }
+    },
+    {
+      "name": "Update checks",
+      "description": "Browser checks for SW updates after navigation. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#update-algorithm\">Spec</a>.",
+      "chrome": {
+        "supported": 0.5,
+        "minVersion": 40,
+        "details": [
+          "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/beta.html\">Chrome Beta</a>"
+        ]
+      },
+      "firefox": {
+        "supported": 0
+      },
+      "opera": {
+        "supported": 0
+      },
+      "safari": {
+        "supported": 0
+      },
+      "internet-explorer": {
+        "supported": 0
+      }
+    },
+    {
+      "name": "ServiceWorker lifecycle",
+      "description": "Allow a next version to be in waiting &amp; take over when appropriate.",
+      "chrome": {
+        "supported": 0.5,
+        "minVersion": 40,
+        "details": [
+          "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/beta.html\">Chrome Beta</a>"
+        ]
+      },
+      "firefox": {
+        "supported": 0
+      },
+      "opera": {
+        "supported": 0
+      },
+      "safari": {
+        "supported": 0
+      },
+      "internet-explorer": {
+        "supported": 0
+      }
+    },
+    {
+      "name": "<code>Request</code>",
+      "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#request-objects\">Spec</a>. <a href=\"/isserviceworkerready/demos/globalapis/\">Test</a>.",
+      "chrome": {
+        "supported": 0.5,
+        "minVersion": 40,
+        "details": [
+          "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/beta.html\">Chrome Beta</a>"
+        ]
+      },
+      "firefox": {
+        "supported": 0
+      },
+      "opera": {
+        "supported": 0
+      },
+      "safari": {
+        "supported": 0
+      },
+      "internet-explorer": {
+        "supported": 0
+      }
+    },
+    {
+      "name": "<code>Response</code>",
+      "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#response-objects\">Spec</a>. <a href=\"/isserviceworkerready/demos/globalapis/\">Test</a>.",
+      "chrome": {
+        "supported": 0.5,
+        "minVersion": 40,
+        "details": [
+          "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/beta.html\">Chrome Beta</a>",
+          "URLSearchParams as well as creating a Response from FormData are not supported yet. (<a href=\"https://code.google.com/p/chromium/issues/detail?id=412027#c5\">crbug#412027</a>)."
+        ]
+      },
+      "firefox": {
+        "supported": 0
+      },
+      "opera": {
+        "supported": 0
+      },
+      "safari": {
+        "supported": 0
+      },
+      "internet-explorer": {
+        "supported": 0
+      }
+    },
+    {
+      "name": "<code>fetch(request)</code>",
+      "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#service-worker-global-scope-fetch\">Spec</a>. <a href=\"/isserviceworkerready/demos/fetch/\">Test</a>.",
+      "chrome": {
+        "supported": 0.5,
+        "minVersion": 40,
+        "details": [
+          "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/beta.html\">Chrome Beta</a>",
+          "Only available within ServiceWorkers"
+        ]
+      },
+      "firefox": {
+        "supported": 0
+      },
+      "opera": {
+        "supported": 0
+      },
+      "safari": {
+        "supported": 0
+      },
+      "internet-explorer": {
+        "supported": 0
+      },
+      "details": [
+        "<a href=\"https://github.com/github/fetch\">Polyfill available</a>"
+      ]
+    },
+    {
+      "name": "<code>caches</code>",
+      "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#service-worker-global-scope-caches\">Spec</a>. <a href=\"/isserviceworkerready/demos/globalapis/\">Test</a>.",
+      "chrome": {
+        "supported": 0.5,
+        "minVersion": 40,
+        "details": [
+          "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/beta.html\">Chrome Beta</a>",
+          "Only available within ServiceWorkers",
+          "Some higher-level methods absent such as <code>caches.match</code>, <code>cache.add</code>, <code>cache.addAll</code>"
+        ]
+      },
+      "firefox": {
+        "supported": 0
+      },
+      "opera": {
+        "supported": 0
+      },
+      "safari": {
+        "supported": 0
+      },
+      "internet-explorer": {
+        "supported": 0
+      },
+      "details": [
+        "<a href=\"https://github.com/coonsta/cache-polyfill\">Polyfill available</a>"
+      ]
+    },
+    {
+      "name": "<code>serviceWorker.ready</code>",
+      "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#navigator-service-worker-ready\">Spec</a>. <a href=\"/isserviceworkerready/demos/registerunregister/\">Test</a>.",
+      "chrome": {
+        "supported": 0,
+        "details": [
+          "API exists in Beta, but never resolves"
+        ]
+      },
+      "firefox": {
+        "supported": 0
+      },
+      "opera": {
+        "supported": 0
+      },
+      "safari": {
+        "supported": 0
+      },
+      "internet-explorer": {
+        "supported": 0
+      }
+    }
+  ]
+}
