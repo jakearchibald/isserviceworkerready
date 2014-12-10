@@ -36,23 +36,21 @@
       "minVersion": "29"
     },
     "opera": {
-      "supported": 0.5,
-      "minVersion": 19,
-      "details": [
-        "<code>Promise.resolve(promise)</code> creates new promise instance."
-      ]
+      "supported": 1,
+      "minVersion": 23
     },
     "safari": {
       "minVersion": 7.1,
       "supported": 0.5,
       "details": [
-        "<code>Promise.resolve(promise)</code> creates new promise instance. <a href=\"https://bugs.webkit.org/show_bug.cgi?id=128382\">Ticket</a>."
+        "<code>Promise.resolve(promise)</code> creates new promise instance. (fixed in the nightlies)"
       ]
     },
     "ie": {
-      "supported": 0,
+      "icon": "ie-dev",
+      "supported": 0.5,
       "details": [
-        "<a href=\"http://status.modern.ie/promiseses6\">Preview Release</a>"
+        "Implemented in IE's <a href=\"http://devchannel.modern.ie/\">preview release</a>"
       ]
     }
   },
