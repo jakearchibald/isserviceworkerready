@@ -18,11 +18,6 @@
     window.onerror = function(err) {
       log("Error", err);
     };
-
-    window.onmessage = function(event) {
-      log("Got reply from serviceworker via window", event.data);
-    };
-
     if (window.MessageChannel) {
       var messageChannel = new MessageChannel();
 
@@ -33,9 +28,10 @@
 
     navigator.serviceWorker.register('sw.js', {
       scope: './'
-    }).then(function(sw) {
-      log("Registered!", sw);
-      sw.postMessage({
+    }).then(function(reg) {
+      log("Registered!", reg);
+      var newestWorker = reg.installing || reg.waiting || reg.active;
+      newestWorker.postMessage({
         text: "Hi!",
         port: messageChannel && messageChannel.port2
       }, [messageChannel && messageChannel.port2]);
