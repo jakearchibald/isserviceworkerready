@@ -294,8 +294,8 @@
     }
   },
   {
-    "name": "<code>InstallEvent.replace()</code>",
-    "description": "Allow an installing worker to take over in-scope pages once installed. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#replace-method\">Spec</a>. <a href=\"/isserviceworkerready/demos/installactivate/\">Test</a>.",
+    "name": "<code>self.skipWaiting()</code>",
+    "description": "Allow an installing worker to take over from the current active worker once installed. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#service-worker-global-scope-skipwaiting\">Spec</a>. <a href=\"/isserviceworkerready/demos/installactivate/\">Test</a>.",
     "chrome": {
       "supported": 0
     },

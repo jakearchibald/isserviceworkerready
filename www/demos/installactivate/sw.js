@@ -3,7 +3,7 @@ console.log("SW startup");
 this.oninstall = function(event) {
   console.log("Install event", event);
   console.log(".replace", event.replace);
-  console.log(".waitUntil", event.waitUntil);
+  console.log("self.skipWaiting", self.skipWaiting);
 
   if (event.waitUntil) {
     console.log("Testing waitUntil:");
