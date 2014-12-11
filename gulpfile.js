@@ -24,7 +24,7 @@ gulp.task('copy', [
 
 gulp.task('copy:css', function () {
     return gulp.src('src/css/all.scss')
-               .pipe(plugins.rubySass())
+               .pipe(plugins.rubySass({ style: 'compressed' }))
                .pipe(gulp.dest('build/css'))
                .pipe(plugins.filter('**/*.css'))
                .pipe(reload({stream: true}));
