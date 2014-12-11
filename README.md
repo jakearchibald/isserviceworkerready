@@ -1,5 +1,8 @@
 # Is ServiceWorker Ready Yet?
 
+[![Build Status](https://travis-ci.org/jakearchibald/isserviceworkerready.svg)](https://travis-ci.org/jakearchibald/isserviceworkerready)
+[![devDependency Status](https://david-dm.org/jakearchibald/isserviceworkerready/dev-status.svg)](https://david-dm.org/jakearchibald/isserviceworkerready#info=devDependencies)
+
 Tracks the features of ServiceWorker supported in browsers.
 [View the site](https://jakearchibald.github.io/isserviceworkerready).
 
