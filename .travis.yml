@@ -15,7 +15,7 @@ before_install:
 
 env:
   global:
-    - secure: "f9pQHrUg532vCsg5r4wkLjhpe1I0lB1LSDmno3xnyOPpy/2aSJh2J0ATNwYH+0RF6YomKR6b2NiKCBGtQ6dh9cT1cbnpePMu3dND+Gep9/utku7nPDcvo3akdVdAh20QtHevpYAZArDEJ6BBhy7LVrgNtvuwZxPGPAwF/bGzB3U="
+    - secure: "aFvIDrSx6T91kHM7JHJvwdU90eVZ/XIo3mztoDPHW2eysHomdwwE17ShEEQahOVTslOqjt88U7R8vcAoVliEie64oP/wK29To38Pe3N3YLvGeTfxYKuDhbUmm5U+16qTmgFTjlVbQXCMMH4HSjcPujIzX3wbd/vuF1mkj/cY8Z0="
 
 git:
   depth: 10
