@@ -95,8 +95,8 @@ gulp.task('browser-sync', function() {
 
         notify: false,
         port: 8000,
-        server: "build"
-
+        server: "build",
+        open: false
     });
 });
 
