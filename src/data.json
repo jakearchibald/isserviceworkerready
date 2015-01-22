@@ -81,12 +81,12 @@
       "name": "Debugging",
       "description": "State of debugging tools",
       "chrome": {
-        "supported": 0.5,
+        "supported": 1,
         "minVersion": 40,
         "details": [
-          "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/beta.html\">Chrome Beta</a>",
           "chrome://inspect/#service-workers lets you inspect and debug Service Workers.",
-          "chrome://serviceworker-internals/ shows console logs, devtools, allows stop/start/unregister."
+          "chrome://serviceworker-internals/ shows console logs, devtools, allows stop/start/unregister.",
+          "Better tools are coming!"
         ]
       },
       "firefox": {
@@ -104,19 +104,16 @@
     },
     {
       "name": "<code>navigator.serviceWorker</code>",
-      "description": "Namespace for page-side ServiceWorker API. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#navigator-service-worker\">Spec</a>. <a href=\"/isserviceworkerready/demos/navigator.serviceWorker/\">Test</a>.",
+      "description": "Namespace for page-side ServiceWorker API. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#navigator-service-worker\">Spec</a>. <a href=\"demos/navigator.serviceWorker/\">Test</a>.",
       "chrome": {
-        "supported": 0.5,
-        "minVersion": 40,
-        "details": [
-          "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/beta.html\">Chrome Beta</a>"
-        ]
+        "supported": 1,
+        "minVersion": 40
       },
       "firefox": {
         "icon": "firefox-nightly",
         "supported": 0.5,
         "details": [
-          "Requires a <a href=\"http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-maple/\">maple build</a> and dom.serviceWorkers.enabled in about:config."
+          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a> and dom.serviceWorkers.enabled in about:config."
         ]
       },
       "opera": {
@@ -135,19 +132,16 @@
     },
     {
       "name": "Register / unregister",
-      "description": "Register for a SW and get a registration instance back, unregister undoes. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#navigator-service-worker-register\">Spec</a>. <a href=\"/isserviceworkerready/demos/registerunregister/\">Test</a>.",
+      "description": "Register for a SW and get a registration instance back, unregister undoes. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#navigator-service-worker-register\">Spec</a>. <a href=\"demos/registerunregister/\">Test</a>.",
       "chrome": {
-        "supported": 0.5,
-        "minVersion": 40,
-        "details": [
-          "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/beta.html\">Chrome Beta</a>"
-        ]
+        "supported": 1,
+        "minVersion": 40
       },
       "firefox": {
         "icon": "firefox-nightly",
         "supported": 0.5,
         "details": [
-          "Requires a <a href=\"http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-maple/\">maple build</a> and dom.serviceWorkers.enabled in about:config."
+          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a> and dom.serviceWorkers.enabled in about:config."
         ]
       },
       "opera": {
@@ -164,12 +158,11 @@
     },
     {
       "name": "<code>postMessage</code> to &amp; from worker",
-      "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#service-worker-client\">Spec</a>. <a href=\"/isserviceworkerready/demos/postMessage/\">Test</a>.",
+      "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#service-worker-client\">Spec</a>. <a href=\"demos/postMessage/\">Test</a>.",
       "chrome": {
         "supported": 0.5,
         "minVersion": 40,
         "details": [
-          "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/beta.html\">Chrome Beta</a>",
           "<code>messageEvent.source</code> is <a href=\"https://crbug.com/403693\">null within the worker</a>, but you can pass your own <code>MessageChannel</code> for 2-way communication."
         ]
       },
@@ -188,19 +181,16 @@
     },
     {
       "name": "Fetch event",
-      "description": "Fires for pages and all sub-resources. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#fetch-event-section\">Spec</a>. <a href=\"/isserviceworkerready/demos/fetchevent/\">Test</a>.",
+      "description": "Fires for pages and all sub-resources. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#fetch-event-section\">Spec</a>. <a href=\"demos/fetchevent/\">Test</a>.",
       "chrome": {
-        "supported": 0.5,
-        "minVersion": 40,
-        "details": [
-          "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/beta.html\">Chrome Beta</a>"
-        ]
+        "supported": 1,
+        "minVersion": 40
       },
       "firefox": {
         "icon": "firefox-nightly",
         "supported": 0.5,
         "details": [
-          "Requires a <a href=\"http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-maple/\">maple build</a> and dom.serviceWorkers.enabled in about:config."
+          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a> and dom.serviceWorkers.enabled in about:config."
         ]
       },
       "opera": {
@@ -215,20 +205,16 @@
     },
     {
       "name": "<code>fetchEvent.request</code>",
-      "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#fetch-event-section\">Spec</a>. <a href=\"/isserviceworkerready/demos/fetchevent/\">Test</a>.",
+      "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#fetch-event-section\">Spec</a>. <a href=\"demos/fetchevent/\">Test</a>.",
       "chrome": {
-        "supported": 0.5,
-        "minVersion": 40,
-        "details": [
-          "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/beta.html\">Chrome Beta</a>",
-          "Partial implementation, covers method, url, referer, header, mode and credentials."
-        ]
+        "supported": 1,
+        "minVersion": 40
       },
       "firefox": {
         "icon": "firefox-nightly",
         "supported": 0.5,
         "details": [
-          "Requires a <a href=\"http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-maple/\">maple build</a> and dom.serviceWorkers.enabled in about:config.",
+          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a> and dom.serviceWorkers.enabled in about:config.",
           "Partial implementation."
         ]
       },
@@ -244,40 +230,17 @@
     },
     {
       "name": "<code>fetchEvent.respondWith()</code>",
-      "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#respond-with-method\">Spec</a>. <a href=\"/isserviceworkerready/demos/fetchevent/\">Test</a>.",
+      "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#respond-with-method\">Spec</a>. <a href=\"demos/fetchevent/\">Test</a>.",
       "chrome": {
-        "supported": 0.5,
-        "minVersion": 40,
-        "details": [
-          "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/beta.html\">Chrome Beta</a>"
-        ]
+        "supported": 1,
+        "minVersion": 40
       },
       "firefox": {
         "icon": "firefox-nightly",
         "supported": 0.5,
         "details": [
-          "Requires a <a href=\"http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-maple/\">maple build</a> and dom.serviceWorkers.enabled in about:config.",
-          "Can only respond with non-standard <code>SameOriginResponse</code> object"
+          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a> and dom.serviceWorkers.enabled in about:config."
         ]
-      },
-      "opera": {
-        "supported": 0
-      },
-      "safari": {
-        "supported": 0
-      },
-      "internet-explorer": {
-        "supported": 0
-      }
-    },
-    {
-      "name": "<code>fetchEvent.default()</code>",
-      "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#default-method\">Spec</a>. <a href=\"/isserviceworkerready/demos/fetchevent/\">Test</a>.",
-      "chrome": {
-        "supported": 0
-      },
-      "firefox": {
-        "supported": 0
       },
       "opera": {
         "supported": 0
@@ -291,19 +254,16 @@
     },
     {
       "name": "Install event",
-      "description": "Install event fires in a newly discovered SW. Includes <code>InstallEvent.waitUntil()</code>. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#install-event-section\">Spec</a>. <a href=\"/isserviceworkerready/demos/installactivate/\">Test</a>.",
+      "description": "Install event fires in a newly discovered SW. Includes <code>InstallEvent.waitUntil()</code>. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#install-event-section\">Spec</a>. <a href=\"demos/installactivate/\">Test</a>.",
       "chrome": {
-        "supported": 0.5,
-        "minVersion": 40,
-        "details": [
-          "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/beta.html\">Chrome Beta</a>"
-        ]
+        "supported": 1,
+        "minVersion": 40
       },
       "firefox": {
         "icon": "firefox-nightly",
         "supported": 0.5,
         "details": [
-          "Requires a <a href=\"http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-maple/\">maple build</a> and dom.serviceWorkers.enabled in about:config."
+          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a> and dom.serviceWorkers.enabled in about:config."
         ]
       },
       "opera": {
@@ -318,9 +278,13 @@
     },
     {
       "name": "<code>self.skipWaiting()</code>",
-      "description": "Allow an installing worker to take over from the current active worker once installed. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#service-worker-global-scope-skipwaiting\">Spec</a>. <a href=\"/isserviceworkerready/demos/installactivate/\">Test</a>.",
+      "description": "Allow an installing worker to take over from the current active worker once installed. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#service-worker-global-scope-skipwaiting\">Spec</a>. <a href=\"demos/installactivate/\">Test</a>.",
       "chrome": {
-        "supported": 0
+        "supported": 0.5,
+        "icon": "chrome-canary",
+        "details": [
+          "Requires <a href=\"https://www.google.co.uk/chrome/browser/canary.html\">Chrome Canary</a>."
+        ]
       },
       "firefox": {
         "supported": 0
@@ -337,19 +301,16 @@
     },
     {
       "name": "Activate event",
-      "description": "Activate event fires after others become redundant. Includes <code>InstallEvent.waitUntil()</code>. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#install-phase-event\">Spec</a>. <a href=\"/isserviceworkerready/demos/installactivate/\">Test</a>.",
+      "description": "Activate event fires after others become redundant. Includes <code>InstallEvent.waitUntil()</code>. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#install-phase-event\">Spec</a>. <a href=\"demos/installactivate/\">Test</a>.",
       "chrome": {
-        "supported": 0.5,
-        "minVersion": 40,
-        "details": [
-          "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/beta.html\">Chrome Beta</a>"
-        ]
+        "supported": 1,
+        "minVersion": 40
       },
       "firefox": {
         "icon": "firefox-nightly",
         "supported": 0.5,
         "details": [
-          "Requires a <a href=\"http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-maple/\">maple build</a> and dom.serviceWorkers.enabled in about:config."
+          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a> and dom.serviceWorkers.enabled in about:config."
         ]
       },
       "opera": {
@@ -366,11 +327,8 @@
       "name": "Update checks",
       "description": "Browser checks for SW updates after navigation. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#update-algorithm\">Spec</a>.",
       "chrome": {
-        "supported": 0.5,
-        "minVersion": 40,
-        "details": [
-          "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/beta.html\">Chrome Beta</a>"
-        ]
+        "supported": 1,
+        "minVersion": 40
       },
       "firefox": {
         "supported": 0
@@ -410,7 +368,7 @@
     },
     {
       "name": "<code>Request</code>",
-      "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#request-objects\">Spec</a>. <a href=\"/isserviceworkerready/demos/globalapis/\">Test</a>.",
+      "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#request-objects\">Spec</a>. <a href=\"demos/globalapis/\">Test</a>.",
       "chrome": {
         "supported": 0.5,
         "minVersion": 40,
@@ -433,12 +391,11 @@
     },
     {
       "name": "<code>Response</code>",
-      "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#response-objects\">Spec</a>. <a href=\"/isserviceworkerready/demos/globalapis/\">Test</a>.",
+      "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#response-objects\">Spec</a>. <a href=\"demos/globalapis/\">Test</a>.",
       "chrome": {
-        "supported": 0.5,
+        "supported": 1,
         "minVersion": 40,
         "details": [
-          "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/beta.html\">Chrome Beta</a>",
           "URLSearchParams as well as creating a Response from FormData are not supported yet. (<a href=\"https://code.google.com/p/chromium/issues/detail?id=412027#c5\">crbug#412027</a>)."
         ]
       },
@@ -457,12 +414,11 @@
     },
     {
       "name": "<code>fetch(request)</code>",
-      "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#service-worker-global-scope-fetch\">Spec</a>. <a href=\"/isserviceworkerready/demos/fetch/\">Test</a>.",
+      "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#service-worker-global-scope-fetch\">Spec</a>. <a href=\"demos/fetch/\">Test</a>.",
       "chrome": {
         "supported": 0.5,
         "minVersion": 40,
         "details": [
-          "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/beta.html\">Chrome Beta</a>",
           "Only available within ServiceWorkers"
         ]
       },
@@ -484,14 +440,14 @@
     },
     {
       "name": "<code>caches</code>",
-      "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#service-worker-global-scope-caches\">Spec</a>. <a href=\"/isserviceworkerready/demos/globalapis/\">Test</a>.",
+      "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#service-worker-global-scope-caches\">Spec</a>. <a href=\"demos/globalapis/\">Test</a>.",
       "chrome": {
         "supported": 0.5,
         "minVersion": 40,
         "details": [
-          "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/beta.html\">Chrome Beta</a>",
           "Only available within ServiceWorkers",
-          "Some higher-level methods absent such as <code>caches.match</code>, <code>cache.add</code>, <code>cache.addAll</code>"
+          "Some higher-level methods absent such as <code>caches.match</code>, <code>cache.add</code>, <code>cache.addAll</code>",
+          "<a href=\"https://github.com/coonsta/cache-polyfill\">Polyfill available</a>"
         ]
       },
       "firefox": {
@@ -505,14 +461,11 @@
       },
       "internet-explorer": {
         "supported": 0
-      },
-      "details": [
-        "<a href=\"https://github.com/coonsta/cache-polyfill\">Polyfill available</a>"
-      ]
+      }
     },
     {
       "name": "<code>serviceWorker.ready</code>",
-      "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#navigator-service-worker-ready\">Spec</a>. <a href=\"/isserviceworkerready/demos/registerunregister/\">Test</a>.",
+      "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#navigator-service-worker-ready\">Spec</a>. <a href=\"demos/registerunregister/\">Test</a>.",
       "chrome": {
         "supported": 0,
         "details": [
