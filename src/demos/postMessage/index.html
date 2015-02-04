@@ -34,13 +34,17 @@
     navigator.serviceWorker.register('sw.js', {
       scope: './'
     }).then(function(sw) {
+
       log("Registered!", sw);
-      sw.postMessage({
+    }).catch(function(err) {
+      log("Error", err);
+    });
+
+    navigator.serviceWorker.ready.then(function(reg) {
+      reg.active.postMessage({
         text: "Hi!",
         port: messageChannel && messageChannel.port2
       }, [messageChannel && messageChannel.port2]);
-    }).catch(function(err) {
-      log("Error", err);
     });
   </script></body>
 </html>
