@@ -49,7 +49,7 @@
     },
     {
       "name": "Promises",
-      "description": "Not ServiceWorker specific, but required by ServiceWorker. <a href=\"https://people.mozilla.org/~jorendorff/es6-draft.html#sec-promise-objects\">Spec</a>.",
+      "description": "Not ServiceWorker-specific, but required by ServiceWorker. <a href=\"https://people.mozilla.org/~jorendorff/es6-draft.html#sec-promise-objects\">Spec</a>.",
       "chrome": {
         "supported": 1,
         "minVersion": 36
@@ -84,8 +84,8 @@
         "supported": 1,
         "minVersion": 40,
         "details": [
-          "chrome://inspect/#service-workers lets you inspect and debug Service Workers.",
-          "chrome://serviceworker-internals/ shows console logs, devtools, allows stop/start/unregister.",
+          "<code>chrome://inspect/#service-workers</code> lets you inspect and debug Service Workers.",
+          "<code>chrome://serviceworker-internals</code> shows console logs, devtools, allows stop/start/unregister.",
           "Better tools are coming!"
         ]
       },
@@ -117,8 +117,8 @@
         ]
       },
       "opera": {
-        "supported": 0.5,
-        "minVersion": 21
+        "supported": 1,
+        "minVersion": 27
       },
       "safari": {
         "supported": 0
@@ -127,12 +127,11 @@
         "supported": 0
       },
       "details": [
-        "<strong>Opera</strong>: Requires #enable-experimental-web-platform-features in about:flags."
       ]
     },
     {
       "name": "Register / unregister",
-      "description": "Register for a SW and get a registration instance back, unregister undoes. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#navigator-service-worker-register\">Spec</a>. <a href=\"demos/registerunregister/\">Test</a>.",
+      "description": "Register for a SW and get a registration instance back, <code>unregister</code> undoes. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#navigator-service-worker-register\">Spec</a>. <a href=\"demos/registerunregister/\">Test</a>.",
       "chrome": {
         "supported": 1,
         "minVersion": 40
@@ -141,11 +140,12 @@
         "icon": "firefox-nightly",
         "supported": 0.5,
         "details": [
-          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a> and dom.serviceWorkers.enabled in about:config."
+          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a> and <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>."
         ]
       },
       "opera": {
-        "supported": 0
+        "supported": 1,
+        "minVersion": 27
       },
       "safari": {
         "supported": 0
@@ -163,14 +163,18 @@
         "supported": 0.5,
         "minVersion": 40,
         "details": [
-          "<code>messageEvent.source</code> is <a href=\"https://crbug.com/403693\">null within the worker</a>, but you can pass your own <code>MessageChannel</code> for 2-way communication."
+          "<code>messageEvent.source</code> is <a href=\"https://crbug.com/403693\"><code>null</code> within the worker</a>, but you can pass your own <code>MessageChannel</code> for 2-way communication."
         ]
       },
       "firefox": {
         "supported": 0
       },
       "opera": {
-        "supported": 0
+        "supported": 0.5,
+        "minVersion": 27,
+        "details": [
+          "<code>messageEvent.source</code> is <a href=\"https://crbug.com/403693\"><code>null</code> within the worker</a>, but you can pass your own <code>MessageChannel</code> for 2-way communication."
+        ]
       },
       "safari": {
         "supported": 0
@@ -190,11 +194,12 @@
         "icon": "firefox-nightly",
         "supported": 0.5,
         "details": [
-          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a> and dom.serviceWorkers.enabled in about:config."
+          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a> and <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>."
         ]
       },
       "opera": {
-        "supported": 0
+        "supported": 1,
+        "minVersion": 27
       },
       "safari": {
         "supported": 0
@@ -214,12 +219,13 @@
         "icon": "firefox-nightly",
         "supported": 0.5,
         "details": [
-          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a> and dom.serviceWorkers.enabled in about:config.",
+          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a> and <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>.",
           "Partial implementation."
         ]
       },
       "opera": {
-        "supported": 0
+        "supported": 1,
+        "minVersion": 27
       },
       "safari": {
         "supported": 0
@@ -239,11 +245,12 @@
         "icon": "firefox-nightly",
         "supported": 0.5,
         "details": [
-          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a> and dom.serviceWorkers.enabled in about:config."
+          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a> and <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>."
         ]
       },
       "opera": {
-        "supported": 0
+        "supported": 1,
+        "minVersion": 27
       },
       "safari": {
         "supported": 0
@@ -263,11 +270,12 @@
         "icon": "firefox-nightly",
         "supported": 0.5,
         "details": [
-          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a> and dom.serviceWorkers.enabled in about:config."
+          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a> and <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>."
         ]
       },
       "opera": {
-        "supported": 0
+        "supported": 1,
+        "minVersion": 27
       },
       "safari": {
         "supported": 0
@@ -283,7 +291,7 @@
         "supported": 0.5,
         "icon": "chrome-canary",
         "details": [
-          "Requires <a href=\"https://www.google.co.uk/chrome/browser/canary.html\">Chrome Canary</a>."
+          "Requires <a href=\"https://www.google.com/chrome/browser/canary.html\">Chrome Canary</a>."
         ]
       },
       "firefox": {
@@ -310,11 +318,12 @@
         "icon": "firefox-nightly",
         "supported": 0.5,
         "details": [
-          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a> and dom.serviceWorkers.enabled in about:config."
+          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a> and <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>."
         ]
       },
       "opera": {
-        "supported": 0
+        "supported": 1,
+        "minVersion": 27
       },
       "safari": {
         "supported": 0
@@ -334,7 +343,8 @@
         "supported": 0
       },
       "opera": {
-        "supported": 0
+        "supported": 1,
+        "minVersion": 27
       },
       "safari": {
         "supported": 0
@@ -350,7 +360,7 @@
         "supported": 0.5,
         "minVersion": 40,
         "details": [
-          "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/beta.html\">Chrome Beta</a>"
+          "Requires <a href=\"https://www.google.com/intl/en/chrome/browser/beta.html\">Chrome Beta</a>"
         ]
       },
       "firefox": {
@@ -373,7 +383,7 @@
         "supported": 0.5,
         "minVersion": 40,
         "details": [
-          "Requires <a href=\"https://www.google.co.uk/intl/en/chrome/browser/beta.html\">Chrome Beta</a>"
+          "Requires <a href=\"https://www.google.com/intl/en/chrome/browser/beta.html\">Chrome Beta</a>"
         ]
       },
       "firefox": {
@@ -396,14 +406,18 @@
         "supported": 1,
         "minVersion": 40,
         "details": [
-          "URLSearchParams as well as creating a Response from FormData are not supported yet. (<a href=\"https://code.google.com/p/chromium/issues/detail?id=412027#c5\">crbug#412027</a>)."
+          "<code>URLSearchParams</code> as well as creating a <code>Response</code> from <code>FormData</code> are not supported yet. (<a href=\"https://code.google.com/p/chromium/issues/detail?id=412027#c5\">crbug#412027</a>)."
         ]
       },
       "firefox": {
         "supported": 0
       },
       "opera": {
-        "supported": 0
+        "supported": 1,
+        "minVersion": 27,
+        "details": [
+          "<code>URLSearchParams</code> as well as creating a <code>Response</code> from <code>FormData</code> are not supported yet. (<a href=\"https://code.google.com/p/chromium/issues/detail?id=412027#c5\">crbug#412027</a>)."
+        ]
       },
       "safari": {
         "supported": 0
@@ -426,7 +440,11 @@
         "supported": 0
       },
       "opera": {
-        "supported": 0
+        "supported": 0.5,
+        "minVersion": 27,
+        "details": [
+          "Only available within ServiceWorkers"
+        ]
       },
       "safari": {
         "supported": 0
@@ -454,7 +472,13 @@
         "supported": 0
       },
       "opera": {
-        "supported": 0
+        "supported": 0.5,
+        "minVersion": 27,
+        "details": [
+          "Only available within ServiceWorkers",
+          "Some higher-level methods absent such as <code>caches.match</code>, <code>cache.add</code>, <code>cache.addAll</code>",
+          "<a href=\"https://github.com/coonsta/cache-polyfill\">Polyfill available</a>"
+        ]
       },
       "safari": {
         "supported": 0
