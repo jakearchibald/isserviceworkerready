@@ -113,7 +113,7 @@
         "icon": "firefox-nightly",
         "supported": 0.5,
         "details": [
-          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a> and dom.serviceWorkers.enabled in about:config."
+          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a> and <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>."
         ]
       },
       "opera": {
