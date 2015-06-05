@@ -87,7 +87,11 @@
         ]
       },
       "firefox": {
-        "supported": 0
+        "supported": 0.5,
+        "minVersion": 40,
+        "details": [
+          "<a href=\"https://developer.mozilla.org/en-US/docs/Tools/Web_Console\">Web Console</a> can display console messages from Service Workers "
+        ]
       },
       "opera": {
         "supported": 0
@@ -107,10 +111,10 @@
         "minVersion": 40
       },
       "firefox": {
-        "icon": "firefox-nightly",
+        "icon": "firefox",
         "supported": 0.5,
         "details": [
-          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a> or dom.serviceWorkers.enabled in about:config."
+          "Requires dom.serviceWorkers.enabled in about:config."
         ]
       },
       "opera": {
@@ -134,10 +138,10 @@
         "minVersion": 40
       },
       "firefox": {
-        "icon": "firefox-nightly",
+        "icon": "firefox",
         "supported": 0.5,
         "details": [
-          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a> or <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>."
+          "Requires <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>."
         ]
       },
       "opera": {
@@ -518,7 +522,7 @@
         "icon": "firefox-nightly",
         "supported": 0.5,
         "details": [
-          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a> or <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>."
+          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a> and <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>."
         ]
       },
       "opera": {
