@@ -17,8 +17,8 @@
       "name": "Safari"
     },
     {
-      "id": "internet-explorer",
-      "name": "Internet Explorer"
+      "id": "edge",
+      "name": "Edge"
     }
   ],
   "features": [
@@ -40,7 +40,7 @@
           "No public commitment."
         ]
       },
-      "internet-explorer": {
+      "edge": {
         "supported": 0,
         "details": [
           "<a href=\"http://status.modern.ie/serviceworker\">Under consideration</a>."
@@ -69,12 +69,9 @@
           "<code>Promise.resolve(promise)</code> creates new promise instance. (fixed in the nightlies)"
         ]
       },
-      "internet-explorer": {
-        "icon": "internet-explorer-dev",
-        "supported": 0.5,
-        "details": [
-          "Implemented in IE's <a href=\"http://devchannel.modern.ie/\">preview release</a>"
-        ]
+      "edge": {
+        "icon": "edge",
+        "supported": 1
       }
     },
     {
@@ -98,7 +95,7 @@
       "safari": {
         "supported": 0
       },
-      "internet-explorer": {
+      "edge": {
         "supported": 0
       }
     },
@@ -123,7 +120,7 @@
       "safari": {
         "supported": 0
       },
-      "internet-explorer": {
+      "edge": {
         "supported": 0
       },
       "details": [
@@ -150,7 +147,7 @@
       "safari": {
         "supported": 0
       },
-      "internet-explorer": {
+      "edge": {
         "supported": 0
       },
       "details": [
@@ -179,7 +176,7 @@
       "safari": {
         "supported": 0
       },
-      "internet-explorer": {
+      "edge": {
         "supported": 0
       }
     },
@@ -204,7 +201,7 @@
       "safari": {
         "supported": 0
       },
-      "internet-explorer": {
+      "edge": {
         "supported": 0
       }
     },
@@ -230,7 +227,7 @@
       "safari": {
         "supported": 0
       },
-      "internet-explorer": {
+      "edge": {
         "supported": 0
       }
     },
@@ -255,7 +252,7 @@
       "safari": {
         "supported": 0
       },
-      "internet-explorer": {
+      "edge": {
         "supported": 0
       }
     },
@@ -280,7 +277,7 @@
       "safari": {
         "supported": 0
       },
-      "internet-explorer": {
+      "edge": {
         "supported": 0
       }
     },
@@ -303,7 +300,7 @@
       "safari": {
         "supported": 0
       },
-      "internet-explorer": {
+      "edge": {
         "supported": 0
       }
     },
@@ -328,7 +325,7 @@
       "safari": {
         "supported": 0
       },
-      "internet-explorer": {
+      "edge": {
         "supported": 0
       }
     },
@@ -352,7 +349,7 @@
       "safari": {
         "supported": 0
       },
-      "internet-explorer": {
+      "edge": {
         "supported": 0
       }
     },
@@ -373,7 +370,7 @@
       "safari": {
         "supported": 0
       },
-      "internet-explorer": {
+      "edge": {
         "supported": 0
       }
     },
@@ -396,7 +393,7 @@
       "safari": {
         "supported": 0
       },
-      "internet-explorer": {
+      "edge": {
         "supported": 0
       }
     },
@@ -419,7 +416,7 @@
       "safari": {
         "supported": 0
       },
-      "internet-explorer": {
+      "edge": {
         "supported": 0
       }
     },
@@ -446,7 +443,7 @@
       "safari": {
         "supported": 0
       },
-      "internet-explorer": {
+      "edge": {
         "supported": 0
       }
     },
@@ -473,7 +470,7 @@
       "safari": {
         "supported": 0
       },
-      "internet-explorer": {
+      "edge": {
         "supported": 0
       },
       "details": [
@@ -507,7 +504,7 @@
       "safari": {
         "supported": 0
       },
-      "internet-explorer": {
+      "edge": {
         "supported": 0
       }
     },
@@ -530,7 +527,7 @@
       "safari": {
         "supported": 0
       },
-      "internet-explorer": {
+      "edge": {
         "supported": 0
       }
     }
