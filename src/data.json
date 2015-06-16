@@ -37,13 +37,13 @@
       "safari": {
         "supported": 0,
         "details": [
-          "No public commitment."
+          "No public commitment"
         ]
       },
       "internet-explorer": {
         "supported": 0,
         "details": [
-          "<a href=\"http://status.modern.ie/serviceworker\">Under consideration</a>."
+          "<a href=\"http://status.modern.ie/serviceworker\">Under consideration</a>"
         ]
       }
     },
@@ -66,7 +66,7 @@
         "minVersion": 7.1,
         "supported": 0.5,
         "details": [
-          "<code>Promise.resolve(promise)</code> creates new promise instance. (fixed in the nightlies)"
+          "<code>Promise.resolve(promise)</code> creates a new <code>Promise</code> instance (fixed in the nightlies)"
         ]
       },
       "internet-explorer": {
@@ -79,13 +79,13 @@
     },
     {
       "name": "Debugging",
-      "description": "State of debugging tools",
+      "description": "State of debugging tools.",
       "chrome": {
         "supported": 1,
         "minVersion": 40,
         "details": [
-          "<code>chrome://inspect/#service-workers</code> lets you inspect and debug Service Workers.",
-          "<code>chrome://serviceworker-internals</code> shows console logs, devtools, allows stop/start/unregister.",
+          "<code>chrome://inspect/#service-workers</code> lets you inspect and debug Service Workers",
+          "<code>chrome://serviceworker-internals</code> shows console logs, devtools, allows stop/start/unregister",
           "Better tools are coming!"
         ]
       },
@@ -163,7 +163,7 @@
         "supported": 0.5,
         "minVersion": 40,
         "details": [
-          "<code>messageEvent.source</code> is <a href=\"https://crbug.com/403693\"><code>null</code> within the worker</a>, but you can pass your own <code>MessageChannel</code> for 2-way communication."
+          "<code>messageEvent.source</code> is <a href=\"https://crbug.com/403693\"><code>null</code> within the worker</a>, but you can pass your own <code>MessageChannel</code> for 2-way communication"
         ]
       },
       "firefox": {
@@ -173,7 +173,7 @@
         "supported": 0.5,
         "minVersion": 27,
         "details": [
-          "<code>messageEvent.source</code> is <a href=\"https://crbug.com/403693\"><code>null</code> within the worker</a>, but you can pass your own <code>MessageChannel</code> for 2-way communication."
+          "<code>messageEvent.source</code> is <a href=\"https://crbug.com/403693\"><code>null</code> within the worker</a>, but you can pass your own <code>MessageChannel</code> for 2-way communication"
         ]
       },
       "safari": {
@@ -194,7 +194,7 @@
         "icon": "firefox-nightly",
         "supported": 0.5,
         "details": [
-          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a> and <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>."
+          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a> and <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>"
         ]
       },
       "opera": {
@@ -219,8 +219,8 @@
         "icon": "firefox-nightly",
         "supported": 0.5,
         "details": [
-          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a> and <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>.",
-          "Partial implementation."
+          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a> and <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>",
+          "Partial implementation"
         ]
       },
       "opera": {
@@ -245,7 +245,7 @@
         "icon": "firefox-nightly",
         "supported": 0.5,
         "details": [
-          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a> and <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>."
+          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a> and <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>"
         ]
       },
       "opera": {
@@ -261,7 +261,7 @@
     },
     {
       "name": "Install event",
-      "description": "Install event fires in a newly discovered SW. Includes <code>InstallEvent.waitUntil()</code>. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#install-event-section\">Spec</a>. <a href=\"demos/installactivate/\">Test</a>.",
+      "description": "Install event fires in a newly discovered SW. Includes <code>InstallEvent.waitUntil()</code>. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#install-event-section\">Spec</a>. <a href=\"demos/installactivate/\">Test</a>",
       "chrome": {
         "supported": 1,
         "minVersion": 40
@@ -270,7 +270,7 @@
         "icon": "firefox-nightly",
         "supported": 0.5,
         "details": [
-          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a> and <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>."
+          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a> and <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>"
         ]
       },
       "opera": {
@@ -291,7 +291,7 @@
         "supported": 0.5,
         "icon": "chrome-canary",
         "details": [
-          "Requires <a href=\"https://www.google.com/chrome/browser/canary.html\">Chrome Canary</a>."
+          "Requires <a href=\"https://www.google.com/chrome/browser/canary.html\">Chrome Canary</a>"
         ]
       },
       "firefox": {
@@ -318,7 +318,7 @@
         "icon": "firefox-nightly",
         "supported": 0.5,
         "details": [
-          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a> and <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>."
+          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a> and <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>"
         ]
       },
       "opera": {
@@ -340,7 +340,7 @@
         "icon": "chrome-canary",
         "minVersion": 42,
         "details": [
-          "Requires <a href=\"https://www.google.com/chrome/browser/canary.html\">Chrome Canary</a>."
+          "Requires <a href=\"https://www.google.com/chrome/browser/canary.html\">Chrome Canary</a>"
         ]
       },
       "firefox": {
@@ -430,7 +430,7 @@
         "supported": 1,
         "minVersion": 40,
         "details": [
-          "<code>URLSearchParams</code> as well as creating a <code>Response</code> from <code>FormData</code> are not supported yet. (<a href=\"https://code.google.com/p/chromium/issues/detail?id=412027#c5\">crbug#412027</a>)."
+          "<code>URLSearchParams</code> as well as creating a <code>Response</code> from <code>FormData</code> are <a href=\"https://code.google.com/p/chromium/issues/detail?id=412027#c5\">not supported yet</a>"
         ]
       },
       "firefox": {
@@ -440,7 +440,7 @@
         "supported": 1,
         "minVersion": 27,
         "details": [
-          "<code>URLSearchParams</code> as well as creating a <code>Response</code> from <code>FormData</code> are not supported yet. (<a href=\"https://code.google.com/p/chromium/issues/detail?id=412027#c5\">crbug#412027</a>)."
+          "<code>URLSearchParams</code> as well as creating a <code>Response</code> from <code>FormData</code> are <a href=\"https://code.google.com/p/chromium/issues/detail?id=412027#c5\">not supported yet</a>"
         ]
       },
       "safari": {
