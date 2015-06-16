@@ -17,8 +17,8 @@
       "name": "Safari"
     },
     {
-      "id": "internet-explorer",
-      "name": "Internet Explorer"
+      "id": "edge",
+      "name": "Edge"
     }
   ],
   "features": [
@@ -40,7 +40,7 @@
           "No public commitment"
         ]
       },
-      "internet-explorer": {
+      "edge": {
         "supported": 0,
         "details": [
           "<a href=\"http://status.modern.ie/serviceworker\">Under consideration</a>"
@@ -69,12 +69,9 @@
           "<code>Promise.resolve(promise)</code> creates a new <code>Promise</code> instance (fixed in the nightlies)"
         ]
       },
-      "internet-explorer": {
-        "icon": "internet-explorer-dev",
-        "supported": 0.5,
-        "details": [
-          "Implemented in IE's <a href=\"http://devchannel.modern.ie/\">preview release</a>"
-        ]
+      "edge": {
+        "icon": "edge",
+        "supported": 1
       }
     },
     {
@@ -90,7 +87,11 @@
         ]
       },
       "firefox": {
-        "supported": 0
+        "supported": 0.5,
+        "minVersion": 40,
+        "details": [
+          "<a href=\"https://developer.mozilla.org/en-US/docs/Tools/Web_Console\">Web Console</a> can display console messages from Service Workers "
+        ]
       },
       "opera": {
         "supported": 0
@@ -98,7 +99,7 @@
       "safari": {
         "supported": 0
       },
-      "internet-explorer": {
+      "edge": {
         "supported": 0
       }
     },
@@ -110,10 +111,10 @@
         "minVersion": 40
       },
       "firefox": {
-        "icon": "firefox-nightly",
+        "icon": "firefox",
         "supported": 0.5,
         "details": [
-          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a> or <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>."
+          "Requires <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>."
         ]
       },
       "opera": {
@@ -123,7 +124,7 @@
       "safari": {
         "supported": 0
       },
-      "internet-explorer": {
+      "edge": {
         "supported": 0
       },
       "details": [
@@ -137,10 +138,10 @@
         "minVersion": 40
       },
       "firefox": {
-        "icon": "firefox-nightly",
+        "icon": "firefox",
         "supported": 0.5,
         "details": [
-          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a> or <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>."
+          "Requires <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>."
         ]
       },
       "opera": {
@@ -150,7 +151,7 @@
       "safari": {
         "supported": 0
       },
-      "internet-explorer": {
+      "edge": {
         "supported": 0
       },
       "details": [
@@ -179,7 +180,7 @@
       "safari": {
         "supported": 0
       },
-      "internet-explorer": {
+      "edge": {
         "supported": 0
       }
     },
@@ -204,7 +205,7 @@
       "safari": {
         "supported": 0
       },
-      "internet-explorer": {
+      "edge": {
         "supported": 0
       }
     },
@@ -230,7 +231,7 @@
       "safari": {
         "supported": 0
       },
-      "internet-explorer": {
+      "edge": {
         "supported": 0
       }
     },
@@ -255,7 +256,7 @@
       "safari": {
         "supported": 0
       },
-      "internet-explorer": {
+      "edge": {
         "supported": 0
       }
     },
@@ -280,7 +281,7 @@
       "safari": {
         "supported": 0
       },
-      "internet-explorer": {
+      "edge": {
         "supported": 0
       }
     },
@@ -303,7 +304,7 @@
       "safari": {
         "supported": 0
       },
-      "internet-explorer": {
+      "edge": {
         "supported": 0
       }
     },
@@ -328,7 +329,7 @@
       "safari": {
         "supported": 0
       },
-      "internet-explorer": {
+      "edge": {
         "supported": 0
       }
     },
@@ -352,7 +353,7 @@
       "safari": {
         "supported": 0
       },
-      "internet-explorer": {
+      "edge": {
         "supported": 0
       }
     },
@@ -373,7 +374,7 @@
       "safari": {
         "supported": 0
       },
-      "internet-explorer": {
+      "edge": {
         "supported": 0
       }
     },
@@ -396,7 +397,7 @@
       "safari": {
         "supported": 0
       },
-      "internet-explorer": {
+      "edge": {
         "supported": 0
       }
     },
@@ -419,7 +420,7 @@
       "safari": {
         "supported": 0
       },
-      "internet-explorer": {
+      "edge": {
         "supported": 0
       }
     },
@@ -446,7 +447,7 @@
       "safari": {
         "supported": 0
       },
-      "internet-explorer": {
+      "edge": {
         "supported": 0
       }
     },
@@ -473,7 +474,7 @@
       "safari": {
         "supported": 0
       },
-      "internet-explorer": {
+      "edge": {
         "supported": 0
       },
       "details": [
@@ -507,7 +508,7 @@
       "safari": {
         "supported": 0
       },
-      "internet-explorer": {
+      "edge": {
         "supported": 0
       }
     },
@@ -521,7 +522,7 @@
         "icon": "firefox-nightly",
         "supported": 0.5,
         "details": [
-          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a> or <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>."
+          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a> and <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>."
         ]
       },
       "opera": {
@@ -530,7 +531,7 @@
       "safari": {
         "supported": 0
       },
-      "internet-explorer": {
+      "edge": {
         "supported": 0
       }
     }
