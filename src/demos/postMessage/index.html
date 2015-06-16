@@ -23,6 +23,10 @@
       log("Got reply from serviceworker via window", event.data);
     };
 
+    navigator.serviceWorker.onmessage = function(event) {
+      log("Got reply from serviceworker via navigator.serviceWorker", event.data);
+    };
+
     if (window.MessageChannel) {
       var messageChannel = new MessageChannel();
 
@@ -31,20 +35,25 @@
       };
     }
 
-    navigator.serviceWorker.register('sw.js', {
-      scope: './'
-    }).then(function(sw) {
-
+    navigator.serviceWorker.register('sw.js').then(function(sw) {
       log("Registered!", sw);
     }).catch(function(err) {
       log("Error", err);
     });
 
     navigator.serviceWorker.ready.then(function(reg) {
-      reg.active.postMessage({
-        text: "Hi!",
-        port: messageChannel && messageChannel.port2
-      }, [messageChannel && messageChannel.port2]);
+      try {
+        reg.active.postMessage({
+          text: "Hi!",
+          port: messageChannel && messageChannel.port2
+        }, [messageChannel && messageChannel.port2]);
+      }
+      catch (e) {
+        // getting a cloning error in Firefox
+        reg.active.postMessage({
+          text: "Hi!"
+        });
+      }
     });
   </script></body>
 </html>

@@ -41,9 +41,9 @@
         ]
       },
       "edge": {
-        "supported": 0,
+        "supported": 0.5,
         "details": [
-          "<a href=\"http://status.modern.ie/serviceworker\">Under consideration</a>"
+          "<a href=\"http://status.modern.ie/serviceworker\">Under consideration</a>, but <a href=\"https://twitter.com/jacobrossi/status/608291251121618944\">positive signals</a>."
         ]
       }
     },
@@ -71,7 +71,10 @@
       },
       "edge": {
         "icon": "edge",
-        "supported": 1
+        "supported": 0.5,
+        "details": [
+          "Preview build."
+        ]
       }
     },
     {
@@ -81,14 +84,15 @@
         "supported": 1,
         "minVersion": 40,
         "details": [
-          "<code>chrome://inspect/#service-workers</code> lets you inspect and debug Service Workers",
-          "<code>chrome://serviceworker-internals</code> shows console logs, devtools, allows stop/start/unregister",
-          "Better tools are coming!"
+          "Debuggable from the resources panel in <a href=\"https://www.google.com/chrome/browser/canary.html\">Chrome Canary</a> if you <a href=\"https://www.reddit.com/r/webdev/comments/2wz7s4/the_secret_extra_tools_within_chromes_dev_tools/\">enable super-experimental devtools</a>.",
+          "Console messages from the service worker appear in the pages' console.",
+          "You can set breakpoints and run console commands in the context of the service worker.",
+          "<code>chrome://serviceworker-internals</code> has some under-the-hood stuff."
         ]
       },
       "firefox": {
+        "icon": "firefox-nightly",
         "supported": 0.5,
-        "minVersion": 40,
         "details": [
           "<a href=\"https://developer.mozilla.org/en-US/docs/Tools/Web_Console\">Web Console</a> can display console messages from Service Workers "
         ]
@@ -111,7 +115,7 @@
         "minVersion": 40
       },
       "firefox": {
-        "icon": "firefox",
+        "icon": "firefox-nightly",
         "supported": 0.5,
         "details": [
           "Requires <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>."
@@ -138,7 +142,7 @@
         "minVersion": 40
       },
       "firefox": {
-        "icon": "firefox",
+        "icon": "firefox-nightly",
         "supported": 0.5,
         "details": [
           "Requires <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>."
@@ -162,27 +166,29 @@
       "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#service-worker-client\">Spec</a>. <a href=\"demos/postMessage/\">Test</a>.",
       "chrome": {
         "supported": 0.5,
-        "minVersion": 40,
-        "details": [
-          "<code>messageEvent.source</code> is <a href=\"https://crbug.com/403693\"><code>null</code> within the worker</a>, but you can pass your own <code>MessageChannel</code> for 2-way communication"
-        ]
+        "minVersion": 40
       },
       "firefox": {
-        "supported": 0
+        "icon": "firefox-nightly",
+        "supported": 0.5,
+        "details": [
+          "Requires <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>."
+        ]
       },
       "opera": {
         "supported": 0.5,
-        "minVersion": 27,
-        "details": [
-          "<code>messageEvent.source</code> is <a href=\"https://crbug.com/403693\"><code>null</code> within the worker</a>, but you can pass your own <code>MessageChannel</code> for 2-way communication"
-        ]
+        "minVersion": 27
       },
       "safari": {
         "supported": 0
       },
       "edge": {
         "supported": 0
-      }
+      },
+      "details": [
+        "<strong>Chrome & Opera</strong>: <code>messageEvent.source</code> is <a href=\"https://crbug.com/403693\"><code>null</code> within the worker</a>, but you can pass your own <code>MessageChannel</code> for 2-way communication",
+        "<strong>Chrome & Opera</strong>: Incorrectly delivers messages to <code>window.onmessage</code> rather than <code>navigator.serviceWorker.onmessage</code>."
+      ]
     },
     {
       "name": "Fetch event",
@@ -220,8 +226,7 @@
         "icon": "firefox-nightly",
         "supported": 0.5,
         "details": [
-          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a> and <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>",
-          "Partial implementation"
+          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a> and <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>"
         ]
       },
       "opera": {
@@ -289,11 +294,8 @@
       "name": "<code>self.skipWaiting()</code>",
       "description": "Allow an installing worker to take over from the current active worker once installed. <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#service-worker-global-scope-skipwaiting\">Spec</a>. <a href=\"demos/installactivate/\">Test</a>.",
       "chrome": {
-        "supported": 0.5,
-        "icon": "chrome-canary",
-        "details": [
-          "Requires <a href=\"https://www.google.com/chrome/browser/canary.html\">Chrome Canary</a>"
-        ]
+        "supported": 1,
+        "minVersion": 42
       },
       "firefox": {
         "supported": 0
@@ -337,12 +339,8 @@
       "name": "<code>clients.claim()</code>",
       "description": "Allow an active worker to take control of pages in its scope (eg, documents that were loaded before the SW was registered). <a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#clients-claim\">Spec</a>. <a href=\"demos/claim/\">Test</a>.",
       "chrome": {
-        "supported": 0.5,
-        "icon": "chrome-canary",
-        "minVersion": 42,
-        "details": [
-          "Requires <a href=\"https://www.google.com/chrome/browser/canary.html\">Chrome Canary</a>"
-        ]
+        "supported": 1,
+        "minVersion": 42
       },
       "firefox": {
         "supported": 0
@@ -365,7 +363,11 @@
         "minVersion": 40
       },
       "firefox": {
-        "supported": 0
+        "icon": "firefox-nightly",
+        "supported": 0.5,
+        "details": [
+          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a> and <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>"
+        ]
       },
       "opera": {
         "supported": 1,
@@ -382,14 +384,15 @@
       "name": "ServiceWorker lifecycle",
       "description": "Allow a next version to be in waiting &amp; take over when appropriate.",
       "chrome": {
-        "supported": 0.5,
-        "minVersion": 40,
-        "details": [
-          "Requires <a href=\"https://www.google.com/intl/en/chrome/browser/beta.html\">Chrome Beta</a>"
-        ]
+        "supported": 1,
+        "minVersion": 40
       },
       "firefox": {
-        "supported": 0
+        "icon": "firefox-nightly",
+        "supported": 0.5,
+        "details": [
+          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a> and <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>"
+        ]
       },
       "opera": {
         "supported": 0
@@ -405,14 +408,15 @@
       "name": "<code>Request</code>",
       "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#request-objects\">Spec</a>. <a href=\"demos/globalapis/\">Test</a>.",
       "chrome": {
-        "supported": 0.5,
-        "minVersion": 40,
-        "details": [
-          "Requires <a href=\"https://www.google.com/intl/en/chrome/browser/beta.html\">Chrome Beta</a>"
-        ]
+        "supported": 1,
+        "minVersion": 40
       },
       "firefox": {
-        "supported": 0
+        "icon": "firefox-nightly",
+        "supported": 0.5,
+        "details": [
+          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a> and <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>"
+        ]
       },
       "opera": {
         "supported": 0
@@ -431,11 +435,15 @@
         "supported": 1,
         "minVersion": 40,
         "details": [
-          "<code>URLSearchParams</code> as well as creating a <code>Response</code> from <code>FormData</code> are <a href=\"https://code.google.com/p/chromium/issues/detail?id=412027#c5\">not supported yet</a>"
+          "<code>URLSearchParams</code> <a href=\"https://code.google.com/p/chromium/issues/detail?id=412027#c11\">not supported yet</a>"
         ]
       },
       "firefox": {
-        "supported": 0
+        "icon": "firefox-nightly",
+        "supported": 0.5,
+        "details": [
+          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a> and <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>"
+        ]
       },
       "opera": {
         "supported": 1,
@@ -455,21 +463,19 @@
       "name": "<code>fetch(request)</code>",
       "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#service-worker-global-scope-fetch\">Spec</a>. <a href=\"demos/fetch/\">Test</a>.",
       "chrome": {
-        "supported": 0.5,
-        "minVersion": 40,
-        "details": [
-          "Only available within ServiceWorkers"
-        ]
+        "supported": 1,
+        "minVersion": 40
       },
       "firefox": {
-        "supported": 0
+        "icon": "firefox-nightly",
+        "supported": 0.5,
+        "details": [
+          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a> and <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>"
+        ]
       },
       "opera": {
-        "supported": 0.5,
-        "minVersion": 27,
-        "details": [
-          "Only available within ServiceWorkers"
-        ]
+        "supported": 1,
+        "minVersion": 27
       },
       "safari": {
         "supported": 0
@@ -488,20 +494,22 @@
         "supported": 0.5,
         "minVersion": 40,
         "details": [
-          "Only available within ServiceWorkers",
-          "Some higher-level methods absent such as <code>caches.match</code>, <code>cache.add</code>, <code>cache.addAll</code>",
+          "Some higher-level methods absent such as <code>cache.add</code>, <code>cache.addAll</code>",
           "<a href=\"https://github.com/coonsta/cache-polyfill\">Polyfill available</a>"
         ]
       },
       "firefox": {
-        "supported": 0
+        "icon": "firefox-nightly",
+        "supported": 0.5,
+        "details": [
+          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a> and <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>"
+        ]
       },
       "opera": {
         "supported": 0.5,
-        "minVersion": 27,
+        "minVersion": 40,
         "details": [
-          "Only available within ServiceWorkers",
-          "Some higher-level methods absent such as <code>caches.match</code>, <code>cache.add</code>, <code>cache.addAll</code>",
+          "Some higher-level methods absent such as <code>cache.add</code>, <code>cache.addAll</code>",
           "<a href=\"https://github.com/coonsta/cache-polyfill\">Polyfill available</a>"
         ]
       },
