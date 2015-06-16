@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .log {
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <pre class="log"></pre>
+  <script>
+    var logEl = document.querySelector('.log');
+    function log() {
+      logEl.appendChild(document.createTextNode(Array.prototype.join.call(arguments, ", ") + '\n'));
+      console.log.apply(console, arguments);
+    }
+
+    window.onerror = function(err) {
+      log("Error", err);
+    };
+
+    log("Registering ServiceWorker");
+    navigator.serviceWorker.register('sw.js').then(function(sw) {
+      log("It registered, but install will fail");
+    }).catch(function(err) {
+      log("error", err);
+    });
+  </script>
+</body>
+</html>

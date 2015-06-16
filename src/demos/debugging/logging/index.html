@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .log {
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <button>Trigger log from ServiceWorker</button>
+  <pre class="log"></pre>
+  <script>
+    var logEl = document.querySelector('.log');
+    function log() {
+      logEl.appendChild(document.createTextNode(Array.prototype.join.call(arguments, ", ") + '\n'));
+      console.log.apply(console, arguments);
+    }
+
+    window.onerror = function(err) {
+      log("Error", err);
+    };
+
+    document.querySelector('button').addEventListener('click', function() {
+      navigator.serviceWorker.controller.postMessage('yo');
+    });
+
+    log("Registering ServiceWorker - see console");
+    navigator.serviceWorker.register('sw.js');
+  </script>
+</body>
+</html>

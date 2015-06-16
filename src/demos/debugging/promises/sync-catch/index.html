@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .log {
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <pre class="log"></pre>
+  <script>
+    var logEl = document.querySelector('.log');
+    function log() {
+      logEl.appendChild(document.createTextNode(Array.prototype.join.call(arguments, ", ") + '\n'));
+      console.log.apply(console, arguments);
+    }
+
+    log("See the console");
+
+    window.onerror = function(err) {
+      log("Error", err);
+    };
+
+    (function() {
+      var whatever = Promise.resolve().then(function() {
+        throw Error("Another error from promise");
+      }).catch(function() {
+        // this should supress errors
+        return "Yey";
+      });
+    }());
+  </script>
+</body>
+</html>
