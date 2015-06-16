@@ -115,7 +115,7 @@
         "minVersion": 40
       },
       "firefox": {
-        "icon": "firefox-nightly",
+        "icon": "firefox",
         "supported": 0.5,
         "details": [
           "Requires <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>."
@@ -142,7 +142,7 @@
         "minVersion": 40
       },
       "firefox": {
-        "icon": "firefox-nightly",
+        "icon": "firefox",
         "supported": 0.5,
         "details": [
           "Requires <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>."
@@ -169,7 +169,7 @@
         "minVersion": 40
       },
       "firefox": {
-        "icon": "firefox-nightly",
+        "icon": "firefox",
         "supported": 0.5,
         "details": [
           "Requires <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>."
