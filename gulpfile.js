@@ -103,7 +103,7 @@ gulp.task('browser-sync', function() {
 gulp.task('watch', function () {
     gulp.watch(['src/**/*.scss'], ['copy:css']);
     gulp.watch(['src/*.html', 'src/data.json'], ['copy:html', reload]);
-    gulp.watch(['src/img/**', 'src/demos/**'], ['copy:misc', reload]);
+    gulp.watch(['src/img/**', 'src/demos/**'], ['copy:misc']);
 });
 
 // ---------------------------------------------------------------------
