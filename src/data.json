@@ -513,7 +513,7 @@
       },
       "opera": {
         "supported": 0.5,
-        "minVersion": 40,
+        "minVersion": 27,
         "details": [
           "Some higher-level methods absent such as <code>cache.add</code>, <code>cache.addAll</code>",
           "<a href=\"https://github.com/coonsta/cache-polyfill\">Polyfill available</a>"
