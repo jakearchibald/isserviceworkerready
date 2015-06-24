@@ -98,7 +98,13 @@
         ]
       },
       "opera": {
-        "supported": 0
+        "supported": 1,
+        "details" : 
+        [
+          "Debuggable from the resources panel in <a href=\"http://www.opera.com/developer\">Opera developer</a> if you <a href=\"https://www.reddit.com/r/webdev/comments/2wz7s4/the_secret_extra_tools_within_chromes_dev_tools/\">enable super-experimental devtools</a>.",
+          "Console messages from the service worker appear in the pages' console in Opera stable.",
+          "<code>browser://serviceworker-internals</code> in Opera developer has some under-the-hood stuff."
+        ]
       },
       "safari": {
         "supported": 0
@@ -346,7 +352,7 @@
         "supported": 0
       },
       "opera": {
-        "supported": 0
+        "supported": 1
       },
       "safari": {
         "supported": 0
