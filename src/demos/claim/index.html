@@ -47,7 +47,7 @@
 
     document.querySelector('button').onclick = function(event) {
       event.preventDefault();
-      fetch("//nooooope/404.json").then(function(r) {
+      fetch("404.json").then(function(r) {
         return r.json();
       }).then(function(data) {
         log("From the ServiceWorker:", JSON.stringify(data));
