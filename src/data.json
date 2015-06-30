@@ -207,7 +207,7 @@
         "icon": "firefox-nightly",
         "supported": 0.5,
         "details": [
-          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a> and <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>"
+          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a>"
         ]
       },
       "opera": {
@@ -232,7 +232,7 @@
         "icon": "firefox-nightly",
         "supported": 0.5,
         "details": [
-          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a> and <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>"
+          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a>"
         ]
       },
       "opera": {
@@ -257,7 +257,7 @@
         "icon": "firefox-nightly",
         "supported": 0.5,
         "details": [
-          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a> and <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>"
+          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a>"
         ]
       },
       "opera": {
@@ -282,7 +282,7 @@
         "icon": "firefox-nightly",
         "supported": 0.5,
         "details": [
-          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a> and <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>"
+          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a>"
         ]
       },
       "opera": {
@@ -327,7 +327,7 @@
         "icon": "firefox-nightly",
         "supported": 0.5,
         "details": [
-          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a> and <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>"
+          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a>"
         ]
       },
       "opera": {
@@ -349,7 +349,13 @@
         "minVersion": 42
       },
       "firefox": {
-        "supported": 0
+        "icon": "firefox-nightly",
+        "supported": 0.5,
+        "minVersion": 42,
+        "details": [
+          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a>",
+          "Does not allow to intercept requests to another domain."
+        ]
       },
       "opera": {
         "supported": 1
@@ -372,7 +378,7 @@
         "icon": "firefox-nightly",
         "supported": 0.5,
         "details": [
-          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a> and <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>"
+          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a>"
         ]
       },
       "opera": {
@@ -397,7 +403,7 @@
         "icon": "firefox-nightly",
         "supported": 0.5,
         "details": [
-          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a> and <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>"
+          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a>"
         ]
       },
       "opera": {
@@ -421,7 +427,7 @@
         "icon": "firefox-nightly",
         "supported": 0.5,
         "details": [
-          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a> and <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>"
+          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a>"
         ]
       },
       "opera": {
@@ -448,7 +454,7 @@
         "icon": "firefox-nightly",
         "supported": 0.5,
         "details": [
-          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a> and <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>"
+          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a>"
         ]
       },
       "opera": {
@@ -476,7 +482,7 @@
         "icon": "firefox-nightly",
         "supported": 0.5,
         "details": [
-          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a> and <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>"
+          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a>"
         ]
       },
       "opera": {
@@ -508,12 +514,12 @@
         "icon": "firefox-nightly",
         "supported": 0.5,
         "details": [
-          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a> and <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>"
+          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a>"
         ]
       },
       "opera": {
         "supported": 0.5,
-        "minVersion": 40,
+        "minVersion": 27,
         "details": [
           "Some higher-level methods absent such as <code>cache.add</code>, <code>cache.addAll</code>",
           "<a href=\"https://github.com/coonsta/cache-polyfill\">Polyfill available</a>"
@@ -536,7 +542,7 @@
         "icon": "firefox-nightly",
         "supported": 0.5,
         "details": [
-          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a> and <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>."
+          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a>"
         ]
       },
       "opera": {
