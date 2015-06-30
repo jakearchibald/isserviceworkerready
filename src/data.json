@@ -351,7 +351,7 @@
       "firefox": {
         "icon": "firefox-nightly",
         "supported": 0.5,
-        "minVersion": 42
+        "minVersion": 42,
         "details": [
           "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a>",
           "Does not allow to intercept requests to another domain."
