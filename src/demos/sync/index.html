@@ -38,8 +38,9 @@
           if (result !== 'granted') return reject(Error("Denied notification permission"));
           resolve();
         })
-      });
-      navigator.serviceWorker.ready.then(function(reg) {
+      }).then(function() {
+        return navigator.serviceWorker.ready;
+      }).then(function(reg) {
         if (!reg.sync) {
           throw Error('Sync not supported');
         }
