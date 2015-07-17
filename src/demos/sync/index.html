@@ -12,7 +12,8 @@
     One-off background sync doesn't require permissions, but notifications do,
     and that's how we're going to tell you it worked.
   </p>
-  <button>Register background sync</button>
+  <button class="register">Register background sync</button>
+  <button class="unregister">Unregister background sync</button>
   <div class="log"></div>
   <script>
     var logEl = document.querySelector('.log');
@@ -29,7 +30,7 @@
       if (reg) log("There's already a background sync pending");
     });
 
-    document.querySelector('button').addEventListener('click', function(event) {
+    document.querySelector('.register').addEventListener('click', function(event) {
       event.preventDefault();
 
       new Promise(function(resolve, reject) {
@@ -40,12 +41,27 @@
       });
       navigator.serviceWorker.ready.then(function(reg) {
         if (!reg.sync) {
-          log('Sync not supported');
-          return;
+          throw Error('Sync not supported');
         }
         return reg.sync.register({tag: 'syncTest'});
       }).then(function() {
         log('Sync registered');
+      }).catch(function(err) {
+        log('It broke');
+        log(err.message);
+      });
+    });
+
+    document.querySelector('.unregister').addEventListener('click', function(event) {
+      event.preventDefault();
+
+      navigator.serviceWorker.ready.then(function(reg) {
+        return reg.sync.getRegistration('syncTest');
+      }).then(function(syncReg) {
+        if (!syncReg) return log('No sync to unregister');
+        return syncReg.unregister().then(function() {
+          log('Unregistered!');
+        });
       }).catch(function(err) {
         log('It broke');
         log(err.message);
