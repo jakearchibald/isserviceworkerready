@@ -29,6 +29,9 @@
       return reg.sync.getRegistration('syncTest');
     }).then(function(reg) {
       if (reg) log("There's already a background sync pending");
+    }).catch(function(err) {
+      log('It broke (probably sync not supported)');
+      log(err.message);
     });
 
     document.querySelector('.register').addEventListener('click', function(event) {
@@ -42,9 +45,6 @@
       }).then(function() {
         return navigator.serviceWorker.ready;
       }).then(function(reg) {
-        if (!reg.sync) {
-          throw Error('Sync not supported');
-        }
         return reg.sync.register({tag: 'syncTest'});
       }).then(function() {
         log('Sync registered');
