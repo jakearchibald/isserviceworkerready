@@ -562,7 +562,7 @@
         "icon": "chrome-canary",
         "supported": 0.5,
         "details": [
-          "Requires <a href=\"https://www.google.com/chrome/browser/canary.html\">Chrome Canary</a>"
+          "Requires <a href=\"https://www.google.com/chrome/browser/canary.html\">Chrome Canary</a> and #enable-experimental-web-platform-features in chrome://flags/"
         ]
       },
       "firefox": {
