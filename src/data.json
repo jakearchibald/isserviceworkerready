@@ -557,7 +557,7 @@
     },
     {
       "name": "Background sync",
-      "description": "Defering tasks until the user has connectivity. <a href=\"https://github.com/slightlyoff/BackgroundSync\">Spec</a>. <a href=\"demos/sync/\">Test</a>.",
+      "description": "Deferring tasks until the user has connectivity. <a href=\"https://github.com/slightlyoff/BackgroundSync\">Spec</a>. <a href=\"demos/sync/\">Test</a>.",
       "chrome": {
         "icon": "chrome-canary",
         "supported": 0.5,
