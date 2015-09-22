@@ -1,10 +1,7 @@
 self.addEventListener('sync', function(event) {
-  event.waitUntil(
-    Promise.all([
-      self.registration.showNotification("Sync event fired!"),
-      fetch('./').catch(function() {
-        return self.registration.showNotification("…but the network wasn't ready :(");
-      })
-    ])
-  );
+  self.registration.showNotification("Sync event fired!");
+});
+
+self.addEventListener('message', function(event) {
+  self.registration.sync.register({tag: 'syncTest'});
 });

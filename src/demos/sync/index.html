@@ -13,8 +13,20 @@
     One-off background sync doesn't require permissions, but notifications do,
     and that's how we're going to tell you it worked.
   </p>
+  <h1>Registering from the page</h1>
   <button class="register">Register background sync</button>
   <button class="unregister">Unregister background sync</button>
+
+  <h1>Registering from a worker</h1>
+  <button class="request-notification-permission">Request notification permission</button>
+  <button class="register-worker">Register background sync</button>
+  <button class="unregister">Unregister background sync</button>
+
+  <h1>Registering from a service worker</h1>
+  <button class="request-notification-permission">Request notification permission</button>
+  <button class="register-sw">Register background sync</button>
+  <button class="unregister">Unregister background sync</button>
+
   <div class="log"></div>
   <script>
     var logEl = document.querySelector('.log');
@@ -25,6 +37,8 @@
       console.log(msg);
     }
 
+    var worker = new Worker('worker.js');
+
     navigator.serviceWorker.register('sw.js').then(function(reg) {
       return reg.sync.getRegistration('syncTest');
     }).then(function(reg) {
@@ -32,6 +46,20 @@
     }).catch(function(err) {
       log('It broke (probably sync not supported)');
       log(err.message);
+    });
+
+    document.querySelector('.register-worker').addEventListener('click', function(event) {
+      event.preventDefault();
+
+      worker.postMessage("Yo");
+    });
+
+    document.querySelector('.register-sw').addEventListener('click', function(event) {
+      event.preventDefault();
+
+      navigator.serviceWorker.ready.then(function(reg) {
+        reg.active.postMessage('Yo');
+      });
     });
 
     document.querySelector('.register').addEventListener('click', function(event) {
@@ -54,19 +82,31 @@
       });
     });
 
-    document.querySelector('.unregister').addEventListener('click', function(event) {
-      event.preventDefault();
+    Array.prototype.slice.call(document.querySelector('.request-notification-permission')).forEach(function(el) {
+      el.addEventListener('click', function(event) {
+        event.preventDefault();
 
-      navigator.serviceWorker.ready.then(function(reg) {
-        return reg.sync.getRegistration('syncTest');
-      }).then(function(syncReg) {
-        if (!syncReg) return log('No sync to unregister');
-        return syncReg.unregister().then(function() {
-          log('Unregistered!');
+        Notification.requestPermission(function(result) {
+          if (result !== 'granted') return reject(Error("Denied notification permission"));
+        })
+      });
+    });
+
+    Array.prototype.slice.call(document.querySelector('.unregister')).forEach(function(el) {
+      el.addEventListener('click', function(event) {
+        event.preventDefault();
+
+        navigator.serviceWorker.ready.then(function(reg) {
+          return reg.sync.getRegistration('syncTest');
+        }).then(function(syncReg) {
+          if (!syncReg) return log('No sync to unregister');
+          return syncReg.unregister().then(function() {
+            log('Unregistered!');
+          });
+        }).catch(function(err) {
+          log('It broke');
+          log(err.message);
         });
-      }).catch(function(err) {
-        log('It broke');
-        log(err.message);
       });
     });
 
