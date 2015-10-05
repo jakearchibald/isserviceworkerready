@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <p>
+    This page refreshes once the controller changes
+  </p>
+
+  <div class="log"></div>
+  <script>
+    var logEl = document.querySelector('.log');
+    function log(msg) {
+      var p = document.createElement('p');
+      p.textContent = msg;
+      logEl.appendChild(p);
+      console.log(msg);
+    }
+
+    navigator.serviceWorker.register('sw.js').then(function(reg) {
+      log("SW registered")
+    }).then(function(reg) {
+      if (reg) log("There's already a background sync pending");
+    }).catch(function(err) {
+      log('It broke');
+      log(err.message);
+    });
+
+    navigator.serviceWorker.addEventListener('controllerchange', function() {
+      location.reload();
+    });
+  </script>
+</body>
+</html>
