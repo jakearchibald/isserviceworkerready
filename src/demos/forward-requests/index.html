@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <p>
+    \o/
+  </p>
+
+  <div class="log"></div>
+  <script>
+    var logEl = document.querySelector('.log');
+    function log(msg) {
+      var p = document.createElement('p');
+      p.textContent = msg;
+      logEl.appendChild(p);
+      console.log(msg);
+    }
+
+    navigator.serviceWorker.register('sw.js');
+  </script>
+</body>
+</html>
