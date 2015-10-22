@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <p>
+    This test is reliant on a bug in github pages where a
+    relative url such as
+    <code>blah</code> will redirect to the <em>http</em>
+    version of <code>blah/</code> if <code>blah/index.html</code>
+    exists.
+  </p>
+  <p><a href="blah">Click me</a></p>
+  <script>
+    navigator.serviceWorker.register('sw.js');
+  </script>
+</body>
+</html>
