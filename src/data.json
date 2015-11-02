@@ -94,7 +94,8 @@
         "icon": "firefox-nightly",
         "supported": 0.5,
         "details": [
-          "<a href=\"https://developer.mozilla.org/en-US/docs/Tools/Web_Console\">Web Console</a> can display console messages from Service Workers "
+          "<a href=\"https://developer.mozilla.org/en-US/docs/Tools/Web_Console\">Web Console</a> can display console messages from Service Workers.",
+          "<code>about:serviceworkers</code> has some under-the-hood stuff."
         ]
       },
       "opera": {
