@@ -31,7 +31,7 @@
       "firefox": {
         "supported": 1,
         "details": [
-          "Follow <a href\"https://bugzilla.mozilla.org/show_bug.cgi?id=903441\">Bug 903441</a> for the latest development."
+          "Follow <a href=\"https://bugzilla.mozilla.org/show_bug.cgi?id=903441\">Bug 903441</a> for the latest development."
         ]
       },
       "opera": {
