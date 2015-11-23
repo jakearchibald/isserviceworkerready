@@ -158,7 +158,7 @@
       },
       "opera": {
         "supported": 1,
-        "minVersion": 72
+        "minVersion": 27
       },
       "safari": {
         "supported": 0
