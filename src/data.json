@@ -35,9 +35,9 @@
         "supported": 1
       },
       "safari": {
-        "supported": 0,
+        "supported": 0.5,
         "details": [
-          "No public commitment"
+          "Brief positive signals in <a href=\"https://trac.webkit.org/wiki/FiveYearPlanFall2015\">five year plan</a>."
         ]
       },
       "edge": {
