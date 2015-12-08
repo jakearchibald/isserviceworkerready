@@ -30,7 +30,7 @@
     }).then(function(tags) {
       if (tags.includes('syncTest')) log("There's already a background sync pending");
     }).catch(function(err) {
-      log('It broke (probably sync not supported)');
+      log('It broke (probably sync not supported or flag not enabled)');
       log(err.message);
     });
 
