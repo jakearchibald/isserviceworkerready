@@ -100,7 +100,7 @@
       },
       "opera": {
         "supported": 1,
-        "details" : 
+        "details" :
         [
           "Debuggable from the resources panel in <a href=\"http://www.opera.com/developer\">Opera developer</a> if you <a href=\"https://www.reddit.com/r/webdev/comments/2wz7s4/the_secret_extra_tools_within_chromes_dev_tools/\">enable super-experimental devtools</a>.",
           "Console messages from the service worker appear in the pages' console in Opera stable.",
@@ -504,12 +504,8 @@
       "name": "<code>caches</code>",
       "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#service-worker-global-scope-caches\">Spec</a>. <a href=\"demos/globalapis/\">Test</a>.",
       "chrome": {
-        "supported": 0.5,
-        "minVersion": 40,
-        "details": [
-          "Some higher-level methods absent such as <code>cache.add</code>, <code>cache.addAll</code>",
-          "<a href=\"https://github.com/coonsta/cache-polyfill\">Polyfill available</a>"
-        ]
+        "supported": 1,
+        "minVersion": 40
       },
       "firefox": {
         "icon": "firefox-nightly",
@@ -519,12 +515,8 @@
         ]
       },
       "opera": {
-        "supported": 0.5,
-        "minVersion": 27,
-        "details": [
-          "Some higher-level methods absent such as <code>cache.add</code>, <code>cache.addAll</code>",
-          "<a href=\"https://github.com/coonsta/cache-polyfill\">Polyfill available</a>"
-        ]
+        "supported": 1,
+        "minVersion": 27
       },
       "safari": {
         "supported": 0
