@@ -29,7 +29,10 @@
         "supported": 1
       },
       "firefox": {
-        "supported": 1
+        "supported": 1,
+        "details": [
+          "Follow <a href=\"https://bugzilla.mozilla.org/show_bug.cgi?id=903441\">Bug 903441</a> for the latest development."
+        ]
       },
       "opera": {
         "supported": 1
@@ -45,7 +48,10 @@
         "details": [
           "<a href=\"http://status.modern.ie/serviceworker\">Under consideration</a>, but <a href=\"https://twitter.com/jacobrossi/status/608291251121618944\">positive signals</a>."
         ]
-      }
+      },
+      "details": [
+        "Support does not include iOS versions of third-party browsers on that platform (see Safari support)."
+      ]
     },
     {
       "name": "Promises",
@@ -56,7 +62,7 @@
       },
       "firefox": {
         "supported": 1,
-        "minVersion": "29"
+        "minVersion": 29
       },
       "opera": {
         "supported": 1,
@@ -81,38 +87,35 @@
       "name": "Debugging",
       "description": "State of debugging tools.",
       "chrome": {
-        "supported": 1,
+        "supported": 0.5,
         "minVersion": 40,
         "details": [
-          "Debuggable from the resources panel in <a href=\"https://www.google.com/chrome/browser/canary.html\">Chrome Canary</a> if you <a href=\"https://www.reddit.com/r/webdev/comments/2wz7s4/the_secret_extra_tools_within_chromes_dev_tools/\">enable super-experimental devtools</a>.",
-          "Console messages from the service worker appear in the pages' console.",
-          "You can set breakpoints and run console commands in the context of the service worker.",
-          "<code>chrome://serviceworker-internals</code> has some under-the-hood stuff."
+          "You can set breakpoints and run console commands in the context of the service worker."
         ]
       },
       "firefox": {
-        "icon": "firefox-nightly",
         "supported": 0.5,
+        "minVersion": 40,
         "details": [
           "<a href=\"https://developer.mozilla.org/en-US/docs/Tools/Web_Console\">Web Console</a> can display console messages from Service Workers.",
           "<code>about:serviceworkers</code> has some under-the-hood stuff."
         ]
       },
       "opera": {
-        "supported": 1,
-        "details" : 
-        [
-          "Debuggable from the resources panel in <a href=\"http://www.opera.com/developer\">Opera developer</a> if you <a href=\"https://www.reddit.com/r/webdev/comments/2wz7s4/the_secret_extra_tools_within_chromes_dev_tools/\">enable super-experimental devtools</a>.",
-          "Console messages from the service worker appear in the pages' console in Opera stable.",
-          "<code>browser://serviceworker-internals</code> in Opera developer has some under-the-hood stuff."
-        ]
+        "supported": 0.5,
+        "details" : []
       },
       "safari": {
         "supported": 0
       },
       "edge": {
         "supported": 0
-      }
+      },
+      "details": [
+        "<strong>Chrome & Opera</strong>: Debuggable from the resources panel in <a href=\"https://www.google.com/chrome/browser/canary.html\">Chrome Canary</a> and <a href=\"http://www.opera.com/developer\">Opera developer</a> if you <a href=\"https://www.reddit.com/r/webdev/comments/2wz7s4/the_secret_extra_tools_within_chromes_dev_tools/\">enable super-experimental devtools</a>.",
+        "<strong>Chrome & Opera</strong>: Console messages from the service worker appear in the pages' console.",
+        "<strong>Chrome & Opera</strong>: <code>chrome://serviceworker-internals</code> resp. <code>browser://serviceworker-internals</code> (in Opera developer) has some under-the-hood stuff."
+      ]
     },
     {
       "name": "<code>navigator.serviceWorker</code>",
@@ -122,7 +125,6 @@
         "minVersion": 40
       },
       "firefox": {
-        "icon": "firefox",
         "supported": 0.5,
         "details": [
           "Requires <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>."
@@ -149,7 +151,6 @@
         "minVersion": 40
       },
       "firefox": {
-        "icon": "firefox",
         "supported": 0.5,
         "details": [
           "Requires <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>."
@@ -176,10 +177,10 @@
         "minVersion": 40
       },
       "firefox": {
-        "icon": "firefox",
         "supported": 0.5,
+        "minVersion": 39,
         "details": [
-          "Requires <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>."
+          "Test requires <code>dom.serviceWorkers.enabled</code> in <code>about:config</code> to run successfully."
         ]
       },
       "opera": {
@@ -205,10 +206,11 @@
         "minVersion": 40
       },
       "firefox": {
-        "icon": "firefox-nightly",
+        "icon": "firefox",
         "supported": 0.5,
+        "minVersion": 44,
         "details": [
-          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a>"
+          "Requires <a href=\"https://www.mozilla.org/firefox/developer/\">Firefox Dev Edition</a> or a <a href=\"https://nightly.mozilla.org/\">nightly build</a>."
         ]
       },
       "opera": {
@@ -230,10 +232,10 @@
         "minVersion": 40
       },
       "firefox": {
-        "icon": "firefox-nightly",
         "supported": 0.5,
+        "minVersion": 38,
         "details": [
-          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a>"
+          "Requires <code>dom.serviceWorkers.enabled</code> and <code>dom.serviceWorkers.interception.enabled</code> in <code>about:config</code>."
         ]
       },
       "opera": {
@@ -255,10 +257,10 @@
         "minVersion": 40
       },
       "firefox": {
-        "icon": "firefox-nightly",
         "supported": 0.5,
+        "minVersion": 38,
         "details": [
-          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a>"
+          "Requires <code>dom.serviceWorkers.enabled</code> and <code>dom.serviceWorkers.interception.enabled</code> in <code>about:config</code>."
         ]
       },
       "opera": {
@@ -280,10 +282,10 @@
         "minVersion": 40
       },
       "firefox": {
-        "icon": "firefox-nightly",
         "supported": 0.5,
+        "minVersion": 38,
         "details": [
-          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a>"
+          "Requires <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>."
         ]
       },
       "opera": {
@@ -305,7 +307,11 @@
         "minVersion": 42
       },
       "firefox": {
-        "supported": 0
+        "supported": 0.5,
+        "minVersion": 41,
+        "details": [
+          "Requires <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>."
+        ]
       },
       "opera": {
         "supported": 0
@@ -325,10 +331,10 @@
         "minVersion": 40
       },
       "firefox": {
-        "icon": "firefox-nightly",
         "supported": 0.5,
+        "minVersion": 38,
         "details": [
-          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a>"
+          "Requires <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>."
         ]
       },
       "opera": {
@@ -350,11 +356,10 @@
         "minVersion": 42
       },
       "firefox": {
-        "icon": "firefox-nightly",
         "supported": 0.5,
         "minVersion": 42,
         "details": [
-          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a>",
+          "Requires <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>.",
           "Does not allow to intercept requests to another domain."
         ]
       },
@@ -376,10 +381,9 @@
         "minVersion": 40
       },
       "firefox": {
-        "icon": "firefox-nightly",
         "supported": 0.5,
         "details": [
-          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a>"
+          "Requires <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>."
         ]
       },
       "opera": {
@@ -401,10 +405,10 @@
         "minVersion": 40
       },
       "firefox": {
-        "icon": "firefox-nightly",
         "supported": 0.5,
+        "minVersion": 38,
         "details": [
-          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a>"
+          "Requires <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>."
         ]
       },
       "opera": {
@@ -425,10 +429,10 @@
         "minVersion": 40
       },
       "firefox": {
-        "icon": "firefox-nightly",
         "supported": 0.5,
+        "minVersion": 38,
         "details": [
-          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a>"
+          "Requires <code>dom.serviceWorkers.enabled</code> and <code>dom.serviceWorkers.interception.enabled</code> in <code>about:config</code>."
         ]
       },
       "opera": {
@@ -452,10 +456,10 @@
         ]
       },
       "firefox": {
-        "icon": "firefox-nightly",
         "supported": 0.5,
+        "minVersion": 38,
         "details": [
-          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a>"
+          "Requires <code>dom.serviceWorkers.enabled</code> and <code>dom.serviceWorkers.interception.enabled</code> in <code>about:config</code>."
         ]
       },
       "opera": {
@@ -480,10 +484,10 @@
         "minVersion": 40
       },
       "firefox": {
-        "icon": "firefox-nightly",
         "supported": 0.5,
+        "minVersion": 38,
         "details": [
-          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a>"
+          "Requires <code>dom.serviceWorkers.enabled</code> and <code>dom.serviceWorkers.interception.enabled</code> in <code>about:config</code>."
         ]
       },
       "opera": {
@@ -512,10 +516,10 @@
         ]
       },
       "firefox": {
-        "icon": "firefox-nightly",
         "supported": 0.5,
+        "minVersion": 41,
         "details": [
-          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a>"
+          "Requires <code>dom.serviceWorkers.enabled</code> and <code>dom.serviceWorkers.interception.enabled</code> in <code>about:config</code>."
         ]
       },
       "opera": {
@@ -540,10 +544,9 @@
         "supported": 1
       },
       "firefox": {
-        "icon": "firefox-nightly",
         "supported": 0.5,
         "details": [
-          "Requires a <a href=\"https://nightly.mozilla.org/\">nightly build</a>"
+          "Requires <code>dom.serviceWorkers.enabled</code> and <code>dom.serviceWorkers.interception.enabled</code> in <code>about:config</code>."
         ]
       },
       "opera": {
@@ -567,7 +570,10 @@
         ]
       },
       "firefox": {
-        "supported": 0
+        "supported": 0,
+        "details": [
+          "<a href=\"https://bugzilla.mozilla.org/show_bug.cgi?id=1217544\">Bug 1217544</a>"
+        ]
       },
       "opera": {
         "supported": 0
