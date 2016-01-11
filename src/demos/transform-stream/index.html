@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <h1>Loading service worker…</h1>
+  <div class="log"></div>
+  <script>
+    var logEl = document.querySelector('.log');
+    function log(msg) {
+      var p = document.createElement('p');
+      p.textContent = msg;
+      logEl.appendChild(p);
+      console.log(msg);
+    }
+
+    (function() {
+      if (!navigator.serviceWorker) {
+        log("ServiceWorker not supported");
+        return;
+      }
+
+      try {
+        new ReadableStream();
+      }
+      catch(e) {
+        log("Constructable ReadableStream not supported");
+        return;
+      }
+
+      var reloading = false;
+      navigator.serviceWorker.addEventListener('controllerchange', function() {
+        if (reloading) return;
+        reloading = true;
+        location.reload();
+      });
+      
+      navigator.serviceWorker.register('sw.js');
+    }());
+    
+
+    window.onerror = function(msg) {
+      log(msg);
+    };
+
+  </script>
+</body>
+</html>
