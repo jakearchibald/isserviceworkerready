@@ -40,8 +40,8 @@ function replaceResponse(response, bufferSize, match, replacer) {
 
         const bytes = result.value;
         bufferStr += decoder.decode(bytes, {stream: true});
-        const strToSend = bufferStr.slice(0, -bufferSize).replace(match, replacer);
-        controller.enqueue(encoder.encode(strToSend));
+        bufferStr = bufferStr.replace(match, replacer);
+        controller.enqueue(encoder.encode(bufferStr.slice(0, -bufferSize)));
         bufferStr = bufferStr.slice(-bufferSize);
       });
     }
