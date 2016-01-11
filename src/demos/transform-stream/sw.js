@@ -32,7 +32,7 @@ function replaceResponse(response, bufferSize, match, replacer) {
 
   const stream = new ReadableStream({
     pull: controller => {
-      return reader.read().then(function(result) {
+      return reader.read().then(result => {
         if (result.done) {
           controller.close();
           return;
