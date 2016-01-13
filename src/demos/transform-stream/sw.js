@@ -45,6 +45,9 @@ function replaceResponse(response, bufferSize, match, replacer) {
         controller.enqueue(encoder.encode(bufferStr.slice(0, -bufferSize)));
         bufferStr = bufferStr.slice(-bufferSize);
       });
+    },
+    cancel: () => {
+      reader.cancel();
     }
   });
 
