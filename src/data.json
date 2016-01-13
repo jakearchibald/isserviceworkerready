@@ -513,7 +513,7 @@
       "description": "<a href=\"https://slightlyoff.github.io/ServiceWorker/spec/service_worker/#service-worker-global-scope-caches\">Spec</a>. <a href=\"demos/globalapis/\">Test</a>.",
       "chrome": {
         "supported": 1,
-        "minVersion": 40
+        "minVersion": 46
       },
       "firefox": {
         "supported": 0.5,
@@ -524,7 +524,7 @@
       },
       "opera": {
         "supported": 1,
-        "minVersion": 27
+        "minVersion": 33
       },
       "safari": {
         "supported": 0
