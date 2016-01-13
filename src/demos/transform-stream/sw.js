@@ -14,7 +14,7 @@ self.addEventListener('fetch', event => {
   if (requestURL.pathname.endsWith("/demos/transform-stream/")) {
     event.respondWith(
       fetch('cloud.html').then(response => {
-        return replaceResponse(response, 5, /cloud/ig, match => {
+        return replaceResponse(response, 4, /cloud/ig, match => {
           if (match.toUpperCase() == match) return 'BUTT';
           if (match[0] == 'C') return 'Butt';
           return 'butt';
@@ -34,6 +34,7 @@ function replaceResponse(response, bufferSize, match, replacer) {
     pull: controller => {
       return reader.read().then(result => {
         if (result.done) {
+          controller.enqueue(encoder.encode(bufferStr));
           controller.close();
           return;
         }
