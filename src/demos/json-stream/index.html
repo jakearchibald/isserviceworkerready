@@ -55,53 +55,12 @@
         this._state = StreamingJSONDecoder.HEADER;
         this._errored = false;
         this._itemLength = 0;
-
-        try {
-          this.readable = new ReadableStream({
-            start: controller => {
-              this._controller = controller;
-            }
-          });
-        }
-        catch(e) {
-          // super-sketchy polyfill-ish if ReadableStream isn't supported
-          this.readable = {
-            getReader: () => ({
-              read: () => new Promise(resolve => {
-                this._resolveQueue.push(resolve);
-                processQueue();
-              })
-            }),
-
-          };
-          this._controller = {
-            error: e => {
-              this._error = e;
-            },
-            enqueue: obj => {
-              this._itemsToSend.push({done: false, value: obj});
-              processQueue();
-            },
-            close: () => {
-              this._itemsToSend.push({done: true});
-              processQueue();
-            }
+        this._controller = null;
+        this.readable = new ReadableStream({
+          start: controller => {
+            this._controller = controller;
           }
-          this._error = null;
-          this._resolveQueue = [];
-          this._itemsToSend = [];
-
-          const processQueue = () => {
-            if (this._error) {
-              this._resolveQueue.forEach(r => r(Promise.reject(this._error)));
-              return;
-            }
-            while (this._resolveQueue[0]) {
-              if (!this._itemsToSend.length) return;
-              this._resolveQueue.shift()(this._itemsToSend.shift());
-            }
-          }
-        }
+        });
       }
 
       write(str) {
@@ -191,6 +150,8 @@
     (function() {
       const ul = document.querySelector('ul');
 
+      console.time('JSON read and buffer');
+
       if (self.location.search.includes('no-stream')) {
         fetch('photos.json').then(r => r.json()).then(data => {
           data.photos.forEach(photo => {
@@ -198,6 +159,7 @@
             li.textContent = photo.title || "No title";
             ul.appendChild(li);
           });
+          console.timeEnd('JSON read and buffer');
         })
         return;
       }
@@ -217,12 +179,27 @@
           return fetchReader.read().then(process);
         });
 
+        const buffer = [];
+
         sjsonReader.read().then(function process(result) {
           if (result.done) return;
+
+          if (self.location.search.includes('buffer')) {
+            buffer.push(result.value);
+            return sjsonReader.read().then(process);
+          }
+
           const li = document.createElement('li');
           li.textContent = result.value.title || "No title";
           ul.appendChild(li);
           return sjsonReader.read().then(process);
+        }).then(() => {
+          buffer.forEach(item => {
+            const li = document.createElement('li');
+            li.textContent = item.title || "No title";
+            ul.appendChild(li);
+          });
+          console.timeEnd('JSON read and buffer');
         });
       });
     }());
