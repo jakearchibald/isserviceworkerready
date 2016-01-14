@@ -51,15 +51,57 @@
 
     class StreamingJSONDecoder {
       constructor() {
-        this.readable = new ReadableStream({
-          start: controller => {
-            this._controller = controller;
-          }
-        });
         this._buffer = '';
         this._state = StreamingJSONDecoder.HEADER;
         this._errored = false;
         this._itemLength = 0;
+
+        try {
+          this.readable = new ReadableStream({
+            start: controller => {
+              this._controller = controller;
+            }
+          });
+        }
+        catch(e) {
+          // super-sketchy polyfill-ish if ReadableStream isn't supported
+          this.readable = {
+            getReader: () => ({
+              read: () => new Promise(resolve => {
+                this._resolveQueue.push(resolve);
+                processQueue();
+              })
+            }),
+
+          };
+          this._controller = {
+            error: e => {
+              this._error = e;
+            },
+            enqueue: obj => {
+              this._itemsToSend.push({done: false, value: obj});
+              processQueue();
+            },
+            close: () => {
+              this._itemsToSend.push({done: true});
+              processQueue();
+            }
+          }
+          this._error = null;
+          this._resolveQueue = [];
+          this._itemsToSend = [];
+
+          const processQueue = () => {
+            if (this._error) {
+              this._resolveQueue.forEach(r => r(Promise.reject(this._error)));
+              return;
+            }
+            while (this._resolveQueue[0]) {
+              if (!this._itemsToSend.length) return;
+              this._resolveQueue.shift()(this._itemsToSend.shift());
+            }
+          }
+        }
       }
 
       write(str) {
