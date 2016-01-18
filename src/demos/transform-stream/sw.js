@@ -40,8 +40,9 @@ function replaceResponse(response, bufferSize, match, replacer) {
         }
 
         const bytes = result.value;
-        let lastReplaceEnds = 0;
         bufferStr += decoder.decode(bytes, {stream: true});
+        
+        let lastReplaceEnds = 0;
         bufferStr = bufferStr.replace(match, (...args) => {
           lastReplaceEnds = args[0].length + args[args.length - 2];
           return replacer(...args);
