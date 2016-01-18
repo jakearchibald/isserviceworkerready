@@ -40,10 +40,18 @@ function replaceResponse(response, bufferSize, match, replacer) {
         }
 
         const bytes = result.value;
+        let lastReplaceEnds = 0;
         bufferStr += decoder.decode(bytes, {stream: true});
-        bufferStr = bufferStr.replace(match, replacer);
+        bufferStr = bufferStr.replace(match, (...args) => {
+          lastReplaceEnds = args[0].length + args[args.length - 2];
+          return replacer(...args);
+        });
+
         controller.enqueue(encoder.encode(bufferStr.slice(0, -bufferSize)));
-        bufferStr = bufferStr.slice(-bufferSize);
+
+        bufferStr = bufferStr.slice(
+          Math.max(bufferStr.length - bufferSize, lastReplaceEnds)
+        );
       });
     },
     cancel: () => {
