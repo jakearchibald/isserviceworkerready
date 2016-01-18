@@ -41,18 +41,24 @@ function replaceResponse(response, bufferSize, match, replacer) {
 
         const bytes = result.value;
         bufferStr += decoder.decode(bytes, {stream: true});
-        
+
+        // this is the end of the final replacement in the FINAL string
         let lastReplaceEnds = 0;
+        let replacedLengthDiff = 0;
         bufferStr = bufferStr.replace(match, (...args) => {
-          lastReplaceEnds = args[0].length + args[args.length - 2];
-          return replacer(...args);
+          const matched = args[0];
+          // offset is the offset in the original string, hence replacedLengthDiff
+          const offset = args[args.length - 2];
+          const replacement = replacer(...args);
+
+          replacedLengthDiff += replacement - matched;
+          lastReplaceEnds = offset + matched.length + replacedLengthDiff;
+          return replacement;
         });
 
-        controller.enqueue(encoder.encode(bufferStr.slice(0, -bufferSize)));
-
-        bufferStr = bufferStr.slice(
-          Math.max(bufferStr.length - bufferSize, lastReplaceEnds)
-        );
+        const newBufferStart = Math.max(bufferStr.length - bufferSize, lastReplaceEnds);
+        controller.enqueue(encoder.encode(bufferStr.slice(0, newBufferStart)));
+        bufferStr = bufferStr.slice(newBufferStart);
       });
     },
     cancel: () => {
