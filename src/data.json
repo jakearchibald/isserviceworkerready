@@ -129,10 +129,8 @@
         "minVersion": 40
       },
       "firefox": {
-        "supported": 0.5,
-        "details": [
-          "Requires <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>."
-        ]
+        "supported": 1,
+        "minVersion": 44
       },
       "opera": {
         "supported": 1,
@@ -155,10 +153,8 @@
         "minVersion": 40
       },
       "firefox": {
-        "supported": 0.5,
-        "details": [
-          "Requires <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>."
-        ]
+        "supported": 1,
+        "minVersion": 44
       },
       "opera": {
         "supported": 1,
@@ -181,11 +177,8 @@
         "minVersion": 40
       },
       "firefox": {
-        "supported": 0.5,
-        "minVersion": 39,
-        "details": [
-          "Test requires <code>dom.serviceWorkers.enabled</code> in <code>about:config</code> to run successfully."
-        ]
+        "supported": 1,
+        "minVersion": 44
       },
       "opera": {
         "supported": 0.5,
@@ -210,12 +203,8 @@
         "minVersion": 40
       },
       "firefox": {
-        "icon": "firefox",
-        "supported": 0.5,
-        "minVersion": 44,
-        "details": [
-          "Requires <a href=\"https://www.mozilla.org/firefox/developer/\">Firefox Dev Edition</a> or a <a href=\"https://nightly.mozilla.org/\">nightly build</a>."
-        ]
+        "supported": 1,
+        "minVersion": 39
       },
       "opera": {
         "supported": 1,
@@ -236,11 +225,8 @@
         "minVersion": 40
       },
       "firefox": {
-        "supported": 0.5,
-        "minVersion": 38,
-        "details": [
-          "Requires <code>dom.serviceWorkers.enabled</code> and <code>dom.serviceWorkers.interception.enabled</code> in <code>about:config</code>."
-        ]
+        "supported": 1,
+        "minVersion": 44
       },
       "opera": {
         "supported": 1,
@@ -261,11 +247,8 @@
         "minVersion": 40
       },
       "firefox": {
-        "supported": 0.5,
-        "minVersion": 38,
-        "details": [
-          "Requires <code>dom.serviceWorkers.enabled</code> and <code>dom.serviceWorkers.interception.enabled</code> in <code>about:config</code>."
-        ]
+        "supported": 1,
+        "minVersion": 44
       },
       "opera": {
         "supported": 1,
@@ -286,11 +269,8 @@
         "minVersion": 40
       },
       "firefox": {
-        "supported": 0.5,
-        "minVersion": 38,
-        "details": [
-          "Requires <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>."
-        ]
+        "supported": 1,
+        "minVersion": 44
       },
       "opera": {
         "supported": 1,
@@ -311,11 +291,8 @@
         "minVersion": 42
       },
       "firefox": {
-        "supported": 0.5,
-        "minVersion": 41,
-        "details": [
-          "Requires <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>."
-        ]
+        "supported": 1,
+        "minVersion": 44
       },
       "opera": {
         "supported": 0
@@ -335,11 +312,8 @@
         "minVersion": 40
       },
       "firefox": {
-        "supported": 0.5,
-        "minVersion": 38,
-        "details": [
-          "Requires <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>."
-        ]
+        "supported": 1,
+        "minVersion": 44
       },
       "opera": {
         "supported": 1,
@@ -360,12 +334,8 @@
         "minVersion": 42
       },
       "firefox": {
-        "supported": 0.5,
-        "minVersion": 42,
-        "details": [
-          "Requires <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>.",
-          "Does not allow to intercept requests to another domain."
-        ]
+        "supported": 1,
+        "minVersion": 44
       },
       "opera": {
         "supported": 1
@@ -385,10 +355,8 @@
         "minVersion": 40
       },
       "firefox": {
-        "supported": 0.5,
-        "details": [
-          "Requires <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>."
-        ]
+        "supported": 1,
+        "minVersion": 44
       },
       "opera": {
         "supported": 1,
@@ -409,11 +377,8 @@
         "minVersion": 40
       },
       "firefox": {
-        "supported": 0.5,
-        "minVersion": 38,
-        "details": [
-          "Requires <code>dom.serviceWorkers.enabled</code> in <code>about:config</code>."
-        ]
+        "supported": 1,
+        "minVersion": 44
       },
       "opera": {
         "supported": 0
@@ -433,11 +398,8 @@
         "minVersion": 40
       },
       "firefox": {
-        "supported": 0.5,
-        "minVersion": 38,
-        "details": [
-          "Requires <code>dom.serviceWorkers.enabled</code> and <code>dom.serviceWorkers.interception.enabled</code> in <code>about:config</code>."
-        ]
+        "supported": 1,
+        "minVersion": 39
       },
       "opera": {
         "supported": 0
@@ -460,11 +422,8 @@
         ]
       },
       "firefox": {
-        "supported": 0.5,
-        "minVersion": 38,
-        "details": [
-          "Requires <code>dom.serviceWorkers.enabled</code> and <code>dom.serviceWorkers.interception.enabled</code> in <code>about:config</code>."
-        ]
+        "supported": 1,
+        "minVersion": 39
       },
       "opera": {
         "supported": 1,
@@ -488,11 +447,8 @@
         "minVersion": 40
       },
       "firefox": {
-        "supported": 0.5,
-        "minVersion": 38,
-        "details": [
-          "Requires <code>dom.serviceWorkers.enabled</code> and <code>dom.serviceWorkers.interception.enabled</code> in <code>about:config</code>."
-        ]
+        "supported": 1,
+        "minVersion": 39
       },
       "opera": {
         "supported": 1,
@@ -516,11 +472,8 @@
         "minVersion": 46
       },
       "firefox": {
-        "supported": 0.5,
-        "minVersion": 41,
-        "details": [
-          "Requires <code>dom.serviceWorkers.enabled</code> and <code>dom.serviceWorkers.interception.enabled</code> in <code>about:config</code>."
-        ]
+        "supported": 1,
+        "minVersion": 44
       },
       "opera": {
         "supported": 1,
@@ -540,10 +493,8 @@
         "supported": 1
       },
       "firefox": {
-        "supported": 0.5,
-        "details": [
-          "Requires <code>dom.serviceWorkers.enabled</code> and <code>dom.serviceWorkers.interception.enabled</code> in <code>about:config</code>."
-        ]
+        "supported": 1,
+        "minVersion": 44
       },
       "opera": {
         "supported": 1
