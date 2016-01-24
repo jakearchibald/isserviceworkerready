@@ -38,20 +38,20 @@ This sends `"goalol"`, which is correct. But what if:
 14. Incoming stream ends
 15. Send remaining buffer `"al"`
 
-This sends `"goagoal"`, which is wrong. To fix this, the buffer should be flushed until the position of the last replacement, or up to position `buffer.length - ("lol".length - 1)`, whichever's larger. So:
+This sends `"goagoal"`, which is wrong. To fix this, the buffer should be flushed until the position of the last replacement, or up to position `buffer.length - ("lol".length - 1)`, whichever's greater. So:
 
 1. Buffer is `""`
 2. Chunk arrives `"lol"`, add to buffer
 3. Buffer is `"lol"`
 4. Replace "lol" with "goal" in buffer
 5. Buffer is `"goal"`
-6. Send buffer until the end of the last replacement, or `buffer.length - ("lol" - 1)`, whichever's larger - `"goal"`
+6. Send buffer until the end of the last replacement, or `buffer.length - ("lol" - 1)`, whichever's greater - `"goal"`
 7. Set buffer to the remainder of the previous step - `""`
 8. Chunk arrives `"ol"`, add to buffer
 9. Buffer is `"ol"`
 10. Replace "lol" with "goal" in buffer
 11. Buffer is `"ol"`
-12. Send buffer until the end of the last replacement, or `buffer.length - ("lol" - 1)`, whichever's larger - `""`
+12. Send buffer until the end of the last replacement, or `buffer.length - ("lol" - 1)`, whichever's greater - `""`
 13. Set buffer to the last `"lol".length - 1` chars of buffer - `"ol"`
 14. Incoming stream ends
 15. Send remaining buffer `"ol"`
