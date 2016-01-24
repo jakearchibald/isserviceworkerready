@@ -10,7 +10,7 @@ self.addEventListener('fetch', event => {
   const requestURL = new URL(event.request.url);
 
   if (requestURL.origin != location.origin) return;
-  
+
   if (requestURL.pathname.endsWith("/demos/transform-stream/")) {
     event.respondWith(
       fetch('cloud.html').then(response => {
@@ -24,6 +24,9 @@ self.addEventListener('fetch', event => {
   }
 });
 
+// There are some fun edge cases when it comes to replacing within a stream,
+// if you're interested, see:
+// https://github.com/jakearchibald/isserviceworkerready/blob/master/src/demos/transform-stream/edge-cases.md
 function replaceResponse(response, bufferSize, match, replacer) {
   const reader = response.body.getReader();
   const encoder = new TextEncoder();
