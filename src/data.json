@@ -204,7 +204,7 @@
       },
       "firefox": {
         "supported": 1,
-        "minVersion": 39
+        "minVersion": 44
       },
       "opera": {
         "supported": 1,
