@@ -1,7 +1,3 @@
-self.oninstall = function() {
-  self.skipWaiting();
-};
-
 self.onactivate = function() {
   clients.claim();
 };
@@ -15,7 +11,7 @@ self.onmessage = function(event) {
 
 self.onfetch = function(event) {
   var url = new URL(event.request.url);
-  if (url.pathname === '/404.json') {
+  if (url.pathname.endsWith('/404.json')) {
     event.respondWith(
       new Response('{"This came from": "The ServiceWorker"}', {
         headers: {
