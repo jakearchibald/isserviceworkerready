@@ -510,11 +510,8 @@
       "name": "Background sync",
       "description": "Deferring tasks until the user has connectivity. <a href=\"https://github.com/slightlyoff/BackgroundSync\">Spec</a>. <a href=\"demos/sync/\">Test</a>.",
       "chrome": {
-        "icon": "chrome-canary",
-        "supported": 0.5,
-        "details": [
-          "Requires <a href=\"https://www.google.com/chrome/browser/canary.html\">Chrome Canary</a> and #enable-experimental-web-platform-features in chrome://flags/"
-        ]
+        "supported": 1,
+        "minVersion": 49
       },
       "firefox": {
         "supported": 0,
