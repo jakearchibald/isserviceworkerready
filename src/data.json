@@ -26,12 +26,15 @@
       "name": "ServiceWorker enthusiasm",
       "description": "The first thing any implementation needs.",
       "chrome": {
-        "supported": 1
+        "supported": 1,
+        "details": [
+          "Shipped."
+        ]
       },
       "firefox": {
         "supported": 1,
         "details": [
-          "Follow <a href=\"https://bugzilla.mozilla.org/show_bug.cgi?id=903441\">Bug 903441</a> for the latest development."
+          "Shipped."
         ]
       },
       "opera": {
@@ -44,7 +47,7 @@
         ]
       },
       "edge": {
-        "supported": 0.5,
+        "supported": 1,
         "details": [
           "<a href=\"http://status.modern.ie/serviceworker\">High priority</a>, <a href=\"https://twitter.com/dstorey/status/694961349445554176\">work has began</a>."
         ]
