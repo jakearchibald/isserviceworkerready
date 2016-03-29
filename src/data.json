@@ -402,10 +402,15 @@
         "minVersion": 39
       },
       "opera": {
-        "supported": 0
+        "supported": 1,
+        "minVersion": 27
       },
       "safari": {
-        "supported": 0
+        "supported": 0.5,
+        "icon": "webkit",
+        "details": [
+          "Partial support landing in <a href=\"https://nightly.webkit.org/\">WebKit nightly</a>"
+        ]
       },
       "edge": {
         "supported": 0
@@ -433,7 +438,11 @@
         ]
       },
       "safari": {
-        "supported": 0
+        "supported": 0.5,
+        "icon": "webkit",
+        "details": [
+          "Partial support landing in <a href=\"https://nightly.webkit.org/\">WebKit nightly</a>"
+        ]
       },
       "edge": {
         "supported": 0
@@ -455,7 +464,11 @@
         "minVersion": 27
       },
       "safari": {
-        "supported": 0
+        "supported": 0.5,
+        "icon": "webkit",
+        "details": [
+          "Partial support landing in <a href=\"https://nightly.webkit.org/\">WebKit nightly</a>"
+        ]
       },
       "edge": {
         "supported": 0,
