@@ -10,6 +10,9 @@ function streamingTemplateResponse() {
   const kittenURL    = kittenPhoto.then(data => htmlEscape(data.url_m));
   const kittenAlt    = kittenPhoto.then(data => htmlEscape(data.title));
 
+  // Some artificially slow content for demo purposes
+  const slowContent = new Promise(r => setTimeout(r, 2000)).then(() => 'delayed');
+
   // Fetch the service worker script and get its content stream  
   const serviceWorkerScript = fetch('sw.js').then(r => htmlEscapeStream(r.body));
   
@@ -26,6 +29,7 @@ function streamingTemplateResponse() {
       <h1>This content is streamed from the service worker</h1>
       <p>For instance, this image tag is populated from a request to Flickr's API:</p>
       <img src="${kittenURL}" width="${kittenWidth}" height="${kittenHeight}" alt="${kittenAlt}">
+      <p>The final word in this paragraph is artificially <span>${slowContent}</span>.</p>
       <p>And just to be really meta, here's the service worker that created this streaming response also streamed into this response:</p>
       <pre class="language-js"><code class="language-js">${serviceWorkerScript}</code></pre>
     </body>
