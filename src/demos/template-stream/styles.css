@@ -7,6 +7,10 @@ h1 {
   font-weight: normal;
 }
 
+img {
+  max-width: 100%;
+}
+
 /* http://prismjs.com/download.html?themes=prism-okaidia&languages=clike+javascript */
 /**
  * okaidia theme for JavaScript, CSS and HTML
