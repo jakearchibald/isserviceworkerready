@@ -18,6 +18,7 @@ function streamingTemplateResponse() {
     <html>
     <head>
       <title>Streaming template literals Batman!</title>
+      <meta name="viewport" content="width=device-width">
       <link rel="stylesheet" href="styles.css">
       <script src="prism.js" defer></script>
     </head>
