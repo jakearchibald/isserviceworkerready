@@ -15,6 +15,10 @@ const htmlEscapes = {
   '`': '&#96;'
 };
 
+function htmlEscape(str) {
+  return str.replace(/[&<>"'`]/g, item => htmlEscapes[item]);
+}
+
 function htmlEscapeStream(stream) {
   const reader = stream.getReader();
   const decoder = new TextDecoder();
@@ -28,7 +32,7 @@ function htmlEscapeStream(stream) {
           return;
         }
         
-        const val = decoder.decode(result.value, {stream:true}).replace(/[&<>"'`]/g, item => htmlEscapes[item]);
+        const val = htmlEscape(decoder.decode(result.value, {stream:true}));
         controller.enqueue(encoder.encode(val));
       })
     }
@@ -71,25 +75,39 @@ function templateStream(strings, ...values) {
   });
 }
 
-self.addEventListener('fetch', event => {
-  const delayedContent = new Promise(r => setTimeout(r, 2000)).then(() => "This content arrives after 2 seconds");
+function streamingTemplateResponse() {
+  const kittenPhoto = fetch('https://api.flickr.com/services/rest/?api_key=f2cca7d09b75c6cdea6864aca72e9895&format=json&text=kitten&extras=url_m&per_page=1&nojsoncallback=1&method=flickr.photos.search')
+    .then(r => r.json())
+    .then(data => data.photos.photo[0]);
+
+  const kittenWidth = kittenPhoto.then(data => htmlEscape(data.width_m)); 
+  const kittenHeight = kittenPhoto.then(data => htmlEscape(data.height_m)); 
+  const kittenURL = kittenPhoto.then(data => htmlEscape(data.url_m));
+  const kittenAlt = kittenPhoto.then(data => htmlEscape(data.title));
   const swTest = fetch('sw.js').then(r => htmlEscapeStream(r.body));
   
   const body = templateStream`<!DOCTYPE html>
     <html>
     <head><title>Holy streaming Batman!</title></head>
     <body>
-      <h1>This content streams in from SW</h1>
-      <p>${delayedContent}</p>
-      <h1>And here's the service worker that generated this:</h1>
+      <h1>This content streams in from the service worker</h1>
+      <p>For instance, this image tag is populated from a Flickr request:</p>
+      <img src="${kittenURL}" width="${kittenWidth}" height="${kittenHeight}" alt="${kittenAlt}">
+      <p>And just to be really meta, here's the service worker that created the streaming response streamed into this response:</p>
       <pre>${swTest}</pre>
     </body>
     </html>
   `;
   
-  event.respondWith(
-    new Response(body, {
-      headers: {'Content-Type': 'text/html'}
-    })
-  );
+  return new Response(body, {
+    headers: {'Content-Type': 'text/html'}
+  });
+}
+
+self.addEventListener('fetch', event => {
+  const url = new URL(event.request.url);
+  
+  if (url.origin == location.origin && url.pathname.endsWith('/template-stream/')) {
+    event.respondWith(streamingTemplateResponse());
+  }
 });
