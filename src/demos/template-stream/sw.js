@@ -21,10 +21,10 @@ function streamingTemplateResponse() {
       <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-      <h1>This content streams in from the service worker</h1>
+      <h1>This content is streamed from the service worker</h1>
       <p>For instance, this image tag is populated from a request to Flickr's API:</p>
       <img src="${kittenURL}" width="${kittenWidth}" height="${kittenHeight}" alt="${kittenAlt}">
-      <p>And just to be really meta, here's the service worker that created the streaming response streamed into this response:</p>
+      <p>And just to be really meta, here's the service worker that created this streaming response also streamed into this response:</p>
       <pre class="language-js"><code class="language-js">${serviceWorkerScript}</code></pre>
       <script src="prism.js"></script>
     </body>
