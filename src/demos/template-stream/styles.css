@@ -1,14 +1,11 @@
 html {
   font-family: sans-serif;
+  overflow-x: hidden;
 }
 
 h1 {
   font-family: georgia, serif;
   font-weight: normal;
-}
-
-img {
-  max-width: 100%;
 }
 
 /* http://prismjs.com/download.html?themes=prism-okaidia&languages=clike+javascript */
