@@ -524,7 +524,7 @@
     },
     {
       "name": "Background sync",
-      "description": "Deferring tasks until the user has connectivity. <a href=\"https://github.com/slightlyoff/BackgroundSync\">Spec</a>. <a href=\"demos/sync/\">Test</a>.",
+      "description": "Deferring tasks until the user has connectivity. <a href=\"https://github.com/WICG/BackgroundSync\">Spec</a>. <a href=\"demos/sync/\">Test</a>.",
       "chrome": {
         "supported": 1,
         "minVersion": 49
