@@ -53,7 +53,6 @@ To update data, edit [`data.json`](src/data.json), which is in this format:
           // "firefox-nightly"
           // "webkit"
           // "opera-developer"
-          // "internet-explorer-dev"
           "icon": "canary",
           // (optional) details, cavats, links to tickets, flags etc
           "details": [
@@ -63,7 +62,6 @@ To update data, edit [`data.json`](src/data.json), which is in this format:
         "firefox": {},
         "opera": {},
         "safari": {},
-        "internet-explorer": {},
         // (optional) details that don't apply to a single browser
         "details": [
           "<strong>Chrome & Firefox</strong>: sitting in a tree K-I-S-S-I-N-G"
