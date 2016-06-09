@@ -92,9 +92,10 @@
         ]
       },
       "firefox": {
-        "supported": 0.5,
-        "minVersion": 40,
+        "supported": 1,
+        "minVersion": 47,
         "details": [
+          "Debuggable from the <a href=\"https://developer.mozilla.org/en-US/docs/Tools/about:debugging#Workers\">\"Workers\" page</a> in <code>about:debugging</code>.",
           "<a href=\"https://developer.mozilla.org/en-US/docs/Tools/Web_Console\">Web Console</a> can display console messages from Service Workers.",
           "<code>about:serviceworkers</code> has some under-the-hood stuff."
         ]
