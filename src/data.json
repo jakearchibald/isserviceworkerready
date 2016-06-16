@@ -500,7 +500,10 @@
       },
       "edge": {
         "supported": 0
-      }
+      },
+      "details": [
+        "<strong>Edge</strong>: <a href=\"https://developer.microsoft.com/microsoft-edge/platform/status/cacheapi\">In development.</a>"
+      ]
     },
     {
       "name": "<code>serviceWorker.ready</code>",
