@@ -49,9 +49,12 @@
   }
 
   & > li {
-    margin: 0;
+    margin: 0 10px;
     display: inline-block;
+
     @media (min-width: 360px) {
+      margin: 0;
+
       &::after {
         content: '*';
         margin: 0 1rem;
