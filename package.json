@@ -7,7 +7,7 @@
     "gulp-filter": "^1.0.2",
     "gulp-htmlmin": "^0.2.0",
     "gulp-load-plugins": "^0.8.0",
-    "gulp-ruby-sass": "^0.7.1",
+    "gulp-sass": "^2.3.2",
     "gulp-swig": "^0.7.4",
     "run-sequence": "^1.0.2"
   },
