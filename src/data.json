@@ -99,10 +99,10 @@
       "name": "Debugging",
       "description": "State of debugging tools.",
       "chrome": {
-        "supported": 0.5,
+        "supported": 1,
         "minVersion": 40,
         "details": [
-          "You can set breakpoints and run console commands in the context of the service worker."
+          "You can debug service worker scripts as any other. \"Application\" panel in devtools has service worker & cache sections."
         ]
       },
       "firefox": {
