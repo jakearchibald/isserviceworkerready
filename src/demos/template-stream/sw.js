@@ -54,7 +54,7 @@ function templateStream(strings, ...values) {
   
   // Turn them all into promises - makes it easier.
   // Then get an iterator for the values
-  items = items.map(i => Promise.resolve(i)).values();
+  items = items.map(i => Promise.resolve(i)).entries();
   
   // So we can turn our text into bytes
   const encoder = new TextEncoder();
@@ -72,7 +72,7 @@ function templateStream(strings, ...values) {
       }
       
       // Wait for it to resolve
-      return result.value.then(val => {
+      return result.value[1].then(val => {
         // Does it look like a stream?
         if (val.getReader) {
           // If so, 'pipe' the data to our stream
