@@ -481,7 +481,8 @@
         ]
       },
       "edge": {
-        "supported": 0
+        "supported": 1,
+        "minVersion": 14
       }
     },
     {
@@ -514,7 +515,8 @@
         ]
       },
       "edge": {
-        "supported": 0
+        "supported": 1,
+        "minVersion": 14
       },
       "details": [
         "<strong>Chrome & Samsung Internet</strong>: <code>URLSearchParams</code> <a href=\"https://code.google.com/p/chromium/issues/detail?id=412027#c11\">not supported yet</a>"
