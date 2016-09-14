@@ -481,7 +481,8 @@
         ]
       },
       "edge": {
-        "supported": 0
+        "supported": 1,
+        "minVersion": 14
       }
     },
     {
@@ -514,7 +515,8 @@
         ]
       },
       "edge": {
-        "supported": 0
+        "supported": 1,
+        "minVersion": 14
       },
       "details": [
         "<strong>Chrome & Samsung Internet</strong>: <code>URLSearchParams</code> <a href=\"https://code.google.com/p/chromium/issues/detail?id=412027#c11\">not supported yet</a>"
@@ -547,11 +549,8 @@
         ]
       },
       "edge": {
-        "supported": 0.5,
-        "minVersion": 14,
-        "details": [
-          "<a href=\"https://developer.microsoft.com/microsoft-edge/platform/status/fetchapi\">Enabled by default</a> on preview builds starting with <a href=\"https://developer.microsoft.com/microsoft-edge/platform/changelog/desktop/14342\">EdgeHTML 14.14342</a>"
-        ]
+        "supported": 1,
+        "minVersion": 14
       },
       "details": [
         "<a href=\"https://github.com/github/fetch\">Polyfill available</a>"
