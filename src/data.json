@@ -354,7 +354,7 @@
     },
     {
       "name": "Activate event",
-      "description": "Activate event fires after others become redundant. Includes <code>InstallEvent.waitUntil()</code>. <a href=\"https://w3c.github.io/ServiceWorker/#activation-algorithm\">Spec</a>. <a href=\"demos/installactivate/\">Test</a>.",
+      "description": "Activate event fires once this worker becomes the active worker in a registration. Includes <code>event.waitUntil()</code>. <a href=\"https://w3c.github.io/ServiceWorker/#activation-algorithm\">Spec</a>. <a href=\"demos/installactivate/\">Test</a>.",
       "chrome": {
         "supported": 1,
         "minVersion": 40
