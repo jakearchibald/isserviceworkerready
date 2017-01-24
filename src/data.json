@@ -542,10 +542,10 @@
         "minVersion": 4.0
       },
       "safari": {
-        "supported": 0.5,
-        "icon": "webkit",
+        "supported": 1,
+        "minVersion": 10.1,
         "details": [
-          "Partial support landing in <a href=\"https://nightly.webkit.org/\">WebKit nightly</a>"
+          "Support landing in <a href=\"https://developer.apple.com/library/prerelease/content/releasenotes/General/WhatsNewInSafari/Articles/Safari_10_1.html\">Safari 10.1 beta</a>"
         ]
       },
       "edge": {
