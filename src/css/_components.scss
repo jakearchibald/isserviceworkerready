@@ -231,17 +231,17 @@
     }
 
     @media (min-width: 578px) {
-      border-radius: 600px;
-      bottom: 10%;
-      right: 10%;
+      border-radius: 4px;
+      bottom: 5%;
+      right: 5%;
       padding: 0;
       box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
       @include display-flex;
       @include justify-content(center);
       @include align-items(center);
 
-      width: 33%;
-      height: 33%;
+      width: 50%;
+      height: 30%;
     }
   }
 
