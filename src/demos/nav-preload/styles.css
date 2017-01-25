@@ -1,0 +1,177 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #fff;
+}
+.content {
+  position: relative;
+  margin: 1rem 0;
+}
+.actions li {
+  margin: 1rem 0;
+}
+.actions form {
+  display: inline;
+}
+.pl-c { color: rgb(150, 152, 150); }
+.pl-c1, .pl-s .pl-v { color: rgb(0, 134, 179); }
+.pl-e, .pl-en { color: rgb(121, 93, 163); }
+.pl-smi, .pl-s .pl-s1 { color: rgb(51, 51, 51); }
+.pl-k { color: rgb(167, 29, 93); }
+.pl-s, .pl-pds, .pl-s .pl-pse .pl-s1, .pl-sr, .pl-sr .pl-cce, .pl-sr .pl-sre, .pl-sr .pl-sra { color: rgb(24, 54, 145); }
+.pl-v { color: rgb(237, 106, 67); }
+.octicon { display: inline-block; vertical-align: text-top; fill: currentcolor; }
+a { background-color: transparent; }
+b, strong { font-weight: inherit; }
+b, strong { font-weight: bolder; }
+img { border-style: none; }
+svg:not(:root) { overflow: hidden; }
+code, kbd, pre, samp { font-family: monospace, monospace; font-size: 1em; }
+hr { box-sizing: content-box; height: 0px; overflow: visible; }
+button, input, select, textarea { font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; margin: 0px; }
+button, input { overflow: visible; }
+button, select { text-transform: none; }
+button, html [type="button"], [type="reset"], [type="submit"] { -webkit-appearance: button; }
+* { box-sizing: border-box; }
+input, select, textarea, button { font-family: inherit; font-size: inherit; line-height: inherit; }
+a { color: rgb(64, 120, 192); text-decoration: none; }
+strong { font-weight: 600; }
+hr, .rule { height: 0px; margin: 15px 0px; overflow: hidden; background: transparent; border-width: 0px 0px 1px; border-top-style: initial; border-right-style: initial; border-left-style: initial; border-top-color: initial; border-right-color: initial; border-left-color: initial; border-image: initial; border-bottom-style: solid; border-bottom-color: rgb(221, 221, 221); }
+hr::before, .rule::before { display: table; content: ""; }
+table { border-spacing: 0px; border-collapse: collapse; }
+td, th { padding: 0px; }
+button { cursor: pointer; }
+h1, h2, h3, h4, h5, h6 { margin-top: 0px; margin-bottom: 0px; }
+h2 { font-size: 24px; font-weight: 600; }
+h3 { font-size: 20px; font-weight: 600; }
+h4 { font-size: 16px; font-weight: 600; }
+h5 { font-size: 14px; font-weight: 600; }
+p { margin-top: 0px; margin-bottom: 10px; }
+blockquote { margin: 0px; }
+ul, ol { padding-left: 0px; margin-top: 0px; margin-bottom: 0px; }
+ol ol, ul ol { list-style-type: lower-roman; }
+tt, code { font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace; font-size: 12px; }
+pre { margin-top: 0px; margin-bottom: 0px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 12px; line-height: normal; font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.octicon { vertical-align: text-bottom; }
+.btn { position: relative; display: inline-block; padding: 6px 12px; font-size: 14px; font-weight: 600; line-height: 20px; color: rgb(51, 51, 51); white-space: nowrap; vertical-align: middle; cursor: pointer; user-select: none; background-color: rgb(238, 238, 238); background-image: linear-gradient(rgb(252, 252, 252), rgb(238, 238, 238)); border: 1px solid rgb(213, 213, 213); border-radius: 3px; -webkit-appearance: none; }
+.btn-primary { color: rgb(255, 255, 255); text-shadow: rgba(0, 0, 0, 0.14902) 0px -1px 0px; background-color: rgb(108, 198, 68); background-image: linear-gradient(rgb(145, 221, 112), rgb(85, 174, 46)); border: 1px solid rgb(90, 173, 53); }
+.hidden-text-expander { display: block; }
+.hidden-text-expander.inline { position: relative; top: -1px; display: inline-block; margin-left: 5px; line-height: 0; }
+.hidden-text-expander a, .ellipsis-expander { display: inline-block; height: 12px; padding: 0px 5px 5px; font-size: 12px; font-weight: bold; line-height: 6px; color: rgb(85, 85, 85); text-decoration: none; vertical-align: middle; background: rgb(221, 221, 221); border: 0px; border-radius: 1px; }
+.btn-link { display: inline-block; padding: 0px; font-size: inherit; color: rgb(64, 120, 192); text-decoration: none; white-space: nowrap; cursor: pointer; user-select: none; background-color: transparent; border: 0px; -webkit-appearance: none; }
+.btn-link:disabled { color: rgb(118, 118, 118); pointer-events: none; cursor: default; }
+input, textarea { font-feature-settings: 'liga' 0; }
+.tooltipped { position: relative; }
+.tooltipped::after { position: absolute; z-index: 1000000; display: none; padding: 5px 8px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 11px; line-height: 1.5; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; -webkit-font-smoothing: subpixel-antialiased; color: rgb(255, 255, 255); text-align: center; text-decoration: none; text-shadow: none; text-transform: none; letter-spacing: normal; word-wrap: break-word; white-space: pre; pointer-events: none; content: attr(aria-label); background: rgba(0, 0, 0, 0.8); border-radius: 3px; opacity: 0; }
+.tooltipped::before { position: absolute; z-index: 1000001; display: none; width: 0px; height: 0px; color: rgba(0, 0, 0, 0.8); pointer-events: none; content: ""; border: 5px solid transparent; opacity: 0; }
+.tooltipped-s::before, .tooltipped-se::before, .tooltipped-sw::before { top: auto; right: 50%; bottom: -5px; margin-right: -5px; border-bottom-color: rgba(0, 0, 0, 0.8); }
+.tooltipped-se::after { right: auto; left: 50%; margin-left: -15px; }
+.tooltipped-n::before, .tooltipped-ne::before, .tooltipped-nw::before { top: -5px; right: 50%; bottom: auto; margin-right: -5px; border-top-color: rgba(0, 0, 0, 0.8); }
+.tooltipped-s::after, .tooltipped-n::after { transform: translateX(50%); }
+.tooltipped-multiline::after { width: max-content; max-width: 250px; word-break: break-word; word-wrap: normal; white-space: pre-line; border-collapse: separate; }
+.float-right { float: right !important; }
+.d-block { display: block !important; }
+.d-none { display: none !important; }
+.mr-1 { margin-right: 4px !important; }
+.text-bold { font-weight: 600 !important; }
+.avatar { display: inline-block; overflow: hidden; line-height: 1; vertical-align: middle; border-radius: 3px; }
+.avatar-small { border-radius: 2px; }
+.markdown-body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; font-size: 16px; line-height: 1.5; word-wrap: break-word; }
+.markdown-body::before { display: table; content: ""; }
+.markdown-body::after { display: table; clear: both; content: ""; }
+.markdown-body > :first-child { margin-top: 0px !important; }
+.markdown-body > :last-child { margin-bottom: 0px !important; }
+.markdown-body p, .markdown-body blockquote, .markdown-body ul, .markdown-body ol, .markdown-body dl, .markdown-body table, .markdown-body pre { margin-top: 0px; margin-bottom: 16px; }
+.markdown-body hr { height: 0.25em; padding: 0px; margin: 24px 0px; background-color: rgb(231, 231, 231); border: 0px; }
+.markdown-body blockquote { padding: 0px 1em; color: rgb(119, 119, 119); border-left: 0.25em solid rgb(221, 221, 221); }
+.markdown-body blockquote > :first-child { margin-top: 0px; }
+.markdown-body blockquote > :last-child { margin-bottom: 0px; }
+.markdown-body h1, .markdown-body h2, .markdown-body h3, .markdown-body h4, .markdown-body h5, .markdown-body h6 { margin-top: 24px; margin-bottom: 16px; font-weight: 600; line-height: 1.25; }
+.markdown-body h1 tt, .markdown-body h1 code, .markdown-body h2 tt, .markdown-body h2 code, .markdown-body h3 tt, .markdown-body h3 code, .markdown-body h4 tt, .markdown-body h4 code, .markdown-body h5 tt, .markdown-body h5 code, .markdown-body h6 tt, .markdown-body h6 code { font-size: inherit; }
+.markdown-body h2 { padding-bottom: 0.3em; font-size: 1.5em; border-bottom: 1px solid rgb(238, 238, 238); }
+.markdown-body h3 { font-size: 1.25em; }
+.markdown-body h4 { font-size: 1em; }
+.markdown-body h5 { font-size: 0.875em; }
+.markdown-body ul, .markdown-body ol { padding-left: 2em; }
+.markdown-body ul ul, .markdown-body ul ol, .markdown-body ol ol, .markdown-body ol ul { margin-top: 0px; margin-bottom: 0px; }
+.markdown-body li + li { margin-top: 0.25em; }
+.markdown-body code, .markdown-body tt { padding: 0.2em 0px; margin: 0px; font-size: 85%; background-color: rgba(0, 0, 0, 0.0392157); border-radius: 3px; }
+.markdown-body code::before, .markdown-body code::after, .markdown-body tt::before, .markdown-body tt::after { letter-spacing: -0.2em; content: " "; }
+.markdown-body pre { word-wrap: normal; }
+.markdown-body pre > code { padding: 0px; margin: 0px; font-size: 100%; word-break: normal; white-space: pre; background: transparent; border: 0px; }
+.markdown-body .highlight { margin-bottom: 16px; }
+.markdown-body .highlight pre { margin-bottom: 0px; word-break: normal; }
+.markdown-body .highlight pre, .markdown-body pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; background-color: rgb(247, 247, 247); border-radius: 3px; }
+.markdown-body pre code, .markdown-body pre tt { display: inline; padding: 0px; margin: 0px; overflow: visible; line-height: inherit; word-wrap: normal; background-color: transparent; border: 0px; }
+.markdown-body pre code::before, .markdown-body pre code::after, .markdown-body pre tt::before, .markdown-body pre tt::after { content: normal; }
+.state { display: inline-block; padding: 4px 8px; font-weight: 600; line-height: 20px; color: rgb(255, 255, 255); text-align: center; background-color: rgb(153, 153, 153); border-radius: 3px; }
+.state-open, .state-proposed, .state-reopened { background-color: rgb(108, 198, 68); }
+.state-closed { background-color: rgb(189, 44, 0); }
+.comment-body { width: 100%; padding: 15px; overflow: visible; font-size: 14px; }
+.comment-body .highlight { background-color: transparent; overflow: visible !important; }
+.commit-desc { display: none; }
+.commit-desc pre { max-width: 700px; margin-top: 10px; font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace; font-size: 11px; line-height: 1.45; color: rgb(89, 96, 99); white-space: pre-wrap; }
+.timeline-commits { width: 100%; margin-top: 5px; border-collapse: separate; }
+.timeline-commits td { padding-top: 4px; padding-right: 8px; padding-bottom: 4px; font-size: 12px; line-height: 16px; vertical-align: top; background-color: transparent; }
+.discussion-item .timeline-commits .commit-author { display: none; }
+.timeline-commits .commit-gravatar { width: 16px; padding-left: 10px; }
+.timeline-commits .commit-author { width: 200px; padding-right: 20px; white-space: nowrap; }
+.timeline-commits .author { font-weight: bold; color: rgb(85, 85, 85); }
+.timeline-commits .commit-message { max-width: 550px; min-height: 0px; }
+.timeline-commits .commit-message > code a { color: rgb(85, 85, 85); }
+.timeline-commits .commit-desc pre { overflow: visible; color: rgb(118, 118, 118); }
+.timeline-commits .hidden-text-expander { margin-top: 3px; margin-left: 0px; vertical-align: top; }
+.timeline-commits .hidden-text-expander .ellipsis-expander { height: 13px; background-color: rgb(238, 238, 238); }
+.timeline-commits .commit-sig-status { width: 60px; padding-right: 4px; text-align: right; }
+.timeline-commits .commit-ci-status { width: 16px; padding-right: 4px; }
+.timeline-commits .commit-meta { width: 50px; text-align: right; }
+.commit-icon { display: table-cell; width: 16px; color: rgb(204, 204, 204); }
+.commit-icon .octicon { background-color: rgb(255, 255, 255); }
+.commit-id { color: rgb(187, 187, 187); }
+.discussion-timeline::before { position: absolute; top: 0px; bottom: 0px; left: 79px; z-index: -1; display: block; width: 2px; content: ""; background-color: rgb(243, 243, 243); }
+.timeline-comment-wrapper > .timeline-comment::after, .timeline-comment-wrapper > .timeline-comment::before, .timeline-new-comment .timeline-comment::after, .timeline-new-comment .timeline-comment::before { position: absolute; top: 11px; right: 100%; left: -16px; display: block; width: 0px; height: 0px; pointer-events: none; content: " "; border-color: transparent; border-style: solid solid outset; }
+.timeline-comment-wrapper > .timeline-comment::before, .timeline-new-comment .timeline-comment::before { border-width: 8px; border-right-color: rgb(221, 221, 221); }
+.timeline-comment-wrapper { position: relative; padding-left: 60px; margin-top: 15px; margin-bottom: 15px; border-top: 2px solid rgb(255, 255, 255); border-bottom: 2px solid rgb(255, 255, 255); }
+.timeline-comment-wrapper:first-child { margin-top: 0px; }
+.timeline-comment-avatar { float: left; margin-left: -60px; border-radius: 3px; }
+.timeline-comment { position: relative; background-color: rgb(255, 255, 255); border: 1px solid rgb(221, 221, 221); border-radius: 3px; }
+.timeline-comment-header { padding-right: 15px; padding-left: 15px; color: rgb(118, 118, 118); background-color: rgb(247, 247, 247); border-bottom: 1px solid rgb(221, 221, 221); border-top-left-radius: 3px; border-top-right-radius: 3px; }
+.timeline-comment-header .author { color: rgb(85, 85, 85); }
+.timeline-comment-header .timestamp { color: inherit; white-space: nowrap; }
+.timeline-comment-header .timestamp.timestamp-edited { cursor: default; }
+.timeline-comment-label { float: right; padding: 2px 5px; margin: 8px 0px 0px 10px; font-size: 12px; cursor: default; border: 1px solid rgba(0, 0, 0, 0.0980392); border-radius: 3px; }
+.timeline-comment-header-text { max-width: 78%; padding-top: 10px; padding-bottom: 10px; }
+.timeline-comment-actions { float: right; margin-right: -5px; margin-left: 10px; }
+.discussion-item-ref .commit-gravatar { padding-right: 5px; padding-left: 2px; }
+.discussion-item-ref .state { padding: 1px 5px; margin-left: 8px; font-size: 12px; }
+.discussion-item-ref .state .octicon { width: 1em; font-size: 14px; }
+.discussion-item + .discussion-item, .discussion-item-review + .discussion-item { padding-top: 15px; border-top: 1px solid rgb(245, 245, 245); }
+.discussion-item { position: relative; padding-left: 25px; margin: 15px 0px 15px 79px; }
+.discussion-item .author { font-weight: 600; color: rgb(85, 85, 85); }
+.discussion-item .timestamp { color: inherit; white-space: nowrap; }
+.discussion-item-icon { float: left; width: 32px; height: 32px; margin-top: -7px; margin-left: -40px; line-height: 28px; color: rgb(118, 118, 118); text-align: center; background-color: rgb(243, 243, 243); border: 2px solid rgb(255, 255, 255); border-radius: 50%; }
+.discussion-item-icon .octicon-pencil { font-size: 14px; }
+.discussion-item-header { min-height: 30px; padding-top: 5px; padding-bottom: 5px; line-height: 20px; color: rgb(118, 118, 118); word-wrap: break-word; }
+.discussion-item-header .avatar { width: 16px; height: 16px; }
+.discussion-item-header:last-child { padding-bottom: 0px; }
+.discussion-item-entity { font-weight: 600; color: rgb(51, 51, 51); }
+.discussion-item-ref-title .issue-num { font-weight: normal; color: rgb(118, 118, 118); }
+.discussion-item-ref-title .title-link { color: rgb(51, 51, 51); }
+.discussion-item-rollup-ref .state { margin-top: 2px; }
+.discussion-item .renamed-was, .discussion-item .renamed-is { font-weight: bold; color: rgb(51, 51, 51); }
+.discussion-timeline-actions { background-color: rgb(255, 255, 255); border-top: 2px solid rgb(243, 243, 243); }
+g-emoji { font-family: "Apple Color Emoji", "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol"; font-size: 18px; font-weight: normal; line-height: 20px; vertical-align: middle; }
+html.emoji-size-boost g-emoji { margin-right: 3px; }
+.user-mention, .team-mention { font-weight: 600; color: rgb(51, 51, 51); white-space: nowrap; }
+.comment-reactions::before { display: table; content: ""; }
+.comment-reactions::after { display: table; clear: both; content: ""; }
+.comment-reactions.has-reactions { border-top: 1px solid rgb(229, 229, 229); }
+.reaction-summary-item { float: left; padding: 9px 15px 7px; line-height: 18px; border-right: 1px solid rgb(229, 229, 229); }
+.comment-reactions-options .reaction-summary-item:first-child { border-bottom-left-radius: 2px; }
+.signed-out-comment { padding: 15px; margin-top: 15px; margin-left: 64px; background-color: rgb(255, 249, 234); border: 1px solid rgb(223, 216, 194); border-radius: 3px; }
+.signed-out-comment .btn { margin-right: 3px; vertical-align: baseline; }
+hr { border-bottom-color: rgb(238, 238, 238); }
+.btn-link { font-family: inherit; }
+.text-bold { font-weight: 500 !important; }
