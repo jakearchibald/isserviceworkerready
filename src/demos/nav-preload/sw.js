@@ -1,6 +1,6 @@
 // Slow the serviceworker down a bit
-//const start = Date.now();
-//while (Date.now() - start < 500);
+const start = Date.now();
+while (Date.now() - start < 500);
 
 addEventListener('install', event => {
   event.waitUntil(async function() {
