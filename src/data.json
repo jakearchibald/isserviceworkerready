@@ -39,6 +39,7 @@
         "supported": 1,
         "details": [
           "Shipped."
+     		  "Chromium-based browsers shipped: Yandex Browser"
         ]
       },
       "opera": {
@@ -163,6 +164,7 @@
         "supported": 0
       },
       "details": [
+     		"<strong>Yandex Browser</strong>: Supported from 16.4"
       ]
     },
     {
