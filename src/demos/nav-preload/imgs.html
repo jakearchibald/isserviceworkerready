@@ -4,17 +4,70 @@
   <title>Navigation preload demo</title>
   <meta name="viewport" content="width=device-width, minimum-scale=1.0">
   <link rel="stylesheet" href="styles.css">
-  <script>
+</head>
+<body>
+<script>
+  (function () {
+    const button = document.createElement('button');
+    button.textContent = 'Loading…';
+    button.disabled = true;
+    document.body.appendChild(button);
+
+    if (!('serviceWorker' in navigator)) {
+      button.textContent = 'Service worker not supported';
+    }
+
     navigator.serviceWorker.register('sw.js');
+
+    navigator.serviceWorker.ready.then(reg => {
+      new Promise(resolve => {
+        const worker = reg.active;
+
+        if (worker.state == 'activated') {
+          resolve();
+          return;
+        }
+
+        worker.addEventListener('statechange', () => resolve(), { once: true });
+      }).then(() => {
+        if (!reg.navigationPreload) {
+          button.textContent = 'Navigation preload not supported';
+          return;
+        }
+
+        let enabled = false;
+
+        function updateUi() {
+          button.disabled = false;
+          button.textContent = enabled ? 'Disable navigation preload' : 'Enable navigation preload';
+        }
+
+        reg.navigationPreload.getState().then(state => {
+          enabled = state.enabled;
+          updateUi();
+        });
+
+        button.addEventListener('click', () => {
+          enabled = !enabled;
+          updateUi();
+          if (enabled) {
+            reg.navigationPreload.enable();
+          }
+          else {
+            reg.navigationPreload.disable();
+          }
+        });
+      });
+    });
     // Log performance details:
     window.addEventListener('load', () => {
       for (const key of ['fetchStart', 'connectStart', 'connectEnd', 'requestStart', 'responseStart', 'responseEnd', 'domComplete']) {
         console.log(key, performance.timing[key] - performance.timing.navigationStart);
       }
     });
-  </script>
-</head>
-<body>
+  })();
+
+</script>
 <div class="content">
   <div class="container new-discussion-timeline experiment-repo-nav">
   <div class="repository-content">
