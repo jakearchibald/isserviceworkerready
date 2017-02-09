@@ -23,6 +23,10 @@
     {
       "id": "edge",
       "name": "Edge"
+    },
+    {
+      "id": "yandex-browser",
+      "name": "Yandex Browser"
     }
   ],
   "features": [
@@ -62,6 +66,12 @@
           "<a href=\"https://developer.microsoft.com/microsoft-edge/platform/status/serviceworker\">In development</a>."
         ]
       },
+      "yandex-browser": {
+        "supported": 1,
+        "details": [
+          "<a href=\"https://tech.yandex.com/browser/\">Shipped</a>."
+        ]
+      },
       "details": [
         "Support does not include iOS versions of third-party browsers on that platform (see Safari support)."
       ]
@@ -93,6 +103,10 @@
         "icon": "edge",
         "minVersion": 13,
         "supported": 1
+      },
+      "yandex-browser": {
+        "supported": 1,
+        "minVersion": 16
       }
     },
     {
@@ -131,6 +145,10 @@
       "edge": {
         "supported": 0
       },
+      "yandex-browser": {
+        "supported": 1,
+        "minVersion": 16
+      },
       "details": [
         "<strong>Chrome & Opera</strong>: Debuggable from the resources panel in <a href=\"https://www.google.com/chrome/browser/canary.html\">Chrome Canary</a> and <a href=\"http://www.opera.com/developer\">Opera developer</a> if you <a href=\"https://www.reddit.com/r/webdev/comments/2wz7s4/the_secret_extra_tools_within_chromes_dev_tools/\">enable super-experimental devtools</a>.",
         "<strong>Chrome & Opera</strong>: Console messages from the service worker appear in the pages' console.",
@@ -162,6 +180,10 @@
       "edge": {
         "supported": 0
       },
+      "yandex-browser": {
+        "supported": 1,
+        "minVersion": 16
+      },
       "details": [
       ]
     },
@@ -190,6 +212,10 @@
       "edge": {
         "supported": 0
       },
+      "yandex-browser": {
+        "supported": 1,
+        "minVersion": 16
+      },
       "details": [
       ]
     },
@@ -217,6 +243,10 @@
       },
       "edge": {
         "supported": 0
+      },
+      "yandex-browser": {
+        "supported": 1,
+        "minVersion": 16
       },
       "details": [
         "<strong>Chrome & Opera</strong>: <code>messageEvent.source</code> is <a href=\"https://crbug.com/403693\"><code>null</code> within the worker</a>, but you can pass your own <code>MessageChannel</code> for 2-way communication",
@@ -247,6 +277,10 @@
       },
       "edge": {
         "supported": 0
+      },
+      "yandex-browser": {
+        "supported": 1,
+        "minVersion": 16
       }
     },
     {
@@ -273,6 +307,10 @@
       },
       "edge": {
         "supported": 0
+      },
+      "yandex-browser": {
+        "supported": 1,
+        "minVersion": 16
       }
     },
     {
@@ -299,6 +337,10 @@
       },
       "edge": {
         "supported": 0
+      },
+      "yandex-browser": {
+        "supported": 1,
+        "minVersion": 16
       }
     },
     {
@@ -325,6 +367,10 @@
       },
       "edge": {
         "supported": 0
+      },
+      "yandex-browser": {
+        "supported": 1,
+        "minVersion": 16
       }
     },
     {
@@ -350,6 +396,10 @@
       },
       "edge": {
         "supported": 0
+      },
+      "yandex-browser": {
+        "supported": 1,
+        "minVersion": 16
       }
     },
     {
@@ -376,6 +426,10 @@
       },
       "edge": {
         "supported": 0
+      },
+      "yandex-browser": {
+        "supported": 1,
+        "minVersion": 16
       }
     },
     {
@@ -401,6 +455,10 @@
       },
       "edge": {
         "supported": 0
+      },
+      "yandex-browser": {
+        "supported": 1,
+        "minVersion": 16
       }
     },
     {
@@ -427,6 +485,10 @@
       },
       "edge": {
         "supported": 0
+      },
+      "yandex-browser": {
+        "supported": 1,
+        "minVersion": 16
       }
     },
     {
@@ -452,6 +514,10 @@
       },
       "edge": {
         "supported": 0
+      },
+      "yandex-browser": {
+        "supported": 1,
+        "minVersion": 16
       }
     },
     {
@@ -483,6 +549,10 @@
       "edge": {
         "supported": 1,
         "minVersion": 14
+      },
+      "yandex-browser": {
+        "supported": 1,
+        "minVersion": 16
       }
     },
     {
@@ -518,6 +588,10 @@
         "supported": 1,
         "minVersion": 14
       },
+      "yandex-browser": {
+        "supported": 1,
+        "minVersion": 16
+      },
       "details": [
         "<strong>Chrome & Samsung Internet</strong>: <code>URLSearchParams</code> <a href=\"https://code.google.com/p/chromium/issues/detail?id=412027#c11\">not supported yet</a>"
       ]
@@ -552,6 +626,10 @@
         "supported": 1,
         "minVersion": 14
       },
+      "yandex-browser": {
+        "supported": 1,
+        "minVersion": 16
+      },
       "details": [
         "<a href=\"https://github.com/github/fetch\">Polyfill available</a>"
       ]
@@ -581,6 +659,10 @@
       "edge": {
         "supported": 0
       },
+      "yandex-browser": {
+        "supported": 1,
+        "minVersion": 16
+      },
       "details": [
         "<strong>Edge</strong>: <a href=\"https://developer.microsoft.com/microsoft-edge/platform/status/cacheapi\">In development.</a>"
       ]
@@ -607,6 +689,10 @@
       },
       "edge": {
         "supported": 0
+      },
+      "yandex-browser": {
+        "supported": 1,
+        "minVersion": 16
       }
     },
     {
@@ -636,6 +722,9 @@
         "details": [
           "<a href=\"https://developer.microsoft.com/en-us/microsoft-edge/platform/status/backgroundsyncapi/\">In development</a>"
         ]
+      },
+      "yandex-browser": {
+        "supported": 0
       }
     }
   ]
