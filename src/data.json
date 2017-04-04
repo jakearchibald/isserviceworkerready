@@ -197,16 +197,16 @@
       "name": "<code>postMessage</code> to &amp; from worker",
       "description": "<a href=\"https://w3c.github.io/ServiceWorker/#service-worker-postmessage\">Spec</a>. <a href=\"demos/postMessage/\">Test</a>.",
       "chrome": {
-        "supported": 0.5,
-        "minVersion": 40
+        "supported": 1,
+        "minVersion": 45
       },
       "firefox": {
         "supported": 1,
         "minVersion": 44
       },
       "opera": {
-        "supported": 0.5,
-        "minVersion": 27
+        "supported": 1,
+        "minVersion": 32
       },
       "samsung-internet": {
         "supported": 1,
@@ -219,8 +219,6 @@
         "supported": 0
       },
       "details": [
-        "<strong>Chrome & Opera</strong>: <code>messageEvent.source</code> is <a href=\"https://crbug.com/403693\"><code>null</code> within the worker</a>, but you can pass your own <code>MessageChannel</code> for 2-way communication",
-        "<strong>Chrome & Opera</strong>: Incorrectly delivers messages to <code>window.onmessage</code> rather than <code>navigator.serviceWorker.onmessage</code>."
       ]
     },
     {
