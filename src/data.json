@@ -23,6 +23,10 @@
     {
       "id": "edge",
       "name": "Edge"
+    },
+    {
+      "id": "uc",
+      "name": "UC browser"
     }
   ],
   "features": [
@@ -389,7 +393,7 @@
       },
       "uc": {
         "supported": 1
-      },
+      }
     },
     {
       "name": "Activate event",
