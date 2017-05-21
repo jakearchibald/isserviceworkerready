@@ -69,7 +69,7 @@
       "uc": {
         "supported": 1,
         "details": [
-          "Shipped. It has implemented some function. But it's hard to run well."
+          "Shipped. Based on Android browser. They have implemented some API, but still not advice to use it in production environment. "
         ]
       },
       "details": [
@@ -105,7 +105,11 @@
         "supported": 1
       },
       "uc": {
-        "supported": 1
+        "supported": 0.5,
+        "minVersion": 11.5,
+        "details": [
+          "Have not completed implementation on window scope."
+        ]
       }
     },
     {
@@ -179,7 +183,8 @@
         "supported": 0
       },
       "uc": {
-        "supported": 1
+        "supported": 1,
+        "minVersion": 11.5
       },
       "details": [
       ]
@@ -210,7 +215,11 @@
         "supported": 0
       },
       "uc": {
-        "supported": 1
+        "supported": 1,
+        "minVersion": 11.5,
+        "details": [
+          "UC take '/' as default scope. Which means you had better to specify your scope manually."
+        ]
       },
       "details": [
       ]
@@ -241,15 +250,12 @@
         "supported": 0
       },
       "uc": {
-        "supported": 0,
+        "supported": 0.5,
         "details": [
-          "throw safety error"
-        ]
-      },
-      "details": [
-        "<strong>Chrome & Opera</strong>: <code>messageEvent.source</code> is <a href=\"https://crbug.com/403693\"><code>null</code> within the worker</a>, but you can pass your own <code>MessageChannel</code> for 2-way communication",
-        "<strong>Chrome & Opera</strong>: Incorrectly delivers messages to <code>window.onmessage</code> rather than <code>navigator.serviceWorker.onmessage</code>."
-      ]
+          "You can use this on UC. But you should be careful. Their implementation on <code>event.source</code>, <code>clients.matchAll</code> and <code>MessageChannel.port1.addEventListener</code> are not good. You should avoid this because they may cause bug or just be useless."
+        ],
+        "minVersion": 11.5
+      }
     },
     {
       "name": "Fetch event",
@@ -277,7 +283,8 @@
         "supported": 0
       },
       "uc": {
-        "supported": 1
+        "supported": 1,
+        "minVersion": 11.5
       }
     },
     {
@@ -306,7 +313,8 @@
         "supported": 0
       },
       "uc": {
-        "supported": 1
+        "supported": 1,
+        "minVersion": 11.5
       }
     },
     {
@@ -335,7 +343,8 @@
         "supported": 0
       },
       "uc": {
-        "supported": 1
+        "supported": 1,
+        "minVersion": 11.5
       }
     },
     {
@@ -364,7 +373,8 @@
         "supported": 0
       },
       "uc": {
-        "supported": 1
+        "supported": 1,
+        "minVersion": 11.5
       }
     },
     {
@@ -392,7 +402,8 @@
         "supported": 0
       },
       "uc": {
-        "supported": 1
+        "supported": 1,
+        "minVersion": 11.5
       }
     },
     {
@@ -421,7 +432,8 @@
         "supported": 0
       },
       "uc": {
-        "supported": 1
+        "supported": 1,
+        "minVersion": 11.5
       }
     },
     {
@@ -452,7 +464,8 @@
         "supported": 0,
         "details": [
           "In development"
-        ]
+        ],
+        "minVersion": 11.5
       }
     },
     {
@@ -481,7 +494,8 @@
         "supported": 0
       },
       "uc": {
-        "supported": 1
+        "supported": 1,
+        "minVersion": 11.5
       }
     },
     {
@@ -512,7 +526,8 @@
         "supported": 0.5,
         "details": [
           "Lack of clients.claim make us seems buggy."
-        ]
+        ],
+        "minVersion": 11.5
       }
     },
     {
@@ -546,7 +561,11 @@
         "minVersion": 14
       },
       "uc": {
-        "supported": 0
+        "supported": 0.5,
+        "minVersion": 11.5,
+        "details": [
+          "Have not completed implementation on window scope."
+        ]
       }
     },
     {
@@ -583,7 +602,11 @@
         "minVersion": 14
       },
       "uc": {
-        "supported": 0
+        "supported": 0.5,
+        "minVersion": 11.5,
+        "details": [
+          "Have not completed implementation on window scope."
+        ]
       },
       "details": [
         "<strong>Chrome & Samsung Internet</strong>: <code>URLSearchParams</code> <a href=\"https://code.google.com/p/chromium/issues/detail?id=412027#c11\">not supported yet</a>"
@@ -652,7 +675,11 @@
         "supported": 0
       },
       "uc": {
-        "supported": 0
+        "supported": 0.5,
+        "minVersion": 11.5,
+        "details": [
+          "Have not completed implementation on window scope."
+        ]
       },
       "details": [
         "<strong>Edge</strong>: <a href=\"https://developer.microsoft.com/microsoft-edge/platform/status/cacheapi\">In development.</a>"
@@ -682,7 +709,8 @@
         "supported": 0
       },
       "uc": {
-        "supported": 0
+        "supported": 1,
+        "minVersion": 11.5
       }
     },
     {
