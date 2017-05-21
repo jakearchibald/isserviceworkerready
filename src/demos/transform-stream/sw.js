@@ -54,7 +54,7 @@ function replaceResponse(response, bufferSize, match, replacer) {
           const offset = args[args.length - 2];
           const replacement = replacer(...args);
 
-          replacedLengthDiff += replacement - matched;
+          replacedLengthDiff += replacement.length - matched.length;
           lastReplaceEnds = offset + matched.length + replacedLengthDiff;
           return replacement;
         });
