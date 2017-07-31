@@ -27,7 +27,7 @@
   ],
   "features": [
     {
-      "name": "ServiceWorker enthusiasm",
+      "name": "Service worker enthusiasm",
       "description": "The first thing any implementation needs.",
       "chrome": {
         "supported": 1,
@@ -68,7 +68,7 @@
     },
     {
       "name": "Promises",
-      "description": "Not ServiceWorker-specific, but required by ServiceWorker. <a href=\"https://people.mozilla.org/~jorendorff/es6-draft.html#sec-promise-objects\">Spec</a>.",
+      "description": "Not service worker-specific, but required by service worker. <a href=\"https://people.mozilla.org/~jorendorff/es6-draft.html#sec-promise-objects\">Spec</a>.",
       "chrome": {
         "supported": 1,
         "minVersion": 36
@@ -110,7 +110,7 @@
         "minVersion": 47,
         "details": [
           "Debuggable from the <a href=\"https://developer.mozilla.org/en-US/docs/Tools/about:debugging#Workers\">\"Workers\" page</a> in <code>about:debugging</code>.",
-          "<a href=\"https://developer.mozilla.org/en-US/docs/Tools/Web_Console\">Web Console</a> can display console messages from Service Workers.",
+          "<a href=\"https://developer.mozilla.org/en-US/docs/Tools/Web_Console\">Web Console</a> can display console messages from service workers.",
           "<code>about:serviceworkers</code> has some under-the-hood stuff."
         ]
       },
@@ -139,7 +139,7 @@
     },
     {
       "name": "<code>navigator.serviceWorker</code>",
-      "description": "Namespace for page-side ServiceWorker API. <a href=\"https://w3c.github.io/ServiceWorker/#navigator-service-worker\">Spec</a>. <a href=\"demos/navigator.serviceWorker/\">Test</a>.",
+      "description": "Namespace for page-side service worker API. <a href=\"https://w3c.github.io/ServiceWorker/#navigator-serviceworker\">Spec</a>. <a href=\"demos/navigator.serviceWorker/\">Test</a>.",
       "chrome": {
         "supported": 1,
         "minVersion": 40
@@ -167,7 +167,7 @@
     },
     {
       "name": "Register / unregister",
-      "description": "Register for a SW and get a registration instance back, <code>unregister</code> undoes. <a href=\"https://w3c.github.io/ServiceWorker/#navigator-service-worker-register\">Spec</a>. <a href=\"demos/registerunregister/\">Test</a>.",
+      "description": "Register for a SW and get a registration instance back, <code>unregister</code> undoes. <a href=\"https://w3c.github.io/ServiceWorker/#dfn-service-worker-registration\">Spec</a>. <a href=\"demos/registerunregister/\">Test</a>.",
       "chrome": {
         "supported": 1,
         "minVersion": 40
@@ -223,7 +223,7 @@
     },
     {
       "name": "Fetch event",
-      "description": "Fires for pages and all sub-resources. <a href=\"https://w3c.github.io/ServiceWorker/#fetch-event-section\">Spec</a>. <a href=\"demos/fetchevent/\">Test</a>.",
+      "description": "Fires for pages and all sub-resources. <a href=\"https://w3c.github.io/ServiceWorker/#fetchevent\">Spec</a>. <a href=\"demos/fetchevent/\">Test</a>.",
       "chrome": {
         "supported": 1,
         "minVersion": 40
@@ -249,7 +249,7 @@
     },
     {
       "name": "<code>fetchEvent.request</code>",
-      "description": "<a href=\"https://w3c.github.io/ServiceWorker/#fetch-event-section\">Spec</a>. <a href=\"demos/fetchevent/\">Test</a>.",
+      "description": "<a href=\"https://w3c.github.io/ServiceWorker/#fetchevent\">Spec</a>. <a href=\"demos/fetchevent/\">Test</a>.",
       "chrome": {
         "supported": 1,
         "minVersion": 40
@@ -275,7 +275,7 @@
     },
     {
       "name": "<code>fetchEvent.respondWith()</code>",
-      "description": "<a href=\"https://w3c.github.io/ServiceWorker/#fetch-event-respondwith-method\">Spec</a>. <a href=\"demos/fetchevent/\">Test</a>.",
+      "description": "<a href=\"https://w3c.github.io/ServiceWorker/#fetch-event-respondwith\">Spec</a>. <a href=\"demos/fetchevent/\">Test</a>.",
       "chrome": {
         "supported": 1,
         "minVersion": 40
@@ -301,7 +301,7 @@
     },
     {
       "name": "Install event",
-      "description": "Install event fires in a newly discovered SW. Includes <code>InstallEvent.waitUntil()</code>. <a href=\"https://w3c.github.io/ServiceWorker/#install-event-section\">Spec</a>. <a href=\"demos/installactivate/\">Test</a>",
+      "description": "Install event fires in a newly discovered SW. Includes <code>InstallEvent.waitUntil()</code>. <a href=\"https://w3c.github.io/ServiceWorker/#install\">Spec</a>. <a href=\"demos/installactivate/\">Test</a>",
       "chrome": {
         "supported": 1,
         "minVersion": 40
@@ -327,7 +327,7 @@
     },
     {
       "name": "<code>self.skipWaiting()</code>",
-      "description": "Allow an installing worker to take over from the current active worker once installed. <a href=\"https://w3c.github.io/ServiceWorker/#service-worker-global-scope-skipwaiting\">Spec</a>. <a href=\"demos/installactivate/\">Test</a>.",
+      "description": "Allow an installing worker to take over from the current active worker once installed. <a href=\"https://w3c.github.io/ServiceWorker/#dom-serviceworkerglobalscope-skipwaiting\">Spec</a>. <a href=\"demos/installactivate/\">Test</a>.",
       "chrome": {
         "supported": 1,
         "minVersion": 42
@@ -352,7 +352,7 @@
     },
     {
       "name": "Activate event",
-      "description": "Activate event fires once this worker becomes the active worker in a registration. Includes <code>event.waitUntil()</code>. <a href=\"https://w3c.github.io/ServiceWorker/#activation-algorithm\">Spec</a>. <a href=\"demos/installactivate/\">Test</a>.",
+      "description": "Activate event fires once this worker becomes the active worker in a registration. Includes <code>event.waitUntil()</code>. <a href=\"https://w3c.github.io/ServiceWorker/#activate\">Spec</a>. <a href=\"demos/installactivate/\">Test</a>.",
       "chrome": {
         "supported": 1,
         "minVersion": 40
@@ -378,7 +378,7 @@
     },
     {
       "name": "<code>clients.claim()</code>",
-      "description": "Allow an active worker to take control of pages in its scope (eg, documents that were loaded before the SW was registered). <a href=\"https://w3c.github.io/ServiceWorker/#clients-claim\">Spec</a>. <a href=\"demos/claim/\">Test</a>.",
+      "description": "Allow an active worker to take control of pages in its scope (eg, documents that were loaded before the SW was registered). <a href=\"https://w3c.github.io/ServiceWorker/#dom-clients-claim\">Spec</a>. <a href=\"demos/claim/\">Test</a>.",
       "chrome": {
         "supported": 1,
         "minVersion": 42
@@ -403,7 +403,7 @@
     },
     {
       "name": "Update checks",
-      "description": "Browser checks for SW updates after navigation. <a href=\"https://w3c.github.io/ServiceWorker/#update-algorithm\">Spec</a>.",
+      "description": "Browser checks for SW updates after navigation. <a href=\"https://w3c.github.io/ServiceWorker/#update\">Spec</a>.",
       "chrome": {
         "supported": 1,
         "minVersion": 40
@@ -428,7 +428,7 @@
       }
     },
     {
-      "name": "ServiceWorker lifecycle",
+      "name": "Service worker lifecycle",
       "description": "Allow a next version to be in waiting &amp; take over when appropriate.",
       "chrome": {
         "supported": 1,
@@ -522,7 +522,7 @@
     },
     {
       "name": "<code>fetch(request)</code>",
-      "description": "<a href=\"https://w3c.github.io/ServiceWorker/#fetch-event-section\">Spec</a>. <a href=\"demos/fetch/\">Test</a>.",
+      "description": "<a href=\"https://w3c.github.io/ServiceWorker/#fetchevent-interface\">Spec</a>. <a href=\"demos/fetch/\">Test</a>.",
       "chrome": {
         "supported": 1,
         "minVersion": 40
