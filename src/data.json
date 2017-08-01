@@ -53,7 +53,7 @@
       "safari": {
         "supported": 0.5,
         "details": [
-          "<a href=\"https://webkit.org/status/#specification-service-workers\">Under consideration</a>, Brief positive signals in <a href=\"https://trac.webkit.org/wiki/FiveYearPlanFall2015\">five year plan</a>."
+          "<a href=\"https://webkit.org/status/#specification-service-workers\">Under consideration</a>, Positive signals after update to <a href=\"https://lists.webkit.org/pipermail/webkit-dev/2017-July/029285.html\">ServiceWorker spec</a>."
         ]
       },
       "edge": {
