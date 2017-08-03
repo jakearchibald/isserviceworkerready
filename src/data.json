@@ -51,9 +51,9 @@
         ]
       },
       "safari": {
-        "supported": 0.5,
+        "supported": 1,
         "details": [
-          "<a href=\"https://webkit.org/status/#specification-service-workers\">Under consideration</a>, Brief positive signals in <a href=\"https://trac.webkit.org/wiki/FiveYearPlanFall2015\">five year plan</a>."
+          "<a href=\"https://webkit.org/status\">In development</a>."
         ]
       },
       "edge": {
