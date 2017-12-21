@@ -2,15 +2,13 @@
 # in this file, please see the Travis CI documentation:
 # http://docs.travis-ci.com
 
-after_success:
-  - $(npm bin)/update-branch --commands "npm install && npm run build"
-                             --commit-message "Hey GitHub, this content is for you! [skip ci]"
-                             --directory "build"
-                             --distribution-branch "gh-pages"
-                             --source-branch "master"
-
-before_install:
-  - gem install sass compass
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GH_TOKEN
+  local_dir: build
+  on:
+    branch: master
 
 env:
   global:
@@ -20,6 +18,3 @@ git:
   depth: 10
 
 language: node_js
-
-node_js:
-  - "4"

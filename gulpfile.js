@@ -1,5 +1,6 @@
 var fs = require('fs');
 
+var del = require('del');
 var browserSync = require('browser-sync');
 var gulp = require('gulp');
 var plugins = require('gulp-load-plugins')();
@@ -12,8 +13,8 @@ var reload = browserSync.reload;
 // | Helper tasks                                                      |
 // ---------------------------------------------------------------------
 
-gulp.task('clean', function (done) {
-    require('del')(['build'], done);
+gulp.task('clean', function () {
+    return del(['build']);
 });
 
 gulp.task('copy', [
@@ -24,10 +25,10 @@ gulp.task('copy', [
 
 gulp.task('copy:css', function () {
     return gulp.src('src/css/all.scss')
-               .pipe(plugins.sass({ style: 'compressed' }))
-               .pipe(gulp.dest('build/css'))
-               .pipe(plugins.filter('**/*.css'))
-               .pipe(reload({stream: true}));
+        .pipe(plugins.sass({ style: 'compressed' }))
+        .pipe(gulp.dest('build/css'))
+        .pipe(plugins.filter('**/*.css'))
+        .pipe(reload({stream: true}));
 });
 
 gulp.task('copy:html', function () {
@@ -42,30 +43,28 @@ gulp.task('copy:html', function () {
         '!src/base.html'
 
     ]).pipe(plugins.swig({
-            defaults: { cache: false },
-            data: JSON.parse(fs.readFileSync("./src/data.json"))
-       }))
-      .pipe(plugins.htmlmin({
+        defaults: { cache: false },
+        data: JSON.parse(fs.readFileSync("./src/data.json"))
+    })).pipe(plugins.htmlmin({
 
-            // In-depth information about the options:
-            // https://github.com/kangax/html-minifier#options-quick-reference
+        // In-depth information about the options:
+        // https://github.com/kangax/html-minifier#options-quick-reference
 
-            collapseBooleanAttributes: true,
-            collapseWhitespace: true,
-            minifyJS: true,
-            removeAttributeQuotes: true,
-            removeComments: true,
-            removeEmptyAttributes: true,
-            removeOptionalTags: true,
-            removeRedundantAttributes: true,
+        collapseBooleanAttributes: true,
+        collapseWhitespace: true,
+        minifyJS: true,
+        removeAttributeQuotes: true,
+        removeComments: true,
+        removeEmptyAttributes: true,
+        removeOptionalTags: true,
+        removeRedundantAttributes: true,
 
-            // Prevent html-minifier from breaking the SVGs
-            // https://github.com/kangax/html-minifier/issues/285
-            keepClosingSlash: true,
-            caseSensitive: true
+        // Prevent html-minifier from breaking the SVGs
+        // https://github.com/kangax/html-minifier/issues/285
+        keepClosingSlash: true,
+        caseSensitive: true
 
-      })).pipe(gulp.dest('build'))
-         .pipe(reload({stream: true}));
+    })).pipe(gulp.dest('build')).pipe(reload({stream: true}));
 });
 
 gulp.task('copy:misc', function () {
@@ -88,7 +87,7 @@ gulp.task('copy:misc', function () {
 });
 
 gulp.task('browser-sync', function() {
-     browserSync({
+    browserSync({
 
         // In-depth information about the options:
         // http://www.browsersync.io/docs/options/
@@ -117,5 +116,5 @@ gulp.task('build', function (done) {
 gulp.task('default', ['build']);
 
 gulp.task('serve', function (done) {
-    runSequence( 'build', ['browser-sync', 'watch'], done);
+    runSequence('build', ['browser-sync', 'watch'], done);
 });

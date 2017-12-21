@@ -118,18 +118,25 @@
         "supported": 1,
         "details": [
           "Debuggable from the resources panel in <a href=\"http://www.opera.com/developer\">Opera developer</a> if you <a href=\"https://www.reddit.com/r/webdev/comments/2wz7s4/the_secret_extra_tools_within_chromes_dev_tools/\">enable super-experimental devtools</a>.",
-          "Console messages from the service worker appear in the pages' console in Opera stable.",
-          "<code>browser://serviceworker-internals</code> in Opera developer has some under-the-hood stuff."
+          "Console messages from the service worker appear in the pages' console in Opera stable."
         ]
       },
       "samsung-internet": {
-        "supported": 0
+        "supported": 1
       },
       "safari": {
-        "supported": 0
+        "supported": 0.5,
+        "minVersion": "TP46",
+        "details": [
+          "See 'service workers' in the 'develop' menu to open an inspector for a particular service worker."
+        ]
       },
       "edge": {
-        "supported": 0
+        "minVersion": 16,
+        "supported": 0.5,
+        "details": [
+          "See the service worker section in the sources panel."
+        ]
       },
       "details": [
         "<strong>Chrome & Opera</strong>: Debuggable from the resources panel in <a href=\"https://www.google.com/chrome/browser/canary.html\">Chrome Canary</a> and <a href=\"http://www.opera.com/developer\">Opera developer</a> if you <a href=\"https://www.reddit.com/r/webdev/comments/2wz7s4/the_secret_extra_tools_within_chromes_dev_tools/\">enable super-experimental devtools</a>.",
@@ -157,7 +164,8 @@
         "minVersion": 4.0
       },
       "safari": {
-        "supported": 0
+        "supported": 0.5,
+        "minVersion": "TP46"
       },
       "edge": {
         "supported": 0.5,
@@ -189,7 +197,8 @@
         "minVersion": 4.0
       },
       "safari": {
-        "supported": 0
+        "supported": 0.5,
+        "minVersion": "TP46"
       },
       "edge": {
         "supported": 0.5,
@@ -221,7 +230,8 @@
         "minVersion": 4.0
       },
       "safari": {
-        "supported": 0
+        "supported": 0.5,
+        "minVersion": "TP46"
       },
       "edge": {
         "supported": 0.5,
@@ -253,7 +263,8 @@
         "minVersion": 4.0
       },
       "safari": {
-        "supported": 0
+        "supported": 0.5,
+        "minVersion": "TP46"
       },
       "edge": {
         "supported": 0.5,
@@ -283,7 +294,8 @@
         "minVersion": 4.0
       },
       "safari": {
-        "supported": 0
+        "supported": 0.5,
+        "minVersion": "TP46"
       },
       "edge": {
         "supported": 0.5,
@@ -313,7 +325,8 @@
         "minVersion": 4.0
       },
       "safari": {
-        "supported": 0
+        "supported": 0.5,
+        "minVersion": "TP46"
       },
       "edge": {
         "supported": 0.5,
@@ -343,7 +356,8 @@
         "minVersion": 4.0
       },
       "safari": {
-        "supported": 0
+        "supported": 0.5,
+        "minVersion": "TP46"
       },
       "edge": {
         "supported": 0.5,
@@ -365,14 +379,16 @@
         "minVersion": 44
       },
       "opera": {
-        "supported": 0
+        "supported": 1,
+        "minVersion": 27
       },
       "samsung-internet": {
         "supported": 1,
         "minVersion": 4.0
       },
       "safari": {
-        "supported": 0
+        "supported": 0.5,
+        "minVersion": "TP46"
       },
       "edge": {
         "supported": 0.5,
@@ -402,7 +418,8 @@
         "minVersion": 4.0
       },
       "safari": {
-        "supported": 0
+        "supported": 0.5,
+        "minVersion": "TP46"
       },
       "edge": {
         "supported": 0.5,
@@ -424,14 +441,16 @@
         "minVersion": 44
       },
       "opera": {
-        "supported": 1
+        "supported": 1,
+        "minVersion": 33
       },
       "samsung-internet": {
         "supported": 1,
         "minVersion": 4.0
       },
       "safari": {
-        "supported": 0
+        "supported": 0.5,
+        "minVersion": "TP46"
       },
       "edge": {
         "supported": 0.5,
@@ -461,7 +480,8 @@
         "minVersion": 4.0
       },
       "safari": {
-        "supported": 0
+        "supported": 0.5,
+        "minVersion": "TP46"
       },
       "edge": {
         "supported": 0.5,
@@ -483,14 +503,16 @@
         "minVersion": 44
       },
       "opera": {
-        "supported": 0
+        "supported": 1,
+        "minVersion": 27
       },
       "samsung-internet": {
         "supported": 1,
         "minVersion": 4.0
       },
       "safari": {
-        "supported": 0
+        "supported": 0.5,
+        "minVersion": "TP46"
       },
       "edge": {
         "supported": 0.5,
@@ -520,11 +542,8 @@
         "minVersion": 4.0
       },
       "safari": {
-        "supported": 0.5,
-        "icon": "webkit",
-        "details": [
-          "Partial support landing in <a href=\"https://nightly.webkit.org/\">WebKit nightly</a>"
-        ]
+        "supported": 1,
+        "minVersion": 10.1
       },
       "edge": {
         "supported": 1,
@@ -544,21 +563,15 @@
       },
       "opera": {
         "supported": 1,
-        "minVersion": 27,
-        "details": [
-          "<code>URLSearchParams</code> as well as creating a <code>Response</code> from <code>FormData</code> are <a href=\"https://code.google.com/p/chromium/issues/detail?id=412027#c5\">not supported yet</a>"
-        ]
+        "minVersion": 33
       },
       "samsung-internet": {
         "supported": 1,
         "minVersion": 4.0
       },
       "safari": {
-        "supported": 0.5,
-        "icon": "webkit",
-        "details": [
-          "Partial support landing in <a href=\"https://nightly.webkit.org/\">WebKit nightly</a>"
-        ]
+        "supported": 1,
+        "minVersion": 10.1
       },
       "edge": {
         "supported": 1,
@@ -589,10 +602,7 @@
       },
       "safari": {
         "supported": 1,
-        "minVersion": 10.1,
-        "details": [
-          "Support landing in <a href=\"https://developer.apple.com/library/prerelease/content/releasenotes/General/WhatsNewInSafari/Articles/Safari_10_1.html\">Safari 10.1 beta</a>"
-        ]
+        "minVersion": 10.1
       },
       "edge": {
         "supported": 1,
@@ -622,7 +632,8 @@
         "minVersion": 4.0
       },
       "safari": {
-        "supported": 0
+        "supported": 0.5,
+        "minVersion": "TP46"
       },
       "edge": {
         "supported": 1,
@@ -643,14 +654,16 @@
         "minVersion": 44
       },
       "opera": {
-        "supported": 1
+        "supported": 1,
+        "minVersion": 33
       },
       "samsung-internet": {
         "supported": 1,
         "minVersion": 4.0
       },
       "safari": {
-        "supported": 0
+        "supported": 0.5,
+        "minVersion": "TP46"
       },
       "edge": {
         "supported": 0.5,

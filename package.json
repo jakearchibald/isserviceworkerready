@@ -1,15 +1,14 @@
 {
   "devDependencies": {
-    "@alrra/travis-scripts": "^1.1.0",
-    "browser-sync": "^1.9.1",
-    "del": "^1.1.1",
+    "browser-sync": "^2.19.0",
+    "del": "^3.0.0",
     "gulp": "^3.8.10",
-    "gulp-filter": "^1.0.2",
-    "gulp-htmlmin": "^0.2.0",
-    "gulp-load-plugins": "^0.8.0",
-    "gulp-sass": "^2.3.2",
-    "gulp-swig": "^0.7.4",
-    "run-sequence": "^1.0.2"
+    "gulp-filter": "^5.0.1",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-swig": "^0.8.0",
+    "run-sequence": "^2.2.0"
   },
   "private": true,
   "scripts": {
