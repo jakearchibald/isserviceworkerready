@@ -13,7 +13,6 @@
   "private": true,
   "scripts": {
     "build": "gulp build",
-    "serve": "gulp serve",
-    "test": "gulp build"
+    "serve": "gulp serve"
   }
 }
