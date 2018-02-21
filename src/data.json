@@ -53,7 +53,7 @@
       "safari": {
         "supported": 1,
         "details": [
-          "<a href=\"https://webkit.org/status/#specification-service-workers\">In development</a>."
+          "Shipped."
         ]
       },
       "edge": {
@@ -125,8 +125,8 @@
         "supported": 1
       },
       "safari": {
-        "supported": 0.5,
-        "minVersion": "TP46",
+        "supported": 1,
+        "minVersion": 11.1,
         "details": [
           "See 'service workers' in the 'develop' menu to open an inspector for a particular service worker."
         ]
@@ -164,8 +164,8 @@
         "minVersion": 4.0
       },
       "safari": {
-        "supported": 0.5,
-        "minVersion": "TP46"
+        "supported": 1,
+        "minVersion": 11.1
       },
       "edge": {
         "supported": 0.5,
@@ -197,8 +197,8 @@
         "minVersion": 4.0
       },
       "safari": {
-        "supported": 0.5,
-        "minVersion": "TP46"
+        "supported": 1,
+        "minVersion": 11.1
       },
       "edge": {
         "supported": 0.5,
@@ -230,8 +230,8 @@
         "minVersion": 4.0
       },
       "safari": {
-        "supported": 0.5,
-        "minVersion": "TP46"
+        "supported": 1,
+        "minVersion": 11.1
       },
       "edge": {
         "supported": 0.5,
@@ -263,8 +263,8 @@
         "minVersion": 4.0
       },
       "safari": {
-        "supported": 0.5,
-        "minVersion": "TP46"
+        "supported": 1,
+        "minVersion": 11.1
       },
       "edge": {
         "supported": 0.5,
@@ -294,8 +294,8 @@
         "minVersion": 4.0
       },
       "safari": {
-        "supported": 0.5,
-        "minVersion": "TP46"
+        "supported": 1,
+        "minVersion": 11.1
       },
       "edge": {
         "supported": 0.5,
@@ -325,8 +325,8 @@
         "minVersion": 4.0
       },
       "safari": {
-        "supported": 0.5,
-        "minVersion": "TP46"
+        "supported": 1,
+        "minVersion": 11.1
       },
       "edge": {
         "supported": 0.5,
@@ -356,8 +356,8 @@
         "minVersion": 4.0
       },
       "safari": {
-        "supported": 0.5,
-        "minVersion": "TP46"
+        "supported": 1,
+        "minVersion": 11.1
       },
       "edge": {
         "supported": 0.5,
@@ -387,8 +387,8 @@
         "minVersion": 4.0
       },
       "safari": {
-        "supported": 0.5,
-        "minVersion": "TP46"
+        "supported": 1,
+        "minVersion": 11.1
       },
       "edge": {
         "supported": 0.5,
@@ -418,8 +418,8 @@
         "minVersion": 4.0
       },
       "safari": {
-        "supported": 0.5,
-        "minVersion": "TP46"
+        "supported": 1,
+        "minVersion": 11.1
       },
       "edge": {
         "supported": 0.5,
@@ -449,8 +449,8 @@
         "minVersion": 4.0
       },
       "safari": {
-        "supported": 0.5,
-        "minVersion": "TP46"
+        "supported": 1,
+        "minVersion": 11.1
       },
       "edge": {
         "supported": 0.5,
@@ -480,8 +480,8 @@
         "minVersion": 4.0
       },
       "safari": {
-        "supported": 0.5,
-        "minVersion": "TP46"
+        "supported": 1,
+        "minVersion": 11.1
       },
       "edge": {
         "supported": 0.5,
@@ -511,8 +511,8 @@
         "minVersion": 4.0
       },
       "safari": {
-        "supported": 0.5,
-        "minVersion": "TP46"
+        "supported": 1,
+        "minVersion": 11.1
       },
       "edge": {
         "supported": 0.5,
@@ -632,16 +632,13 @@
         "minVersion": 4.0
       },
       "safari": {
-        "supported": 0.5,
-        "minVersion": "TP46"
+        "supported": 1,
+        "minVersion": 11.1
       },
       "edge": {
         "supported": 1,
         "minVersion": 16
-      },
-      "details": [
-        "<strong>Edge</strong>: <a href=\"https://developer.microsoft.com/microsoft-edge/platform/status/cacheapi\">In development.</a>"
-      ]
+      }
     },
     {
       "name": "<code>serviceWorker.ready</code>",
@@ -662,8 +659,8 @@
         "minVersion": 4.0
       },
       "safari": {
-        "supported": 0.5,
-        "minVersion": "TP46"
+        "supported": 1,
+        "minVersion": 11.1
       },
       "edge": {
         "supported": 0.5,
