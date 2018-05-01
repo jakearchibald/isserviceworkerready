@@ -4,18 +4,18 @@ html {
   line-height: 1.4;
   min-height: 100%;
   background: #102a48;
-  background: #102a48 radial-gradient(circle closest-corner at 50% 39px, #166ab9, #013668, #102a48) no-repeat;
+  background: #102a48 radial-gradient(circle closest-corner at 50% 63px, #166ab9, #013668, #102a48) no-repeat;
   overflow-y: scroll;
-  
+
   -webkit-text-size-adjust: 100%;
-  
+
   @media (min-width: 500px) {
-    background: #102a48 radial-gradient(circle closest-corner at 50% 93px, #166ab9, #013668, #102a48) no-repeat;
+    background: #102a48 radial-gradient(circle closest-corner at 50% 126px, #166ab9, #013668, #102a48) no-repeat;
     font-size: 17px;
   }
 
-  @media (min-width: 800px) {
-    background: #102a48 radial-gradient(circle closest-corner at 50% 122px, #166ab9, #013668, #102a48) no-repeat;
+  @media (min-width: 720px) {
+    background: #102a48 radial-gradient(circle closest-corner at 50% 256px, #166ab9, #013668, #102a48) no-repeat;
   }
 }
 
