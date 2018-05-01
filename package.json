@@ -1,14 +1,14 @@
 {
   "devDependencies": {
-    "browser-sync": "^2.19.0",
+    "browser-sync": "^2.24.1",
     "del": "^3.0.0",
     "gulp": "^3.8.10",
-    "gulp-filter": "^5.0.1",
-    "gulp-htmlmin": "^3.0.0",
+    "gulp-filter": "^5.1.0",
+    "gulp-htmlmin": "^4.0.0",
     "gulp-load-plugins": "^1.5.0",
-    "gulp-sass": "^3.1.0",
+    "gulp-sass": "^4.0.1",
     "gulp-swig": "^0.8.0",
-    "run-sequence": "^2.2.0"
+    "run-sequence": "^2.2.1"
   },
   "private": true,
   "scripts": {
