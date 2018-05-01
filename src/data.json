@@ -53,13 +53,13 @@
       "safari": {
         "supported": 1,
         "details": [
-          "Shipped."
+          "<a href=\"https://webkit.org/blog/8090/workers-at-your-service\">Shipped</a>."
         ]
       },
       "edge": {
         "supported": 1,
         "details": [
-          "<a href=\"https://developer.microsoft.com/microsoft-edge/platform/status/serviceworker\">In development</a>."
+          "<a href=\"https://blogs.windows.com/msedgedev/2018/04/30/edgehtml-17-april-2018-update/\">Shipped</a>."
         ]
       },
       "details": [
@@ -132,8 +132,8 @@
         ]
       },
       "edge": {
-        "minVersion": 16,
-        "supported": 0.5,
+        "minVersion": 17,
+        "supported": 1,
         "details": [
           "See the service worker section in the sources panel."
         ]
@@ -168,11 +168,8 @@
         "minVersion": 11.1
       },
       "edge": {
-        "supported": 0.5,
-        "minVersion": 16,
-        "details": [
-          "Requires “Enable service workers” in <code>about:flags</code>."
-        ]
+        "supported": 1,
+        "minVersion": 17
       },
       "details": [
       ]
@@ -201,11 +198,8 @@
         "minVersion": 11.1
       },
       "edge": {
-        "supported": 0.5,
-        "minVersion": 16,
-        "details": [
-          "Requires “Enable service workers” in <code>about:flags</code>."
-        ]
+        "supported": 1,
+        "minVersion": 17
       },
       "details": [
       ]
@@ -234,11 +228,8 @@
         "minVersion": 11.1
       },
       "edge": {
-        "supported": 0.5,
-        "minVersion": 16,
-        "details": [
-          "Requires “Enable service workers” in <code>about:flags</code>."
-        ]
+        "supported": 1,
+        "minVersion": 17
       },
       "details": [
       ]
@@ -267,11 +258,8 @@
         "minVersion": 11.1
       },
       "edge": {
-        "supported": 0.5,
-        "minVersion": 16,
-        "details": [
-          "Requires “Enable service workers” in <code>about:flags</code>."
-        ]
+        "supported": 1,
+        "minVersion": 17
       }
     },
     {
@@ -298,11 +286,8 @@
         "minVersion": 11.1
       },
       "edge": {
-        "supported": 0.5,
-        "minVersion": 16,
-        "details": [
-          "Requires “Enable service workers” in <code>about:flags</code>."
-        ]
+        "supported": 1,
+        "minVersion": 17
       }
     },
     {
@@ -329,11 +314,8 @@
         "minVersion": 11.1
       },
       "edge": {
-        "supported": 0.5,
-        "minVersion": 16,
-        "details": [
-          "Requires “Enable service workers” in <code>about:flags</code>."
-        ]
+        "supported": 1,
+        "minVersion": 17
       }
     },
     {
@@ -360,11 +342,8 @@
         "minVersion": 11.1
       },
       "edge": {
-        "supported": 0.5,
-        "minVersion": 16,
-        "details": [
-          "Requires “Enable service workers” in <code>about:flags</code>."
-        ]
+        "supported": 1,
+        "minVersion": 17
       }
     },
     {
@@ -391,11 +370,8 @@
         "minVersion": 11.1
       },
       "edge": {
-        "supported": 0.5,
-        "minVersion": 16,
-        "details": [
-          "Requires “Enable service workers” in <code>about:flags</code>."
-        ]
+        "supported": 1,
+        "minVersion": 17
       }
     },
     {
@@ -422,11 +398,8 @@
         "minVersion": 11.1
       },
       "edge": {
-        "supported": 0.5,
-        "minVersion": 16,
-        "details": [
-          "Requires “Enable service workers” in <code>about:flags</code>."
-        ]
+        "supported": 1,
+        "minVersion": 17
       }
     },
     {
@@ -453,11 +426,8 @@
         "minVersion": 11.1
       },
       "edge": {
-        "supported": 0.5,
-        "minVersion": 16,
-        "details": [
-          "Requires “Enable service workers” in <code>about:flags</code>."
-        ]
+        "supported": 1,
+        "minVersion": 17
       }
     },
     {
@@ -484,11 +454,8 @@
         "minVersion": 11.1
       },
       "edge": {
-        "supported": 0.5,
-        "minVersion": 16,
-        "details": [
-          "Requires “Enable service workers” in <code>about:flags</code>."
-        ]
+        "supported": 1,
+        "minVersion": 17
       }
     },
     {
@@ -515,11 +482,8 @@
         "minVersion": 11.1
       },
       "edge": {
-        "supported": 0.5,
-        "minVersion": 16,
-        "details": [
-          "Requires “Enable service workers” in <code>about:flags</code>."
-        ]
+        "supported": 1,
+        "minVersion": 17
       }
     },
     {
@@ -663,11 +627,8 @@
         "minVersion": 11.1
       },
       "edge": {
-        "supported": 0.5,
-        "minVersion": 16,
-        "details": [
-          "Requires “Enable service workers” in <code>about:flags</code>."
-        ]
+        "supported": 1,
+        "minVersion": 17
       }
     },
     {
