@@ -5,7 +5,7 @@
 }
 
 .hero {
-  height: calc(100vh - 2em);
+  height: calc(100vh - 2em - 60px);
   display: flex;
   justify-content: space-between;
   flex-direction: column;
