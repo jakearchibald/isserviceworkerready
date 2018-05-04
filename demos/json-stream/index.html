@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+
+    ul {
+      padding: 0;
+    }
+
+    li {
+      display: inline-block;
+      padding: 0 10px;
+      border-right: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <h1>Streaming JSON demo</h1>
+  <ul></ul>
+
+  <script>
+    "use strict";
+    class StreamingJSONEncoder {
+      constructor() {
+        this.readable = new ReadableStream({
+          start: controller => {
+            this._controller = controller;
+          }
+        });
+      }
+
+      write(obj) {
+        let json;
+        try {
+          json = JSON.stringify(obj);
+        }
+        catch(e) {
+          this._controller.error(e);
+        }
+        this._controller.enqueue(`\n#${json.length}\n${json}\n`);
+      }
+
+      writeEnd() {
+        this._controller.close();
+      }
+    }
+
+    class StreamingJSONDecoder {
+      constructor() {
+        this._buffer = '';
+        this._state = StreamingJSONDecoder.HEADER;
+        this._errored = false;
+        this._itemLength = 0;
+        this._controller = null;
+        this.readable = new ReadableStream({
+          start: controller => {
+            this._controller = controller;
+          }
+        });
+      }
+
+      write(str) {
+        if (this._errored) return;
+        this._buffer += str;
+
+        while (true) {
+          switch (this._state) {
+            case StreamingJSONDecoder.HEADER:
+              if (!this._buffer[0]) return;
+              if (this._buffer[0] !== '#') {
+                this._controller.error(Error('Expected #'));
+                this._errored = true;
+                return;
+              }
+              const newLineIndex = this._buffer.indexOf('\n');
+              if (newLineIndex == -1) return;
+              const header = this._buffer.slice(1, newLineIndex);
+              this._buffer = this._buffer.slice(newLineIndex + 1);
+              this._itemLength = Number(header);
+              if (isNaN(this._itemLength)) {
+                this._controller.error(Error('Invalid header ' + header));
+                this._errored = true;
+                return;
+              }
+              this._state = StreamingJSONDecoder.ITEM;
+              // deliberately no break;
+            case StreamingJSONDecoder.ITEM:
+              if (this._buffer.length < this._itemLength + 1) return;
+              const item = this._buffer.slice(0, this._itemLength + 1);
+              this._buffer = this._buffer.slice(this._itemLength + 1);
+              
+              if (item.slice(-1) != '\n') {
+                this._controller.error(Error('Invalid item'));
+                this._errored = true;
+                return;
+              }
+
+              let data;
+              try {
+                data = JSON.parse(item);
+              }
+              catch(e) {
+                this._controller.error(Error('Failed to parse JSON'));
+                this._errored = true;
+                return;
+              }
+
+              this._controller.enqueue(data);
+              this._state = StreamingJSONDecoder.HEADER;
+          }
+        }
+      }
+
+      writeEnd() {
+        if (this._buffer) {
+          this._controller.error(Error('Buffer not empty at end'));
+          this._errored = true;
+          return;
+        }
+        this._controller.close();
+      }
+    }
+
+    StreamingJSONDecoder.HEADER = 1;
+    StreamingJSONDecoder.ITEM = 2;
+
+    /*
+    fetch('photos.json').then(r => r.json()).then(data => {
+      const sJSON = new StreamingJSONEncoder();
+      const reader = sJSON.readable.getReader();
+
+      reader.read().then(function process(result) {
+        if (result.done) return '';
+        return reader.read().then(process).then(val => result.value + val);
+      }).then(str => {
+        console.log(str);
+        window.str = str;
+      });
+
+      data.photos.forEach(photo => sJSON.write(photo));
+      sJSON.writeEnd();
+    });
+    */
+
+
+    (function() {
+      const ul = document.querySelector('ul');
+
+      console.time('JSON read and buffer');
+
+      if (self.location.search.includes('no-stream')) {
+        fetch('photos.json').then(r => r.json()).then(data => {
+          data.photos.forEach(photo => {
+            const li = document.createElement('li');
+            li.textContent = photo.title || "No title";
+            ul.appendChild(li);
+          });
+          console.timeEnd('JSON read and buffer');
+        })
+        return;
+      }
+      
+      fetch('photos.sjson').then(response => {
+        const fetchReader = response.body.getReader();
+        const textDecoder = new TextDecoder();
+        const sjsonDecoder = new StreamingJSONDecoder();
+        const sjsonReader = sjsonDecoder.readable.getReader();
+
+        fetchReader.read().then(function process(result) {
+          if (result.done) {
+            sjsonDecoder.writeEnd();
+            return;
+          }
+          sjsonDecoder.write(textDecoder.decode(result.value, {stream: true}));
+          return fetchReader.read().then(process);
+        });
+
+        const buffer = [];
+
+        sjsonReader.read().then(function process(result) {
+          if (result.done) return;
+
+          if (self.location.search.includes('buffer')) {
+            buffer.push(result.value);
+            return sjsonReader.read().then(process);
+          }
+
+          const li = document.createElement('li');
+          li.textContent = result.value.title || "No title";
+          ul.appendChild(li);
+          return sjsonReader.read().then(process);
+        }).then(() => {
+          buffer.forEach(item => {
+            const li = document.createElement('li');
+            li.textContent = item.title || "No title";
+            ul.appendChild(li);
+          });
+          console.timeEnd('JSON read and buffer');
+        });
+      });
+    }());
+
+
+  </script>
+</body>
+</html>

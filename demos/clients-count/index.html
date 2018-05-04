@@ -1,0 +1,6 @@
+<!doctype HTML>
+<h1>No controller, refresh to load via SW</h1>
+<script>
+  navigator.serviceWorker.register('sw.js');
+  navigator.serviceWorker.addEventListener('controllerchange', () => location.reload());
+</script>

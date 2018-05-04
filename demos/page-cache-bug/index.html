@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-size: 14px;
+    }
+
+    .log {
+      white-space: pre;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+  <p><button class="clear">Clear caches</button></p>
+  <p><button class="cache">Cache image</button></p>
+  <p><button class="recache">Get image from cache, and put in another cache</button></p>
+  <pre class="log"></pre>
+<script>
+    var logEl = document.querySelector('.log');
+    function log() {
+      logEl.appendChild(document.createTextNode(Array.prototype.join.call(arguments, ", ") + '\n'));
+      console.log.apply(console, arguments);
+    }
+
+    window.onerror = function(err) {
+      log("Error", err);
+    };
+
+    if (navigator.serviceWorker.controller) {
+      log("Page controlled");
+    }
+    else {
+      navigator.serviceWorker.oncontrollerchange = function() {
+        log("Page controlled");
+      };
+    }
+
+    navigator.serviceWorker.register('sw.js');
+
+    document.querySelector('.clear').onclick = function(event) {
+      caches.keys().then(function(keys) {
+        return Promise.all(
+          keys.map(function(key) {
+            return caches.delete(key);
+          })
+        )
+      }).then(function() {
+        log('Caches deleted');
+      }, function() {
+        log('Failed to delete caches');
+      });
+    };
+
+    var imgUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Flag_of_Florida.svg/188px-Flag_of_Florida.svg.png";
+
+    document.querySelector('.cache').onclick = function(event) {
+      caches.open('cache1').then(function(cache) {
+        var request = new Request(imgUrl, {mode: 'no-cors'});
+        
+        return fetch(request).then(function(response) {
+          return cache.put(request, response);
+        });
+      }).then(function() {
+        log('Caching complete');
+      }, function() {
+        log('Caching failed');
+      });
+    }
+
+    document.querySelector('.recache').onclick = function(event) {
+      var request = new Request(imgUrl, {mode: 'no-cors'});
+
+      caches.match(request).then(function(response) {
+        if (!response) {
+          log("Image not found in cache");
+          return;
+        }
+
+        return caches.open('cache2').then(function(cache) {
+          return cache.put(request, response);
+        }).then(function() {
+          log("Image got from cache & added to another cache.");
+        });
+      });
+    }
+  </script></body>
+</html>

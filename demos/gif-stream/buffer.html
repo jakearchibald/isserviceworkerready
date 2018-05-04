@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+    canvas {
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <h1>Decoding MPEG</h1>
+  <script src="jsmpeg.js"></script>
+  <script>
+    fetch('cat.mpg').then(response => {
+      const reader = response.body.getReader();
+      const jsmpeg = new JSMPEG();
+
+      reader.read().then(function process(result) {
+        if (result.done) {
+          jsmpeg.writeEnd();
+          return;
+        }
+        jsmpeg.write(result.value);
+        return reader.read().then(process);
+      });
+
+      jsmpeg.ready.then(() => {
+        const canvas = document.createElement('canvas');
+        canvas.width = jsmpeg.width;
+        canvas.height = jsmpeg.height;
+        document.body.appendChild(canvas);
+        const context = canvas.getContext('2d');
+        const reader = jsmpeg.readable.getReader();
+
+        return reader.read().then(function process(result) {
+          if (result.done) return;
+          const img = context.createImageData(canvas.width, canvas.height);
+          img.data.set(result.value);
+          context.putImageData(img, 0, 0);
+          // using raf to yield to event loop for render
+          return new Promise(r => requestAnimationFrame(r))
+            .then(() => reader.read()).then(process);
+        });
+      });
+    });
+
+  </script>
+</body>
+</html>

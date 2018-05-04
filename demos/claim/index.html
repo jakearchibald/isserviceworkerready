@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      white-space: pre;
+      font-family: monospace;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body><button>Perform fetch</button>
+<script>
+    function log() {
+      document.body.appendChild(document.createTextNode(Array.prototype.join.call(arguments, ", ") + '\n'));
+      console.log.apply(console, arguments);
+    }
+
+    window.onerror = function(err) {
+      log("Error", err);
+    };
+
+    navigator.serviceWorker.oncontrollerchange = function() {
+      log("Page now controlled by ServiceWorker");
+      log("Even if you shift+reload, the ServiceWorker will take control of this page (using postMessage)");
+    };
+
+    if (navigator.serviceWorker.controller) {
+      log("Page already claimed");
+    }
+    else {
+      navigator.serviceWorker.register('sw.js', {
+        scope: './'
+      }).then(function(sw) {
+        log("Registered… attempting to claim the page");
+      }).catch(function(err) {
+        log("Error", err);
+      });
+
+      navigator.serviceWorker.getRegistration().then(function(reg) {
+        if (reg.active) {
+          reg.active.postMessage("claim");
+        }
+      });      
+    }
+
+
+    document.querySelector('button').onclick = function(event) {
+      event.preventDefault();
+      fetch("404.json").then(function(r) {
+        return r.json();
+      }).then(function(data) {
+        log("From the ServiceWorker:", JSON.stringify(data));
+      }).catch(function() {
+        log("Fetch failed - looks like the ServiceWorker isn't in control");
+      })
+    }
+  </script></body>
+</html>

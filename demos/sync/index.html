@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <p>
+    One-off background sync doesn't require permissions, but notifications do,
+    and that's how we're going to tell you it worked.
+  </p>
+  <h1>Registering from the page</h1>
+  <button class="register">Register background sync</button>
+  <div class="log"></div>
+  <script>
+    var logEl = document.querySelector('.log');
+    function log(msg) {
+      var p = document.createElement('p');
+      p.textContent = msg;
+      logEl.appendChild(p);
+      console.log(msg);
+    }
+
+    navigator.serviceWorker.register('sw.js').then(function(reg) {
+      return reg.sync.getTags();
+    }).then(function(tags) {
+      if (tags.includes('syncTest')) log("There's already a background sync pending");
+    }).catch(function(err) {
+      log('It broke (probably sync not supported or flag not enabled)');
+      log(err.message);
+    });
+
+    document.querySelector('.register').addEventListener('click', function(event) {
+      event.preventDefault();
+
+      new Promise(function(resolve, reject) {
+        Notification.requestPermission(function(result) {
+          if (result !== 'granted') return reject(Error("Denied notification permission"));
+          resolve();
+        })
+      }).then(function() {
+        return navigator.serviceWorker.ready;
+      }).then(function(reg) {
+        return reg.sync.register('syncTest');
+      }).then(function() {
+        log('Sync registered');
+      }).catch(function(err) {
+        log('It broke');
+        log(err.message);
+      });
+    });
+
+    window.onerror = function(msg) {
+      log(msg);
+    };
+
+  </script>
+</body>
+</html>

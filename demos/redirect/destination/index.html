@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    if (location.pathname.slice(-1) == '/') {
+      document.write("Redirect processed!");
+    }
+    else {
+      document.write("Redirect not processed.");
+    }
+  </script>
+</body>
+</html>

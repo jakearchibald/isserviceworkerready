@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<title>Scope demo</title>
+<style>
+  html {
+    font-family: sans-serif;
+  }
+</style>
+<script>
+  navigator.serviceWorker.register('sw.js');
+  navigator.serviceWorker.register('app-a/sw.js');
+  navigator.serviceWorker.register('app-b-sw.js', {scope: 'app-b'});
+</script>
+<h1>Managing multiple scopes</h1>
+<p>
+  This page registers 3 sevice workers:
+</p>
+<ul>
+  <li>./sw.js default-scoped to ./</li>
+  <li>./app-a/sw.js default-scoped to ./app-a/</li>
+  <li>./app-b-sw.js scoped to ./app-b (note the lack of trailing slash)</li>
+</ul>
+<p>
+  Usually these would be registered by each individual app, but I've done it all
+  on this page so they're all registered by the time you visit the following pages.
+</p>
+<ul>
+  <li><a href="./">./ (this page)</a></li>
+  <li><a href="app-a/">app-a/</a></li>
+  <li><a href="app-a">app-a</a></li>
+  <li><a href="app-b">app-b</a></li>
+</ul>
+<p>
+  Each service worker logs when it intercepts a fetch, use "preserve log" in the console
+  to see them all.
+</p>
+<h2>What you should see:</h2>
+<ul>
+  <li>Navigations to this page are intercepted by ./sw.js.</li>
+  <li>Navigations to app-a/ are intercepted by app-a/sw.js.</li>
+  <li>Navigations to app-a are intercepted by ./sw.js, the server redirects to app-a/ which is intercepted by app-a/sw.js.</li>
+  <li>Navigations to app-b are intercepted by ./app-b-sw.js, the server redirects to app-b/ which is also intercepted by ./app-b-sw.js.</li>
+</ul>
