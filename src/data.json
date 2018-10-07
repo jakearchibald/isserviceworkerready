@@ -61,10 +61,7 @@
         "details": [
           "<a href=\"https://blogs.windows.com/msedgedev/2018/04/30/edgehtml-17-april-2018-update/\">Shipped</a>."
         ]
-      },
-      "details": [
-        "Support does not include iOS versions of third-party browsers on that platform (see Safari support)."
-      ]
+      }
     },
     {
       "name": "Promises",
