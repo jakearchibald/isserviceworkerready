@@ -645,19 +645,18 @@
         ]
       },
       "opera": {
-        "supported": 0
+        "supported": 1,
+        "minVersion": 42
       },
       "samsung-internet": {
-        "supported": 0
+        "supported": 1
       },
       "safari": {
         "supported": 0
       },
       "edge": {
-        "supported": 0,
-        "details": [
-          "<a href=\"https://developer.microsoft.com/en-us/microsoft-edge/platform/status/backgroundsyncapi/\">In development</a>"
-        ]
+        "supported": 1,
+        "minVersion": 80
       }
     }
   ]
